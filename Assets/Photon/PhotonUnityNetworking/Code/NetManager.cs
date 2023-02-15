@@ -44,6 +44,7 @@ public class NetManager : MonoBehaviourPunCallbacks
     {
         Debug.Log("Joined Room");
         base.OnJoinedRoom();
+        
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)

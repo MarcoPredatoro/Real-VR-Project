@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1726452918983726238}
   - component: {fileID: -4941081847410375391}
   - component: {fileID: -2112570829688090091}
+  - component: {fileID: 3475322115388249382}
   m_Layer: 0
   m_Name: Polo
   m_TagString: Untagged
@@ -97,7 +98,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.55
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-4941081847410375391
 MonoBehaviour:
@@ -138,3 +139,16 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!114 &3475322115388249382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8140721954407011857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 112d20cd8916942de85c6430897d5dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubePrefab: {fileID: 2489893745676488018, guid: f717194989c33451db576219e097c7fe, type: 3}
