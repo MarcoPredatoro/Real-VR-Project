@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7367332300006269125}
   - component: {fileID: 8711368656867191797}
+  - component: {fileID: 5289647069559264068}
+  - component: {fileID: 8204487084623201536}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -49,6 +51,32 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!65 &5289647069559264068
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826392053212446732}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.22, y: 1.03, z: 1.06}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8204487084623201536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826392053212446732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4288800c2bd8b4c31b3e470c74bfe83d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubePrefab: {fileID: 2489893745676488018, guid: f717194989c33451db576219e097c7fe, type: 3}
 --- !u!1 &3208509170225707928
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,6 +87,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5674010572982610649}
   - component: {fileID: 3212334310558982975}
+  - component: {fileID: 6938239940768569931}
+  - component: {fileID: 8228210130505005472}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: Untagged
@@ -98,6 +128,32 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!65 &6938239940768569931
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3208509170225707928}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.16, z: 0.82}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8228210130505005472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3208509170225707928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4288800c2bd8b4c31b3e470c74bfe83d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubePrefab: {fileID: 2489893745676488018, guid: f717194989c33451db576219e097c7fe, type: 3}
 --- !u!1 &4717440310783098642
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,6 +261,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3906542936163980144}
   - component: {fileID: 1418029361587207364}
+  - component: {fileID: 1873188807654788852}
+  - component: {fileID: 6113529675498674756}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -244,6 +302,32 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!65 &1873188807654788852
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037191384473271900}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.18, y: 0.13, z: 0.88}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6113529675498674756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037191384473271900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4288800c2bd8b4c31b3e470c74bfe83d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubePrefab: {fileID: 2489893745676488018, guid: f717194989c33451db576219e097c7fe, type: 3}
 --- !u!1 &8227435018308917281
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,6 +340,7 @@ GameObject:
   - component: {fileID: 3325331560110145815}
   - component: {fileID: 6673396787197999028}
   - component: {fileID: -6435944224534656319}
+  - component: {fileID: 2267692151755990182}
   m_Layer: 0
   m_Name: Marco
   m_TagString: Untagged
@@ -302,8 +387,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: -6435944224534656319}
   - {fileID: 8711368656867191797}
-  - {fileID: 1418029361587207364}
   - {fileID: 3212334310558982975}
+  - {fileID: 1418029361587207364}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -322,6 +407,7 @@ MonoBehaviour:
   head: {fileID: 7367332300006269125}
   leftHand: {fileID: 5674010572982610649}
   rightHand: {fileID: 3906542936163980144}
+  cubePrefab: {fileID: 2489893745676488018, guid: f717194989c33451db576219e097c7fe, type: 3}
 --- !u!114 &-6435944224534656319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,6 +424,19 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!65 &2267692151755990182
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8227435018308917281}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.33, y: 0.34, z: 0.34}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2328383860433688107
 PrefabInstance:
   m_ObjectHideFlags: 0

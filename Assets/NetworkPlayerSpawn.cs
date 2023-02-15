@@ -14,6 +14,7 @@ public class NetworkPlayerSpawn : MonoBehaviourPunCallbacks
     base.OnJoinedRoom();
     spawnedPlayerPrefab = PhotonNetwork.Instantiate("Marco", transform.position, transform.rotation);
     Debug.Log("Player spawned");
+    
   }
 
   public override void OnLeftRoom()
@@ -21,6 +22,7 @@ public class NetworkPlayerSpawn : MonoBehaviourPunCallbacks
     base.OnLeftRoom();
     PhotonNetwork.Destroy(spawnedPlayerPrefab);
     Debug.Log("Player destroyed");
+   
   }
 
 
