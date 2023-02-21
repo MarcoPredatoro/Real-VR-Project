@@ -5421,10 +5421,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetManager_OnConnectedToMaster_m85034A1A
 		NullCheck(L_0);
 		RoomOptions__ctor_m06A5DAB18D3385E8AED5DA84C8A89D9C7E8498F8(L_0, NULL);
 		V_0 = L_0;
-		// roomOptions.MaxPlayers = 4;
+		// roomOptions.MaxPlayers = 5;
 		RoomOptions_t373282A7E849A09DA153714F5A1B479C325CDE23* L_1 = V_0;
 		NullCheck(L_1);
-		L_1->___MaxPlayers_2 = (uint8_t)4;
+		L_1->___MaxPlayers_2 = (uint8_t)5;
 		// roomOptions.IsOpen = true;
 		RoomOptions_t373282A7E849A09DA153714F5A1B479C325CDE23* L_2 = V_0;
 		NullCheck(L_2);

@@ -10,11 +10,12 @@ public class colliderScriptPolo : MonoBehaviour
     public GameObject cubePrefab;
 
 
+
     private void OnCollisionEnter(Collision collision)
     {
          if (collision.gameObject.name == "Marco")
         {
-            PhotonNetwork.Instantiate(cubePrefab.name, transform.position, transform.rotation);
+            cubePrefab.SetActive(false);   
         }
     }
 
@@ -22,7 +23,7 @@ public class colliderScriptPolo : MonoBehaviour
     void Start()
     {
         photonView = GetComponent<PhotonView>();
-        
+        cubePrefab.SetActive(true);   
     }
 
     // Update is called once per frame

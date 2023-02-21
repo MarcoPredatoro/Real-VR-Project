@@ -14,7 +14,7 @@ public class NetworkPlayer : MonoBehaviour
     private Transform leftHandRig;
     private Transform rightHandRig;
     private PhotonView photonView;
-    public GameObject cubePrefab;
+    //public GameObject cubePrefab;
 
 
     // private void OnCollisionEnter(Collision collision)
@@ -33,13 +33,13 @@ public class NetworkPlayer : MonoBehaviour
     //     }
     // }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-         if (collision.gameObject.name == "Polo")
-        {
-            PhotonNetwork.Instantiate(cubePrefab.name, transform.position, transform.rotation);
-        }
-    }
+    // private void OnCollisionEnter(Collision collision)
+    // {
+    //     if (collision.gameObject.name == "Polo")
+    //     {
+    //         cubePrefab.SetActive(false);   
+    //     }
+    // }
 
 
 
@@ -51,7 +51,7 @@ public class NetworkPlayer : MonoBehaviour
         leftHandRig = xrOrigin.transform.Find("Camera Offset/LeftHand Controller");
         rightHandRig = xrOrigin.transform.Find("Camera Offset/RightHand Controller");
         photonView = GetComponent<PhotonView>();
-
+       // cubePrefab.SetActive(true);
     }
 
 
