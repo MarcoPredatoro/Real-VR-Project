@@ -14,6 +14,9 @@ public class NetworkPlayer : MonoBehaviour
     private Transform leftHandRig;
     private Transform rightHandRig;
     private PhotonView photonView;
+
+    public UnityEngine.UI.Image pointsImage;
+    
     //public GameObject cubePrefab;
 
 
@@ -33,11 +36,21 @@ public class NetworkPlayer : MonoBehaviour
     //     }
     // }
 
+    
+
+
+    
+
     // private void OnCollisionEnter(Collision collision)
     // {
-    //     if (collision.gameObject.name == "Polo")
-    //     {
-    //         cubePrefab.SetActive(false);   
+    //     if (collision.gameObject.name == "Polo(Clone)"){
+    //         GameObject.Find("Main").GetComponent<main>().marcoCollision();
+    //     }
+    //     if (collision.gameObject.name == "LeftHand"){
+    //         GameObject.Find("Main").GetComponent<main>().marcoCollision();
+    //     }
+    //     if (collision.gameObject.name == "RightHand"){
+    //         GameObject.Find("Main").GetComponent<main>().marcoCollision();
     //     }
     // }
 
@@ -51,6 +64,7 @@ public class NetworkPlayer : MonoBehaviour
         leftHandRig = xrOrigin.transform.Find("Camera Offset/LeftHand Controller");
         rightHandRig = xrOrigin.transform.Find("Camera Offset/RightHand Controller");
         photonView = GetComponent<PhotonView>();
+        
        // cubePrefab.SetActive(true);
     }
 
@@ -74,6 +88,40 @@ public class NetworkPlayer : MonoBehaviour
         target.position = rigTransform.position;
         target.rotation = rigTransform.rotation;
     }
+
+    private bool stab = false;
+    public void marcoCollision()
+    {
+        if (!stab)
+        {
+            stab = true;
+            pointsImage.color = new Color(255, 0, 0);
+            // pointsImage.material = pointsMaterial;
+            GameObject.Find("Canvas/Image/Points").GetComponent<EventManager>().SendMarcoCollision();
+            StartCoroutine(turnBacktoWhite());
+        }
+    }
+
+    IEnumerator<WaitForSeconds> turnBacktoWhite() {
+        yield return new WaitForSeconds(5);
+        // pointsImage.material = reset;
+        pointsImage.color = new Color(255,255,255);
+        stab = false;
+    }
+
+   
+
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Polo")
+        {
+            marcoCollision();
+         
+        }
+    }
+
 }
 
 /*

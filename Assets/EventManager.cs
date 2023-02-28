@@ -11,6 +11,7 @@ public class EventManager : MonoBehaviourPun
 {
     private const byte RFID_POINTS_EVENT = 1;
     private const byte MARCO_STAB_EVENT = 2;
+    private const byte RESET_POINTS_EVENT = 3;
 
     public int points;
     public Text pointsText;
@@ -26,6 +27,7 @@ public class EventManager : MonoBehaviourPun
     {
         
     }
+
     private void OnEnable()
     {
         PhotonNetwork.NetworkingClient.EventReceived += OnEvent;
@@ -49,10 +51,24 @@ public class EventManager : MonoBehaviourPun
             //int value = (int)data[0];
             updatePoints(-value);
         }
+        else if (photonEvent.Code == RESET_POINTS_EVENT)
+        {
+            points = 0;
+            pointsText.text = points.ToString();
+        }
     }
 
     public void updatePoints(int value) {
         points += value;
         pointsText.text = points.ToString();
+    }
+
+
+    public void SendMarcoCollision()
+    {
+        Debug.Log("sending collision");
+        RaiseEventOptions options = RaiseEventOptions.Default;
+        options.Receivers = ReceiverGroup.All;
+        PhotonNetwork.RaiseEvent(MARCO_STAB_EVENT, 30, options, SendOptions.SendReliable);
     }
 }

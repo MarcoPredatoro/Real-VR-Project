@@ -62,6 +62,7 @@ GameObject:
   - component: {fileID: 7960853119556230511}
   - component: {fileID: 26441448011528199}
   - component: {fileID: 4344981730691080044}
+  - component: {fileID: 5467675603649661658}
   m_Layer: 6
   m_Name: LeftHand
   m_TagString: Untagged
@@ -126,7 +127,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3208509170225707928}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
@@ -148,6 +149,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lTarget: {fileID: 5674010572982610649}
+--- !u!114 &5467675603649661658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3208509170225707928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b0dea12d3954c3e8803165e5ce6d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hapticIntensity: 0.5
+  hapticDuration: 0.3
+  controllerCharacteristics: 320
 --- !u!1 &4717440310783098642
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,6 +260,7 @@ GameObject:
   - component: {fileID: 6770953931650261923}
   - component: {fileID: 2581954297965122875}
   - component: {fileID: 5090335617489301491}
+  - component: {fileID: 2809947762720892451}
   m_Layer: 7
   m_Name: RightHand
   m_TagString: Untagged
@@ -308,7 +325,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6037191384473271900}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
@@ -330,6 +347,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rTarget: {fileID: 3906542936163980144}
+--- !u!114 &2809947762720892451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037191384473271900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b0dea12d3954c3e8803165e5ce6d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hapticIntensity: 0.5
+  hapticDuration: 0.3
+  controllerCharacteristics: 576
 --- !u!1 &8227435018308917281
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,6 +443,7 @@ MonoBehaviour:
   head: {fileID: 7367332300006269125}
   leftHand: {fileID: 5674010572982610649}
   rightHand: {fileID: 3906542936163980144}
+  pointsImage: {fileID: 0}
 --- !u!114 &-6435944224534656319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -708,9 +741,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77459436eeb3aeb48871d657bcb5fd7f, type: 3}
+--- !u!1 &7270874549204582449 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7636918645134869775, guid: 77459436eeb3aeb48871d657bcb5fd7f, type: 3}
+  m_PrefabInstance: {fileID: 944802553262425406}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4475114732033802671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7270874549204582449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99b4a737903b82a43bb95804a2149147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllerCharacteristics: 320
+  handAnimator: {fileID: 7327946152745665123}
 --- !u!4 &7273901963255356353 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7633191943669604095, guid: 77459436eeb3aeb48871d657bcb5fd7f, type: 3}
+  m_PrefabInstance: {fileID: 944802553262425406}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7327946152745665123 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7543112497688889181, guid: 77459436eeb3aeb48871d657bcb5fd7f, type: 3}
   m_PrefabInstance: {fileID: 944802553262425406}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2328383860433688107
@@ -1752,11 +1809,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c99d0ba506360a43b8cea08ef805d25, type: 3}
+--- !u!95 &2045294283067722752 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8350836956578110893, guid: 3c99d0ba506360a43b8cea08ef805d25, type: 3}
+  m_PrefabInstance: {fileID: 8036244346567741869}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2099628861911689342 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8261036530400639443, guid: 3c99d0ba506360a43b8cea08ef805d25, type: 3}
   m_PrefabInstance: {fileID: 8036244346567741869}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2104737198942353666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8265230060884797615, guid: 3c99d0ba506360a43b8cea08ef805d25, type: 3}
+  m_PrefabInstance: {fileID: 8036244346567741869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5871100274814427274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104737198942353666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99b4a737903b82a43bb95804a2149147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllerCharacteristics: 576
+  handAnimator: {fileID: 2045294283067722752}
 --- !u!1001 &8170057433747064512
 PrefabInstance:
   m_ObjectHideFlags: 0
