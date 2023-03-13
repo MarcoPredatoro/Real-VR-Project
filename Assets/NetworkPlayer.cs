@@ -115,7 +115,7 @@ public class NetworkPlayer : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Polo")
+        if (collision.gameObject.name == "Sphere")
         {
             marcoCollision();
          

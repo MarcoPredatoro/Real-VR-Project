@@ -19,12 +19,7 @@ public class HapticInteractable : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-     void TryInitialize()
+    void TryInitialize()
     {
         List<InputDevice> devices = new List<InputDevice>();
 
@@ -35,12 +30,60 @@ public class HapticInteractable : MonoBehaviour
         }
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+
+   
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Polo")
+        if (collision.gameObject.name == "Person(1)")
         {
             targetDevice.SendHapticImpulse(0, hapticIntensity, hapticDuration);
         }
     }
+
+
+
+    // void TryInitialize()
+    // {
+    //     List<InputDevice> devices = new List<InputDevice>();
+
+    //     InputDevices.GetDevicesWithCharacteristics(controllerCharacteristics, devices);
+    //     if (devices.Count > 0)
+    //     {
+    //         targetDevice = devices[0];
+    //     }
+    // }
+
+    // private void OnCollisionEnter(Collision collision)
+    // {
+    //     if (collision.gameObject.name == "Polo")
+    //     {
+    //         targetDevice.SendHapticImpulse(0, hapticIntensity, hapticDuration);
+    //     }
+    // }
+
+
+    // to check if the trigger is pressed and if it is, make the polos appear
+    // void OnTriggerEnter()
+    // {
+    //     if(targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
+    //     {
+    //         if(triggerValue > 0.1f)
+    //         {
+    //             Debug.Log("Trigger pressed");
+    //             //GetComponent<MeshRenderer>().enabled = true;
+    //             GameObject.Find("Polo").GetComponent<PoloViewController>().StartCoroutine(makePoloAppear());
+               
+    //         }
+    //     }
+    // }
+
+
 
 }
