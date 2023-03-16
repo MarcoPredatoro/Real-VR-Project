@@ -11,6 +11,9 @@ public class HapticInteractable : MonoBehaviour
     public float hapticDuration;
     public InputDeviceCharacteristics controllerCharacteristics;    
     private InputDevice targetDevice;
+    public GameObject Sphere;
+    public UnityEngine.UI.Image pointsImage;
+    private bool hasCollided = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,56 +36,77 @@ public class HapticInteractable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (hasCollided)
+        {
+            SendCollisionEvent();
+            hasCollided = false;
+        }
         
     }
 
-
-   
-
     private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name == "Person(1)")
+     {
+         if (collision.gameObject.name == "Polo" || collision.gameObject.name == "Polo2")
         {
             targetDevice.SendHapticImpulse(0, hapticIntensity, hapticDuration);
+            //marcoCollision();
+            GameObject.Find("tree").SetActive(false);
+            //GameObject.Find("Canvas/Image/Points").GetComponent<EventManager>().SendMarcoCollision();
+            hasCollided = true;
+              
         }
     }
 
-
-
-    // void TryInitialize()
+    // private void FixedUpdate()
     // {
-    //     List<InputDevice> devices = new List<InputDevice>();
-
-    //     InputDevices.GetDevicesWithCharacteristics(controllerCharacteristics, devices);
-    //     if (devices.Count > 0)
+    //     if (hasCollided)
     //     {
-    //         targetDevice = devices[0];
+    //         SendCollisionEvent();
+    //         hasCollided = false;
     //     }
     // }
+
+    private void SendCollisionEvent()
+    {
+        GameObject.Find("Canvas/Image/Points").GetComponent<EventManager>().SendMarcoCollision();
+    }
+
+    // private bool stab = false;
+    // public void marcoCollision()
+    // {
+    //     if (!stab)
+    //     {
+    //         stab = true;
+    //         pointsImage.color = new Color(255, 0, 0);
+    //         Sphere.SetActive(false);
+    //         // pointsImage.material = pointsMaterial;
+    //         GameObject.Find("Canvas/Image/Points").GetComponent<EventManager>().SendMarcoCollision();
+    //         //GameObject.Find("Canvas/Image/Text1").GetComponent<EventManager>().SendMarcoCollision();
+    //         StartCoroutine(turnBacktoWhite());
+    //     }
+    // }
+
+    // IEnumerator<WaitForSeconds> turnBacktoWhite() {
+    //     yield return new WaitForSeconds(5);
+    //     // pointsImage.material = reset;
+    //     pointsImage.color = new Color(255,255,255);
+    //     stab = false;
+    // }
+
+     
+
 
     // private void OnCollisionEnter(Collision collision)
     // {
-    //     if (collision.gameObject.name == "Polo")
+    //     if (collision.gameObject.name == "Polo" || collision.gameObject.name == "Polo2")
     //     {
     //         targetDevice.SendHapticImpulse(0, hapticIntensity, hapticDuration);
+    //         //GameObject.Find("tree").SetActive(false);
+    //         //GameObject.Find("Marco").GetComponent<NetworkPlayer>().marcoCollision();
     //     }
     // }
 
 
-    // to check if the trigger is pressed and if it is, make the polos appear
-    // void OnTriggerEnter()
-    // {
-    //     if(targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
-    //     {
-    //         if(triggerValue > 0.1f)
-    //         {
-    //             Debug.Log("Trigger pressed");
-    //             //GetComponent<MeshRenderer>().enabled = true;
-    //             GameObject.Find("Polo").GetComponent<PoloViewController>().StartCoroutine(makePoloAppear());
-               
-    //         }
-    //     }
-    // }
 
 
 

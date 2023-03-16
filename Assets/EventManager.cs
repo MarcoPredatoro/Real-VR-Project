@@ -15,6 +15,7 @@ public class EventManager : MonoBehaviourPun
 
     public int points;
     public Text pointsText;
+    //public Text test;
 
     // Start is called before the first frame update
     void Start()
@@ -70,5 +71,6 @@ public class EventManager : MonoBehaviourPun
         RaiseEventOptions options = RaiseEventOptions.Default;
         options.Receivers = ReceiverGroup.All;
         PhotonNetwork.RaiseEvent(MARCO_STAB_EVENT, 30, options, SendOptions.SendReliable);
+        //test.text = "Marco Event Sent";
     }
 }
