@@ -8,7 +8,8 @@ public class AttackRadius : MonoBehaviour
 
     // private AudioListener listener;
     private GameObject Marco;
-   // private GameObject polo2;
+    //private GameObject polo2;
+    //private GameObject Polo;
     // public GameObject background;
 
     public List<Material> materials;
@@ -21,15 +22,23 @@ public class AttackRadius : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cube.GetComponent<Renderer>().material = materials[0];
-
-        Marco =  GameObject.Find("Marco");
-        cube.GetComponent<Renderer>().material = materials[1];
 
 
+        Marco =  GameObject.Find("Marco/Head");
+        if (Marco == null) {
+            cube.GetComponent<Renderer>().material = materials[0];
+        }
+        else{
+             cube.GetComponent<Renderer>().material = materials[1];
+        }
 
 
-        // cube.GetComponent<Renderer>().material = materials[1];
+        
+
+
+
+
+        //cube.GetComponent<Renderer>().material = materials[1];
 
         // polo2 =  GameObject.Find("Polo2");
         // cube.GetComponent<Renderer>().material = materials[2];
@@ -60,7 +69,7 @@ public class AttackRadius : MonoBehaviour
             // } else if (dis1 >= dis2) {
             //     SetMute(polo1, new bool[]{true, true, true});
             cube.GetComponent<Renderer>().material = materials[0];
-               makeThreatRadiusSound(Marco, dis1);
+            makeThreatRadiusSound(Marco, dis1);
 
                
             // }
