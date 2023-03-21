@@ -11,6 +11,7 @@ Shader "Custom/TorchShader"
 		_LightPosition("Light Position", Vector) = (0,0,0,0)
 		_LightAngle("Light Angle", Range(0,180)) = 0
         _ScaleStrength("Strength", Float) = 50
+        _Distance("Distance", Float) = 1
     }
     SubShader
     {
@@ -40,6 +41,7 @@ Shader "Custom/TorchShader"
 		float3 _LightPosition;
 		float _LightAngle;
         float _ScaleStrength;
+        float _Distance;
 
 
 
@@ -60,7 +62,7 @@ Shader "Custom/TorchShader"
             // Metallic and smoothness come from slider variables
             o.Metallic = _Metallic;
             o.Smoothness = _Glossiness;
-            if(length(direction) > 1.5)
+            if(length(direction) > _Distance)
                 o.Alpha = 0;
             else{
                 o.Alpha = c.a * strength;
