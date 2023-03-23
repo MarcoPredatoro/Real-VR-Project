@@ -11,7 +11,7 @@ public class AttackRadius : MonoBehaviour
     //private GameObject Marco;
     private GameObject polo2;
     private GameObject polo1;
-     public GameObject background;
+    public GameObject background;
 
     public List<Material> materials;
 
@@ -79,9 +79,11 @@ public class AttackRadius : MonoBehaviour
                 
                 background.GetComponent<AudioSource>().mute = true;
                 if (dis1 <= dis2 ) {
+                    test.text = polo1.name + "   :   " + dis1;
                     SetMute(polo2, new bool[]{true, true, true});
                     makeThreatRadiusSound(polo1, dis1);
                 } else if (dis1 >= dis2) {
+                    test.text = polo2.name + "   :   " + dis2;
                     SetMute(polo1, new bool[]{true, true, true});
                     makeThreatRadiusSound(polo2, dis2);
                 //cube.GetComponent<Renderer>().material = materials[0];
@@ -97,16 +99,16 @@ public class AttackRadius : MonoBehaviour
     }
 
     void makeThreatRadiusSound(GameObject polo, float distance) {
-        test.text = polo.name + "   :   " + distance;
+        
         if (distance < threatRadius[2]) {
             // Polo in the closest ring
             Debug.Log("polo in the 3 ring");
-            SetMute(polo, new bool[]{true, true, false});
+            SetMute(polo, new bool[]{false, false, false});
             test.text = "Closest Ring";
         } else if (distance < threatRadius[1]){
             // Polo in the second closest ring
             Debug.Log("polo in the 2 ring");
-            SetMute(polo, new bool[]{true, false, true});
+            SetMute(polo, new bool[]{false, false, true});
             test.text = "Second Closest Ring";
 
         } else {

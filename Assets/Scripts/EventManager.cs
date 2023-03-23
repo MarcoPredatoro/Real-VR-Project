@@ -12,17 +12,25 @@ public class EventManager : MonoBehaviourPun
     private const byte RFID_POINTS_EVENT = 1;
     private const byte MARCO_STAB_EVENT = 2;
     private const byte RESET_POINTS_EVENT = 3;
+    private const byte BLIND_EVENT = 4;
+    private const byte DECOY_EVENT = 5;
 
     public GameObject tree;
 
+    // public Image whiteScreen;
+    // public float duration = 3f;
+
     public int points;
     public Text pointsText;
+    public Text test;
+
     //public Text test;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //whiteScreen.enabled = false;
+        test = GameObject.Find("Text2").GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -59,6 +67,16 @@ public class EventManager : MonoBehaviourPun
             points = 0;
             pointsText.text = points.ToString();
         }
+        else if (photonEvent.Code == BLIND_EVENT)
+        {
+            //GameObject.Find("WhiteScreen/Canvas/Image").GetComponent<FlashBang>().StartCoroutine(FlashWhiteScreen());
+            test.text = "Blind Event Received";
+            GameObject.Find("Network Manager").GetComponent<FlashBang>().Flash();
+        }
+        else if (photonEvent.Code == DECOY_EVENT)
+        {
+            GameObject.Find("Network Manager").GetComponent<Instantiation>().CreateLots();
+        }
     }
 
     public void updatePoints(int value) {
@@ -66,13 +84,21 @@ public class EventManager : MonoBehaviourPun
         pointsText.text = points.ToString();
     }
 
+    // IEnumerator<WaitForSeconds> FlashWhiteScreen()
+    // {
+    //     whiteScreen.enabled = true;
+    //     //audioSource.Play();
+    //     yield return new WaitForSeconds(duration);
+    //     whiteScreen.enabled = false;
+    // }
+
 
     public void SendMarcoCollision()
     {
         Debug.Log("sending collision");
         RaiseEventOptions options = RaiseEventOptions.Default;
         options.Receivers = ReceiverGroup.All;
-        PhotonNetwork.RaiseEvent(MARCO_STAB_EVENT, 30, options, SendOptions.SendReliable);
+        PhotonNetwork.RaiseEvent(MARCO_STAB_EVENT, 5, options, SendOptions.SendReliable);
         //test.text = "Marco Event Sent";
         //tree.SetActive(false);
     }
