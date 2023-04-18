@@ -24,6 +24,9 @@ public class EventManager : MonoBehaviourPun
     public Text pointsText;
     public Text test;
 
+    [SerializeField]
+    private FlashBangGPT flashBangGPT;
+
     //public Text test;
 
     // Start is called before the first frame update
@@ -31,6 +34,8 @@ public class EventManager : MonoBehaviourPun
     {
         //whiteScreen.enabled = false;
         test = GameObject.Find("Text2").GetComponent<Text>();
+
+        
     }
 
     // Update is called once per frame
@@ -71,7 +76,8 @@ public class EventManager : MonoBehaviourPun
         {
             //GameObject.Find("WhiteScreen/Canvas/Image").GetComponent<FlashBang>().StartCoroutine(FlashWhiteScreen());
             test.text = "Blind Event Received";
-            GameObject.Find("Network Manager").GetComponent<FlashBang>().Flash();
+            //GameObject.Find("Network Manager").GetComponent<FlashBangGPT>().InhibitVision();
+            flashBangGPT.InhibitVision();
         }
         else if (photonEvent.Code == DECOY_EVENT)
         {
