@@ -15,26 +15,39 @@ public class EventManager : MonoBehaviourPun
     private const byte BLIND_EVENT = 4;
     private const byte DECOY_EVENT = 5;
 
-    public GameObject tree;
+    //public GameObject tree;
 
     // public Image whiteScreen;
     // public float duration = 3f;
 
+    //public int points;
+    //public Text pointsText;
+    //public Text test;
+    
+
+    public float threshold = 50;
     public int points;
-    public Text pointsText;
-    public Text test;
+    public Material pointsBar;
+    public Image pointer;
+    private Vector2 size;
+
+    private float maxPoints = 100;
+    private float minPoints = -100;
 
     [SerializeField]
-    private FlashBangGPT flashBangGPT;
+    private FlashBang flashBang;
 
-    //public Text test;
+    [SerializeField]
+    private Instantiation decoyPolo;
+
 
     // Start is called before the first frame update
     void Start()
     {
         //whiteScreen.enabled = false;
-        test = GameObject.Find("Text2").GetComponent<Text>();
-
+        //test = GameObject.Find("Text2").GetComponent<Text>();
+        Rect t = pointer.transform.parent.GetComponent<RectTransform>().rect;
+        size = new Vector2(t.width, t.height);
         
     }
 
@@ -70,24 +83,41 @@ public class EventManager : MonoBehaviourPun
         else if (photonEvent.Code == RESET_POINTS_EVENT)
         {
             points = 0;
-            pointsText.text = points.ToString();
+        // pointsText.text = "Points: " + points.ToString();
+            minPoints = 0;
+            maxPoints = 100;
+            updatePointsBar();
         }
         else if (photonEvent.Code == BLIND_EVENT)
         {
             //GameObject.Find("WhiteScreen/Canvas/Image").GetComponent<FlashBang>().StartCoroutine(FlashWhiteScreen());
-            test.text = "Blind Event Received";
+            //test.text = "Blind Event Received";
             //GameObject.Find("Network Manager").GetComponent<FlashBangGPT>().InhibitVision();
-            flashBangGPT.InhibitVision();
+            flashBang.InhibitVision();
         }
         else if (photonEvent.Code == DECOY_EVENT)
         {
-            GameObject.Find("Network Manager").GetComponent<Instantiation>().CreateLots();
+            //test.text = "Decoy Event Received";
+            //GameObject.Find("Network Manager").GetComponent<Instantiation>().CreateLots();
+            decoyPolo.CreateLots();
         }
     }
 
     public void updatePoints(int value) {
         points += value;
-        pointsText.text = points.ToString();
+        // pointsText.text = points.ToString();
+        updatePointsBar();
+    }
+
+    void updatePointsBar() {
+        minPoints = Mathf.Min(minPoints, points);
+        maxPoints = Mathf.Max(maxPoints, points);
+        
+        float p = 1.0f - ((points - minPoints) / (maxPoints - minPoints));
+        // Debug.Log(p);
+        pointsBar.SetFloat("_Points", p);
+        var position = pointer.GetComponent<RectTransform>().localPosition;
+        pointer.GetComponent<RectTransform>().localPosition = new Vector3(size.x * p - (size.x/2.0f), position.y,position.z);
     }
 
     // IEnumerator<WaitForSeconds> FlashWhiteScreen()
@@ -104,7 +134,7 @@ public class EventManager : MonoBehaviourPun
         Debug.Log("sending collision");
         RaiseEventOptions options = RaiseEventOptions.Default;
         options.Receivers = ReceiverGroup.All;
-        PhotonNetwork.RaiseEvent(MARCO_STAB_EVENT, 5, options, SendOptions.SendReliable);
+        PhotonNetwork.RaiseEvent(MARCO_STAB_EVENT, 0.5, options, SendOptions.SendReliable);
         //test.text = "Marco Event Sent";
         //tree.SetActive(false);
     }
