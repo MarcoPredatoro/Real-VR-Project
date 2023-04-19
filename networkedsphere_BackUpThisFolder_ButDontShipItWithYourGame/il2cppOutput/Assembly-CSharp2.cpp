@@ -20541,7 +20541,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventManager_SendMarcoCollision_m0D2D3A8
 		RaiseEventOptions_tAEB3A9A0993C52981809954BC2DB304E887D852E* L_1 = V_0;
 		NullCheck(L_1);
 		L_1->___Receivers_4 = 1;
-		// PhotonNetwork.RaiseEvent(MARCO_STAB_EVENT, .5, options, SendOptions.SendReliable);
+		// PhotonNetwork.RaiseEvent(MARCO_STAB_EVENT, 0.5, options, SendOptions.SendReliable);
 		double L_2 = (0.5);
 		RuntimeObject* L_3 = Box(Double_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F_il2cpp_TypeInfo_var, &L_2);
 		RaiseEventOptions_tAEB3A9A0993C52981809954BC2DB304E887D852E* L_4 = V_0;
