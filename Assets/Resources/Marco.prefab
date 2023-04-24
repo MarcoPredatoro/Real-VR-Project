@@ -476,6 +476,7 @@ MonoBehaviour:
   controllerCharacteristics: 320
   Sphere: {fileID: 4784775081653095365, guid: 5f17082e40fc84985a1936cb02f8a6e5, type: 3}
   pointsImage: {fileID: 0}
+  collisionCooldown: 1
 --- !u!1 &3519113973820452675
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,6 +862,7 @@ MonoBehaviour:
   controllerCharacteristics: 576
   Sphere: {fileID: 4784775081653095365, guid: 5f17082e40fc84985a1936cb02f8a6e5, type: 3}
   pointsImage: {fileID: 0}
+  collisionCooldown: 1
 --- !u!1 &8227435018308917281
 GameObject:
   m_ObjectHideFlags: 0
@@ -2172,7 +2174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5391464938148767507, guid: 914585892bd4b4419b20d9d798c927d6, type: 3}
       propertyPath: m_InnerSpotAngle
-      value: 7.977305
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5391464938148767507, guid: 914585892bd4b4419b20d9d798c927d6, type: 3}
       propertyPath: m_BounceIntensity
@@ -2203,6 +2205,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: d7bca0912ac8842888f16a3a8cf07937, type: 2}
   controllerCharacteristics: 320
+  torchBar: {fileID: 2100000, guid: 2d6dc99f07ad34c3bbd15f44e20bc0fc, type: 2}
+  torchBarImage: {fileID: 0}
 --- !u!4 &8214231547944689500 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3758596340593082479, guid: 914585892bd4b4419b20d9d798c927d6, type: 3}

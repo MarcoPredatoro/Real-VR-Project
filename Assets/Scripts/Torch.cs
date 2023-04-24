@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
+using UnityEngine.UI;
+
 
 
 public class Torch : MonoBehaviour
@@ -9,12 +11,19 @@ public class Torch : MonoBehaviour
     public Material material;
 
     public InputDeviceCharacteristics controllerCharacteristics;    
-     private InputDevice targetDevice;
-     //public GameObject Cube2;
+    private InputDevice targetDevice;
     private Light spotLight;
-
-    // private float isPressed = 1.0f;
     private const float TO_RADIAN = (3.1415f / 180.0f);
+    private float maxSpotAngle = 50f;
+    private float minSpotAngle = 0f;
+    private float spotAngleDecreaseRate = 15f;
+    private float spotAngleIncreaseRate = 40f;
+
+    public Material torchBar;
+    public Image torchBarImage;
+    private Vector2 size;
+
+
 	
     void Start() {
 
@@ -22,20 +31,11 @@ public class Torch : MonoBehaviour
 
           spotLight = GetComponent<Light>();
           spotLight.enabled = false;
-          
-        //material= GameObject.Find("Cube").GetComponent<Renderer>().material;
+          spotLight.spotAngle = maxSpotAngle;
 
-        //Cube2.SetActive(false);
+          Rect t = torchBarImage.transform.GetComponent<RectTransform>().rect;
+          size = new Vector2(t.width, t.height);
 
-        // if (spotLight != null){
-        //     material.color = new Color(255, 0, 255);
-        //     //Cube2.SetActive(false);
-            
-        // }
-        // else{
-
-        //     material.color = new Color(255, 255, 0);
-        // }
         
     }
 
@@ -55,26 +55,19 @@ public class Torch : MonoBehaviour
         if(targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
         {
             // handAnimator.SetFloat("Trigger", triggerValue);
-            if(triggerValue > 0.1f ){
+        if(triggerValue > 0.1f){
           
                 spotLight.enabled = true;
+                spotLight.spotAngle = Mathf.Max(minSpotAngle, spotLight.spotAngle - spotAngleDecreaseRate * Time.deltaTime);
             }
             else{
-            spotLight.enabled = false;
-            }
+
+                spotLight.enabled = false;
+                spotLight.spotAngle = Mathf.Min(maxSpotAngle, spotLight.spotAngle + spotAngleIncreaseRate * Time.deltaTime);
               
         }
+        }
        
-
-        //use below code for grip if needed 
-        // if (targetDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue))
-        // {
-        //     handAnimator.SetFloat("Grip", gripValue);
-        // }
-        // else
-        // {
-        //     handAnimator.SetFloat("Grip", 0);
-        // }
     }
 
 	void Update ()
@@ -98,5 +91,17 @@ public class Torch : MonoBehaviour
             UpdateHandAnimation();
         }
 
+        updateTorchBar();
     }
+
+
+    void updateTorchBar() 
+    {
+        float p = 1.0f - ((spotLight.spotAngle - minSpotAngle) / (maxSpotAngle - minSpotAngle));
+        // Debug.Log(p);
+        torchBar.SetFloat("_Points", p);
+    }
+
+    
+
 }

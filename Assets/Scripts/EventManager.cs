@@ -22,7 +22,7 @@ public class EventManager : MonoBehaviourPun
 
     //public int points;
     //public Text pointsText;
-    //public Text test;
+    public Text test;
     
 
     public float threshold = 50;
@@ -45,7 +45,7 @@ public class EventManager : MonoBehaviourPun
     void Start()
     {
         //whiteScreen.enabled = false;
-        //test = GameObject.Find("Text2").GetComponent<Text>();
+        test = GameObject.Find("Text2").GetComponent<Text>();
         Rect t = pointer.transform.parent.GetComponent<RectTransform>().rect;
         size = new Vector2(t.width, t.height);
         
@@ -135,7 +135,7 @@ public class EventManager : MonoBehaviourPun
         RaiseEventOptions options = RaiseEventOptions.Default;
         options.Receivers = ReceiverGroup.All;
         PhotonNetwork.RaiseEvent(MARCO_STAB_EVENT, 0.5, options, SendOptions.SendReliable);
-        //test.text = "Marco Event Sent";
+        test.text = "Marco Event Sent";
         //tree.SetActive(false);
     }
 }

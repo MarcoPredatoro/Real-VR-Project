@@ -3,7 +3,10 @@ guid: 74089dc2ed086461cbd7c3b4450ac5b8
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - material: {instanceID: 0}
+  - torchBar: {fileID: 2100000, guid: 2d6dc99f07ad34c3bbd15f44e20bc0fc, type: 2}
+  - torchBarImage: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
