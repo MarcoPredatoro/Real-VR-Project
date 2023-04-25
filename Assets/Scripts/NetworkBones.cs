@@ -10,8 +10,8 @@ public class NetworkBones : MonoBehaviourPun, IPunObservable
     // we will have to set all of these in Start
     Animator PuppetAnimator;
     //public string pointBody; // <--- you'll need this for multiple polos, maybe?
-    GameObject RootPosition; // this is usually pelvis
-    Transform CharacterRootTransform; // this is usually the transform of the gameobject the script is attached to
+    //GameObject RootPosition; // this is usually pelvis
+    //Transform CharacterRootTransform; // this is usually the transform of the gameobject the script is attached to
     PhotonView pv;
     // here we go
     [SerializeField]

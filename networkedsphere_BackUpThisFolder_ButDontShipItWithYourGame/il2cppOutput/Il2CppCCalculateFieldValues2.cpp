@@ -33581,18 +33581,14 @@ struct NetworkBones_tFCFBC8B2608A089A9B7A558502AE9D3CAC3E2636  : public MonoBeha
 {
 	// UnityEngine.Animator NetworkBones::PuppetAnimator
 	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___PuppetAnimator_5;
-	// UnityEngine.GameObject NetworkBones::RootPosition
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___RootPosition_6;
-	// UnityEngine.Transform NetworkBones::CharacterRootTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___CharacterRootTransform_7;
 	// Photon.Pun.PhotonView NetworkBones::pv
-	PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___pv_8;
+	PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___pv_6;
 	// System.Collections.Generic.Dictionary`2<System.Int32,System.Single[]> NetworkBones::kinectRotationsMap
-	Dictionary_2_t7318F453520192D4630D9C042513BF43E881DB16* ___kinectRotationsMap_9;
+	Dictionary_2_t7318F453520192D4630D9C042513BF43E881DB16* ___kinectRotationsMap_7;
 	// UnityEngine.Vector3 NetworkBones::hipPosition
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___hipPosition_10;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___hipPosition_8;
 	// UnityEngine.Quaternion NetworkBones::Y_90_ROT
-	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___Y_90_ROT_13;
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___Y_90_ROT_11;
 };
 
 // Oculus.Interaction.UnityCanvas.OVRCanvasMeshRenderer
@@ -38800,9 +38796,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7255[3] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7256[2] = 
 {
 	static_cast<int32_t>(offsetof(LeftHandPresencePhysics_tE0D8C566E48C27AF256341E1F246F867D2F55233, ___lTarget_4)),static_cast<int32_t>(offsetof(LeftHandPresencePhysics_tE0D8C566E48C27AF256341E1F246F867D2F55233, ___lb_5)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7257[9] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7257[7] = 
 {
-	static_cast<int32_t>(offsetof(NetworkBones_tFCFBC8B2608A089A9B7A558502AE9D3CAC3E2636, ___PuppetAnimator_5)),static_cast<int32_t>(offsetof(NetworkBones_tFCFBC8B2608A089A9B7A558502AE9D3CAC3E2636, ___RootPosition_6)),static_cast<int32_t>(offsetof(NetworkBones_tFCFBC8B2608A089A9B7A558502AE9D3CAC3E2636, ___CharacterRootTransform_7)),static_cast<int32_t>(offsetof(NetworkBones_tFCFBC8B2608A089A9B7A558502AE9D3CAC3E2636, ___pv_8)),static_cast<int32_t>(offsetof(NetworkBones_tFCFBC8B2608A089A9B7A558502AE9D3CAC3E2636, ___kinectRotationsMap_9)),static_cast<int32_t>(offsetof(NetworkBones_tFCFBC8B2608A089A9B7A558502AE9D3CAC3E2636, ___hipPosition_10)),0,0,static_cast<int32_t>(offsetof(NetworkBones_tFCFBC8B2608A089A9B7A558502AE9D3CAC3E2636, ___Y_90_ROT_13)),};
+	static_cast<int32_t>(offsetof(NetworkBones_tFCFBC8B2608A089A9B7A558502AE9D3CAC3E2636, ___PuppetAnimator_5)),static_cast<int32_t>(offsetof(NetworkBones_tFCFBC8B2608A089A9B7A558502AE9D3CAC3E2636, ___pv_6)),static_cast<int32_t>(offsetof(NetworkBones_tFCFBC8B2608A089A9B7A558502AE9D3CAC3E2636, ___kinectRotationsMap_7)),static_cast<int32_t>(offsetof(NetworkBones_tFCFBC8B2608A089A9B7A558502AE9D3CAC3E2636, ___hipPosition_8)),0,0,static_cast<int32_t>(offsetof(NetworkBones_tFCFBC8B2608A089A9B7A558502AE9D3CAC3E2636, ___Y_90_ROT_11)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7258[8] = 
 {
 	static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___head_4)),static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___leftHand_5)),static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___rightHand_6)),static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___headRig_7)),static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___leftHandRig_8)),static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___rightHandRig_9)),static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___photonView_10)),static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___pointsImage_11)),};

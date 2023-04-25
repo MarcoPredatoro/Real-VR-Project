@@ -1124,7 +1124,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral77F781BE1FA4EBA75ACC2DC942D3D87126A499DB
 IL2CPP_EXTERN_C String_t* _stringLiteral7E70AF961A2F88ADB9DB7B9C3B5F25A532C1570A;
 IL2CPP_EXTERN_C String_t* _stringLiteral7F85969F8B77C4212092B8B884696BD02CF363E2;
 IL2CPP_EXTERN_C String_t* _stringLiteral8443E3260D5BE8B74E20200607AB7BB16B783FEF;
-IL2CPP_EXTERN_C String_t* _stringLiteral85082395959DE2D0388E83726B5702141DA050C2;
+IL2CPP_EXTERN_C String_t* _stringLiteral857DD36CDBEEA9DD093EFA54FDDE87F915EC48CD;
 IL2CPP_EXTERN_C String_t* _stringLiteral86C677CA2B54E7E4E81E71A6AF30E985B484A0AF;
 IL2CPP_EXTERN_C String_t* _stringLiteral87F8ED9157125FFC4DA9E06A7B8011AD80A53FE1;
 IL2CPP_EXTERN_C String_t* _stringLiteral88A4E835FC47194C325AC1B4075B94D15767248A;
@@ -6970,18 +6970,14 @@ struct NetworkBones_tFCFBC8B2608A089A9B7A558502AE9D3CAC3E2636  : public MonoBeha
 {
 	// UnityEngine.Animator NetworkBones::PuppetAnimator
 	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___PuppetAnimator_5;
-	// UnityEngine.GameObject NetworkBones::RootPosition
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___RootPosition_6;
-	// UnityEngine.Transform NetworkBones::CharacterRootTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___CharacterRootTransform_7;
 	// Photon.Pun.PhotonView NetworkBones::pv
-	PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___pv_8;
+	PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___pv_6;
 	// System.Collections.Generic.Dictionary`2<System.Int32,System.Single[]> NetworkBones::kinectRotationsMap
-	Dictionary_2_t7318F453520192D4630D9C042513BF43E881DB16* ___kinectRotationsMap_9;
+	Dictionary_2_t7318F453520192D4630D9C042513BF43E881DB16* ___kinectRotationsMap_7;
 	// UnityEngine.Vector3 NetworkBones::hipPosition
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___hipPosition_10;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___hipPosition_8;
 	// UnityEngine.Quaternion NetworkBones::Y_90_ROT
-	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___Y_90_ROT_13;
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___Y_90_ROT_11;
 };
 
 // UnityEngine.UI.Selectable
@@ -21507,14 +21503,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticInteractable_OnCollisionEnter_m151
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral85082395959DE2D0388E83726B5702141DA050C2);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral857DD36CDBEEA9DD093EFA54FDDE87F915EC48CD);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD6FA65F1C0D22659482EA9A40B9B9FA5902B0EAF);
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
 	int32_t G_B4_0 = 0;
 	{
-		// if ((collision.gameObject.name == "Polo" || collision.gameObject.name == "Polo2") && canSendCollision)
+		// if ((collision.gameObject.name == "polo-with-bones" || collision.gameObject.name == "Polo2") && canSendCollision)
 		Collision_tBCC6AEBD9A63E6DA2E50660DAC03CDCB1FF7A9B0* L_0 = ___collision0;
 		NullCheck(L_0);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1;
@@ -21523,7 +21519,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticInteractable_OnCollisionEnter_m151
 		String_t* L_2;
 		L_2 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_1, NULL);
 		bool L_3;
-		L_3 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_2, _stringLiteral85082395959DE2D0388E83726B5702141DA050C2, NULL);
+		L_3 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_2, _stringLiteral857DD36CDBEEA9DD093EFA54FDDE87F915EC48CD, NULL);
 		if (L_3)
 		{
 			goto IL_002f;
@@ -22437,8 +22433,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkBones_Start_m93D0B860AFAE7214E781
 		// pv = GetComponent<PhotonView>();
 		PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* L_1;
 		L_1 = Component_GetComponent_TisPhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B_m746044A420F6E334D6664146FCFE7569712D22E2(__this, Component_GetComponent_TisPhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B_m746044A420F6E334D6664146FCFE7569712D22E2_RuntimeMethod_var);
-		__this->___pv_8 = L_1;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___pv_8), (void*)L_1);
+		__this->___pv_6 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___pv_6), (void*)L_1);
 		// }
 		return;
 	}
@@ -22490,7 +22486,7 @@ IL_0005:
 		L_6 = Animator_GetBoneTransform_m02042CB47C468D576C6EE436F4AA71D8C47AAF56(L_3, L_5, NULL);
 		V_2 = L_6;
 		// float[] rot = kinectRotationsMap[j];
-		Dictionary_2_t7318F453520192D4630D9C042513BF43E881DB16* L_7 = __this->___kinectRotationsMap_9;
+		Dictionary_2_t7318F453520192D4630D9C042513BF43E881DB16* L_7 = __this->___kinectRotationsMap_7;
 		int32_t L_8 = V_0;
 		NullCheck(L_7);
 		SingleU5BU5D_t89DEFE97BCEDB5857010E79ECE0F52CF6E93B87C* L_9;
@@ -22531,7 +22527,7 @@ IL_0005:
 	{
 		// finalJoint.position = hipPosition;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_26 = V_2;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27 = __this->___hipPosition_10;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27 = __this->___hipPosition_8;
 		NullCheck(L_26);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_26, L_27, NULL);
 	}
@@ -22589,18 +22585,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkBones_OnPhotonSerializeView_m3C41
 		NullCheck(L_2);
 		int32_t L_3 = 0;
 		RuntimeObject* L_4 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_3));
-		__this->___kinectRotationsMap_9 = ((Dictionary_2_t7318F453520192D4630D9C042513BF43E881DB16*)CastclassClass((RuntimeObject*)L_4, Dictionary_2_t7318F453520192D4630D9C042513BF43E881DB16_il2cpp_TypeInfo_var));
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___kinectRotationsMap_9), (void*)((Dictionary_2_t7318F453520192D4630D9C042513BF43E881DB16*)CastclassClass((RuntimeObject*)L_4, Dictionary_2_t7318F453520192D4630D9C042513BF43E881DB16_il2cpp_TypeInfo_var)));
+		__this->___kinectRotationsMap_7 = ((Dictionary_2_t7318F453520192D4630D9C042513BF43E881DB16*)CastclassClass((RuntimeObject*)L_4, Dictionary_2_t7318F453520192D4630D9C042513BF43E881DB16_il2cpp_TypeInfo_var));
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___kinectRotationsMap_7), (void*)((Dictionary_2_t7318F453520192D4630D9C042513BF43E881DB16*)CastclassClass((RuntimeObject*)L_4, Dictionary_2_t7318F453520192D4630D9C042513BF43E881DB16_il2cpp_TypeInfo_var)));
 		// hipPosition = (Vector3)data[1];
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_5 = V_0;
 		NullCheck(L_5);
 		int32_t L_6 = 1;
 		RuntimeObject* L_7 = (L_5)->GetAt(static_cast<il2cpp_array_size_t>(L_6));
-		__this->___hipPosition_10 = ((*(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)((Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)UnBox(L_7, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var))));
+		__this->___hipPosition_8 = ((*(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)((Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*)UnBox(L_7, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var))));
 		// mapBonesFromPhoton();
 		NetworkBones_mapBonesFromPhoton_mFBAA73233C216900B996463CD802D2142441230E(__this, NULL);
 		// Debug.Log("received hips: " + hipPosition.ToString());
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_8 = (&__this->___hipPosition_10);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_8 = (&__this->___hipPosition_8);
 		String_t* L_9;
 		L_9 = Vector3_ToString_m6C24B9F0382D25D75B05C606E127CD14660574EE(L_8, NULL);
 		String_t* L_10;
@@ -22619,7 +22615,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkBones__ctor_mA7AC473CBEEA873658C9
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_0;
 		memset((&L_0), 0, sizeof(L_0));
 		Quaternion__ctor_m868FD60AA65DD5A8AC0C5DEB0608381A8D85FCD8_inline((&L_0), (0.0f), (0.707109988f), (0.0f), (0.707109988f), /*hidden argument*/NULL);
-		__this->___Y_90_ROT_13 = L_0;
+		__this->___Y_90_ROT_11 = L_0;
 		MonoBehaviourPun__ctor_m52771D9D46565807FDF72A7B6622574D38C29A55(__this, NULL);
 		return;
 	}
