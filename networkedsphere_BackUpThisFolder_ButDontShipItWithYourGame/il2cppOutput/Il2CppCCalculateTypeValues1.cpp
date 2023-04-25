@@ -12898,14 +12898,14 @@ struct U3CFindSkeletonVisualGameObjectsU3Ed__52_tAEE38F2607C43B4EC514A9C784FC4E9
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___U3CrightSkeletonVisualTransformU3E5__2_4;
 };
 
-// HapticInteractable/<CollisionCooldown>d__13
-struct U3CCollisionCooldownU3Ed__13_t793AEC753384C2C2C9CC7126DEFA4C5AE026EE6B  : public RuntimeObject
+// HapticInteractable/<CollisionCooldown>d__11
+struct U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A  : public RuntimeObject
 {
-	// System.Int32 HapticInteractable/<CollisionCooldown>d__13::<>1__state
+	// System.Int32 HapticInteractable/<CollisionCooldown>d__11::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object HapticInteractable/<CollisionCooldown>d__13::<>2__current
+	// System.Object HapticInteractable/<CollisionCooldown>d__11::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// HapticInteractable HapticInteractable/<CollisionCooldown>d__13::<>4__this
+	// HapticInteractable HapticInteractable/<CollisionCooldown>d__11::<>4__this
 	HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906* ___U3CU3E4__this_2;
 };
 
@@ -42629,14 +42629,10 @@ struct HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906  : public Mo
 	uint32_t ___controllerCharacteristics_6;
 	// UnityEngine.XR.InputDevice HapticInteractable::targetDevice
 	InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD ___targetDevice_7;
-	// UnityEngine.GameObject HapticInteractable::Sphere
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___Sphere_8;
-	// UnityEngine.UI.Image HapticInteractable::pointsImage
-	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___pointsImage_9;
 	// System.Single HapticInteractable::collisionCooldown
-	float ___collisionCooldown_10;
+	float ___collisionCooldown_8;
 	// System.Boolean HapticInteractable::canSendCollision
-	bool ___canSendCollision_11;
+	bool ___canSendCollision_9;
 };
 
 // Oculus.Interaction.Samples.HideHandVisualOnGrab
@@ -45881,12 +45877,6 @@ struct Torch_t2727495FD114CB86B4B9E3D080325F104E638798  : public MonoBehaviour_t
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___torchBarImage_14;
 	// UnityEngine.Vector2 Torch::size
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___size_15;
-	// System.Single Torch::torchCooldown
-	float ___torchCooldown_16;
-	// System.Boolean Torch::torchOnCooldown
-	bool ___torchOnCooldown_17;
-	// System.Single Torch::torchCooldownTimer
-	float ___torchCooldownTimer_18;
 };
 
 // OVRTouchSample.TouchController
@@ -47842,26 +47832,24 @@ struct DistantInteractionPolylineVisual_t2291BAA19519BA2FCCE862EFAE55E2EA31D3948
 // EventManager
 struct EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A  : public MonoBehaviourPun_t64DD82CBA1C47A70448DAB2263AB90A4411621BD
 {
-	// UnityEngine.UI.Text EventManager::test
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___test_10;
 	// System.Single EventManager::threshold
-	float ___threshold_11;
+	float ___threshold_10;
 	// System.Int32 EventManager::points
-	int32_t ___points_12;
+	int32_t ___points_11;
 	// UnityEngine.Material EventManager::pointsBar
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___pointsBar_13;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___pointsBar_12;
 	// UnityEngine.UI.Image EventManager::pointer
-	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___pointer_14;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___pointer_13;
 	// UnityEngine.Vector2 EventManager::size
-	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___size_15;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___size_14;
 	// System.Single EventManager::maxPoints
-	float ___maxPoints_16;
+	float ___maxPoints_15;
 	// System.Single EventManager::minPoints
-	float ___minPoints_17;
+	float ___minPoints_16;
 	// FlashBang EventManager::flashBang
-	FlashBang_t54E642B069336B945FBCD9D203D5D6CA27FB6269* ___flashBang_18;
+	FlashBang_t54E642B069336B945FBCD9D203D5D6CA27FB6269* ___flashBang_17;
 	// Instantiation EventManager::decoyPolo
-	Instantiation_t782C3CB09C8FB734229108F1DB2C464876825E57* ___decoyPolo_19;
+	Instantiation_t782C3CB09C8FB734229108F1DB2C464876825E57* ___decoyPolo_18;
 };
 
 // UnityEngine.EventSystems.EventSystem
@@ -56402,7 +56390,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize7250 = { sizeof(U3CFadeFromW
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7251;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize7251 = { sizeof(FlashBang_t54E642B069336B945FBCD9D203D5D6CA27FB6269), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7252;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7252 = { sizeof(U3CCollisionCooldownU3Ed__13_t793AEC753384C2C2C9CC7126DEFA4C5AE026EE6B), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7252 = { sizeof(U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7253;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize7253 = { sizeof(HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7254;

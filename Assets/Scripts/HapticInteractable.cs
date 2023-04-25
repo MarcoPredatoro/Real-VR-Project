@@ -11,8 +11,8 @@ public class HapticInteractable : MonoBehaviour
     public float hapticDuration;
     public InputDeviceCharacteristics controllerCharacteristics;    
     private InputDevice targetDevice;
-    public GameObject Sphere;
-    public UnityEngine.UI.Image pointsImage;
+    //public GameObject Sphere;
+    //public UnityEngine.UI.Image pointsImage;
     public float collisionCooldown = 1f;
     private bool canSendCollision = true;
     // Start is called before the first frame update

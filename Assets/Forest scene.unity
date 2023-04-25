@@ -1356,54 +1356,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610460473}
   m_CullTransparentMesh: 1
---- !u!1 &664960537
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 664960539}
-  - component: {fileID: 664960538}
-  m_Layer: 0
-  m_Name: TorchObj
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &664960538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664960537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74089dc2ed086461cbd7c3b4450ac5b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 0}
-  controllerCharacteristics: 320
-  torchBar: {fileID: 2100000, guid: 2d6dc99f07ad34c3bbd15f44e20bc0fc, type: 2}
-  torchBarImage: {fileID: 610460475}
---- !u!4 &664960539
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664960537}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3537094, y: -1.6722813, z: 6.40943}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 23
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &783313656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2902,7 +2854,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f8c3ee96ccf4c7d88fefc842f7dedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test: {fileID: 0}
   threshold: 50
   points: 0
   pointsBar: {fileID: 2100000, guid: 49d2a2d9f57f84bbab1887576d40f2d0, type: 2}
@@ -3150,7 +3101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &2131416095
 Light:
   m_ObjectHideFlags: 0
