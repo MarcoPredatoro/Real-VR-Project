@@ -45857,26 +45857,34 @@ struct Torch_t2727495FD114CB86B4B9E3D080325F104E638798  : public MonoBehaviour_t
 {
 	// UnityEngine.Material Torch::material
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___material_4;
+	// UnityEngine.Material Torch::PoloMatArmour
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___PoloMatArmour_5;
+	// UnityEngine.Material Torch::PoloTank
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___PoloTank_6;
+	// UnityEngine.Material Torch::PoloBodySuit
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___PoloBodySuit_7;
 	// UnityEngine.XR.InputDeviceCharacteristics Torch::controllerCharacteristics
-	uint32_t ___controllerCharacteristics_5;
+	uint32_t ___controllerCharacteristics_8;
 	// UnityEngine.XR.InputDevice Torch::targetDevice
-	InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD ___targetDevice_6;
+	InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD ___targetDevice_9;
 	// UnityEngine.Light Torch::spotLight
-	Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* ___spotLight_7;
+	Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* ___spotLight_10;
 	// System.Single Torch::maxSpotAngle
-	float ___maxSpotAngle_9;
+	float ___maxSpotAngle_12;
 	// System.Single Torch::minSpotAngle
-	float ___minSpotAngle_10;
+	float ___minSpotAngle_13;
 	// System.Single Torch::spotAngleDecreaseRate
-	float ___spotAngleDecreaseRate_11;
+	float ___spotAngleDecreaseRate_14;
 	// System.Single Torch::spotAngleIncreaseRate
-	float ___spotAngleIncreaseRate_12;
+	float ___spotAngleIncreaseRate_15;
 	// UnityEngine.Material Torch::torchBar
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___torchBar_13;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___torchBar_16;
+	// UnityEngine.Material Torch::clawTorch
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___clawTorch_17;
 	// UnityEngine.UI.Image Torch::torchBarImage
-	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___torchBarImage_14;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___torchBarImage_18;
 	// UnityEngine.Vector2 Torch::size
-	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___size_15;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___size_19;
 };
 
 // OVRTouchSample.TouchController

@@ -2227,6 +2227,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -28.189
       objectReference: {fileID: 0}
+    - target: {fileID: -8428384778347268400, guid: 29a590de967194bf1a086b9ea5f995d2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cfe97e73ed4074d4d9ffd8bbf4ea7ad6, type: 2}
     - target: {fileID: 919132149155446097, guid: 29a590de967194bf1a086b9ea5f995d2, type: 3}
       propertyPath: m_Name
       value: ClawRealLeft
@@ -3205,8 +3209,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: d7bca0912ac8842888f16a3a8cf07937, type: 2}
+  PoloMatArmour: {fileID: 2100000, guid: 71b8c3106e6eb4f0fbba63327d372a43, type: 2}
+  PoloTank: {fileID: 2100000, guid: 05bed0be7564746029dfc1a49b569e7f, type: 2}
+  PoloBodySuit: {fileID: 2100000, guid: e5d40fa501a6c405e880f502359a4d3e, type: 2}
   controllerCharacteristics: 320
   torchBar: {fileID: 2100000, guid: 2d6dc99f07ad34c3bbd15f44e20bc0fc, type: 2}
+  clawTorch: {fileID: 2100000, guid: cfe97e73ed4074d4d9ffd8bbf4ea7ad6, type: 2}
   torchBarImage: {fileID: 0}
 --- !u!4 &8214231547944689500 stripped
 Transform:

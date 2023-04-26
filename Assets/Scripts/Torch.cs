@@ -9,6 +9,10 @@ using UnityEngine.UI;
 public class Torch : MonoBehaviour
 {
     public Material material;
+    public Material PoloMatArmour;
+    public Material PoloTank;
+    public Material PoloBodySuit;
+
 
     public InputDeviceCharacteristics controllerCharacteristics;    
     private InputDevice targetDevice;
@@ -20,6 +24,7 @@ public class Torch : MonoBehaviour
     private float spotAngleIncreaseRate = 40f;
 
     public Material torchBar;
+    public Material clawTorch;
     public Image torchBarImage;
     private Vector2 size;
 
@@ -81,6 +86,37 @@ public class Torch : MonoBehaviour
         else{
             material.SetVector("_LightDirection", spotLight.transform.forward);
         }
+
+        PoloMatArmour.SetVector("_LightPosition",  spotLight.transform.position);
+        PoloMatArmour.SetFloat("_LightAngle", spotLight.spotAngle * TO_RADIAN);
+
+        if(spotLight.enabled){
+            PoloMatArmour.SetVector("_LightDirection", -spotLight.transform.forward);
+        }
+        else{
+            PoloMatArmour.SetVector("_LightDirection", spotLight.transform.forward);
+        }
+
+        PoloTank.SetVector("_LightPosition",  spotLight.transform.position);
+        PoloTank.SetFloat("_LightAngle", spotLight.spotAngle * TO_RADIAN);
+
+        if(spotLight.enabled){
+            PoloTank.SetVector("_LightDirection", -spotLight.transform.forward);
+        }
+        else{
+            PoloTank.SetVector("_LightDirection", spotLight.transform.forward);
+        }
+
+        PoloBodySuit.SetVector("_LightPosition",  spotLight.transform.position);
+        PoloBodySuit.SetFloat("_LightAngle", spotLight.spotAngle * TO_RADIAN);
+
+        if(spotLight.enabled){
+            PoloBodySuit.SetVector("_LightDirection", -spotLight.transform.forward);
+        }
+        else{
+            PoloBodySuit.SetVector("_LightDirection", spotLight.transform.forward);
+        }
+
         if(!targetDevice.isValid)
         {
             
@@ -100,6 +136,7 @@ public class Torch : MonoBehaviour
         float p = 1.0f - ((spotLight.spotAngle - minSpotAngle) / (maxSpotAngle - minSpotAngle));
         // Debug.Log(p);
         torchBar.SetFloat("_Points", p);
+        clawTorch.SetFloat("_Points", p);
     }
 
     

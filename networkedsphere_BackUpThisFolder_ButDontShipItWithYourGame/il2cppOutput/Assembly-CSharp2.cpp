@@ -1099,7 +1099,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral5CAD8C023C852AF66910DC7FCA29C55DEC394E72
 IL2CPP_EXTERN_C String_t* _stringLiteral5D6A39CF1E3A2BB7700481DB871D78DDB02A911D;
 IL2CPP_EXTERN_C String_t* _stringLiteral5D71F5C87DB18CFE161C3A05DA26797B4AC73E8F;
 IL2CPP_EXTERN_C String_t* _stringLiteral5DF695F96AE9B00DBD2CB8F12E765C3159E02AF8;
-IL2CPP_EXTERN_C String_t* _stringLiteral5E59A9F9DA37A05B58E7A1FCC2DE7D33725F73CA;
 IL2CPP_EXTERN_C String_t* _stringLiteral5E9CB63E374EAFC2ED6E197340BF5CEC1872FA74;
 IL2CPP_EXTERN_C String_t* _stringLiteral5F1B2F32F71B6B2B975553F27D779BF840265BB1;
 IL2CPP_EXTERN_C String_t* _stringLiteral60D25464A0D2697B9DE85A8CE7C6E223B98C82E6;
@@ -6555,26 +6554,34 @@ struct Torch_t2727495FD114CB86B4B9E3D080325F104E638798  : public MonoBehaviour_t
 {
 	// UnityEngine.Material Torch::material
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___material_4;
+	// UnityEngine.Material Torch::PoloMatArmour
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___PoloMatArmour_5;
+	// UnityEngine.Material Torch::PoloTank
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___PoloTank_6;
+	// UnityEngine.Material Torch::PoloBodySuit
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___PoloBodySuit_7;
 	// UnityEngine.XR.InputDeviceCharacteristics Torch::controllerCharacteristics
-	uint32_t ___controllerCharacteristics_5;
+	uint32_t ___controllerCharacteristics_8;
 	// UnityEngine.XR.InputDevice Torch::targetDevice
-	InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD ___targetDevice_6;
+	InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD ___targetDevice_9;
 	// UnityEngine.Light Torch::spotLight
-	Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* ___spotLight_7;
+	Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* ___spotLight_10;
 	// System.Single Torch::maxSpotAngle
-	float ___maxSpotAngle_9;
+	float ___maxSpotAngle_12;
 	// System.Single Torch::minSpotAngle
-	float ___minSpotAngle_10;
+	float ___minSpotAngle_13;
 	// System.Single Torch::spotAngleDecreaseRate
-	float ___spotAngleDecreaseRate_11;
+	float ___spotAngleDecreaseRate_14;
 	// System.Single Torch::spotAngleIncreaseRate
-	float ___spotAngleIncreaseRate_12;
+	float ___spotAngleIncreaseRate_15;
 	// UnityEngine.Material Torch::torchBar
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___torchBar_13;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___torchBar_16;
+	// UnityEngine.Material Torch::clawTorch
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___clawTorch_17;
 	// UnityEngine.UI.Image Torch::torchBarImage
-	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___torchBarImage_14;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___torchBarImage_18;
 	// UnityEngine.Vector2 Torch::size
-	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___size_15;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___size_19;
 };
 
 // UnityEngine.EventSystems.UIBehaviour
@@ -10023,8 +10030,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRGrabber_GrabVolumeEnable_m0DF038ADAA6
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRGrabber_OffhandGrabbed_m9C044BADB86E5FC8DAE222E8F1EE0C346897EB8A (OVRGrabber_tC16FABB1A90FB635BDE98E18F032A793D7033FCC* __this, OVRGrabbable_t322F6468B588212B888E9397723397A16E7614B5* ___grabbable0, const RuntimeMethod* method) ;
 // System.Void OVRGrabber::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRGrabber__ctor_m2BF96B9B9B6F6D0158D55F54FC241827EBA20F88 (OVRGrabber_tC16FABB1A90FB635BDE98E18F032A793D7033FCC* __this, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Transform::LookAt(UnityEngine.Transform)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_LookAt_mA8567593181FD78BBDC2AF29AD99F93BDB2976B2 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___target0, const RuntimeMethod* method) ;
 // System.Single UnityEngine.Mathf::Clamp01(System.Single)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___value0, const RuntimeMethod* method) ;
 // UnityEngine.Quaternion UnityEngine.Quaternion::Internal_FromEulerRad(UnityEngine.Vector3)
@@ -23264,19 +23269,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Torch_Start_m704AC2D3369A9BD06D90FD52D8A
 		// spotLight = GetComponent<Light>();
 		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_0;
 		L_0 = Component_GetComponent_TisLight_t1E68479B7782AF2050FAA02A5DC612FD034F18F3_mF4816FA12B6F220CA55D47D669D7E50DC118B9E9(__this, Component_GetComponent_TisLight_t1E68479B7782AF2050FAA02A5DC612FD034F18F3_mF4816FA12B6F220CA55D47D669D7E50DC118B9E9_RuntimeMethod_var);
-		__this->___spotLight_7 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___spotLight_7), (void*)L_0);
+		__this->___spotLight_10 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___spotLight_10), (void*)L_0);
 		// spotLight.enabled = false;
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_1 = __this->___spotLight_7;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_1 = __this->___spotLight_10;
 		NullCheck(L_1);
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_1, (bool)0, NULL);
 		// spotLight.spotAngle = maxSpotAngle;
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_2 = __this->___spotLight_7;
-		float L_3 = __this->___maxSpotAngle_9;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_2 = __this->___spotLight_10;
+		float L_3 = __this->___maxSpotAngle_12;
 		NullCheck(L_2);
 		Light_set_spotAngle_mB27C0667B5C07771750AF66E36F2CA02D272C61B(L_2, L_3, NULL);
 		// Rect t = torchBarImage.transform.GetComponent<RectTransform>().rect;
-		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_4 = __this->___torchBarImage_14;
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_4 = __this->___torchBarImage_18;
 		NullCheck(L_4);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5;
 		L_5 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_4, NULL);
@@ -23295,7 +23300,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Torch_Start_m704AC2D3369A9BD06D90FD52D8A
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_10;
 		memset((&L_10), 0, sizeof(L_10));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_10), L_8, L_9, /*hidden argument*/NULL);
-		__this->___size_15 = L_10;
+		__this->___size_19 = L_10;
 		// }
 		return;
 	}
@@ -23321,7 +23326,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Torch_TryInitialize_m39DD3852DA80061D267
 		List_1__ctor_mF7ACC153F11A3260DAACDCA56B0A70A4BFA61EA4(L_0, List_1__ctor_mF7ACC153F11A3260DAACDCA56B0A70A4BFA61EA4_RuntimeMethod_var);
 		V_0 = L_0;
 		// InputDevices.GetDevicesWithCharacteristics(controllerCharacteristics, devices);
-		uint32_t L_1 = __this->___controllerCharacteristics_5;
+		uint32_t L_1 = __this->___controllerCharacteristics_8;
 		List_1_tB66D13E0427CA48C600AEA4DBA5B173C3734C6CE* L_2 = V_0;
 		InputDevices_GetDevicesWithCharacteristics_m82F54DE2802FCE4EB730FCFBF8731CA91A27DEB0(L_1, L_2, NULL);
 		// if (devices.Count > 0)
@@ -23342,7 +23347,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Torch_TryInitialize_m39DD3852DA80061D267
 		NullCheck(L_6);
 		InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD L_7;
 		L_7 = List_1_get_Item_mB0ED54544433CE428ACEC0FE2E6FEE53E11EE6D2(L_6, 0, List_1_get_Item_mB0ED54544433CE428ACEC0FE2E6FEE53E11EE6D2_RuntimeMethod_var);
-		__this->___targetDevice_6 = L_7;
+		__this->___targetDevice_9 = L_7;
 	}
 
 IL_0030:
@@ -23365,7 +23370,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Torch_UpdateHandAnimation_m0DE53769EF452
 	bool V_2 = false;
 	{
 		// if(targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
-		InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD* L_0 = (&__this->___targetDevice_6);
+		InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD* L_0 = (&__this->___targetDevice_9);
 		il2cpp_codegen_runtime_class_init_inline(CommonUsages_t9208F514F1E77BE70AC53EFEC94D57EDDAF3B8E1_il2cpp_TypeInfo_var);
 		InputFeatureUsage_1_t311D0F42F1A7BF37D3CEAC15A53A1F24165F1848 L_1 = ((CommonUsages_t9208F514F1E77BE70AC53EFEC94D57EDDAF3B8E1_StaticFields*)il2cpp_codegen_static_fields_for(CommonUsages_t9208F514F1E77BE70AC53EFEC94D57EDDAF3B8E1_il2cpp_TypeInfo_var))->___trigger_15;
 		bool L_2;
@@ -23389,17 +23394,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Torch_UpdateHandAnimation_m0DE53769EF452
 	}
 	{
 		// spotLight.enabled = true;
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_6 = __this->___spotLight_7;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_6 = __this->___spotLight_10;
 		NullCheck(L_6);
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_6, (bool)1, NULL);
 		// spotLight.spotAngle = Mathf.Max(minSpotAngle, spotLight.spotAngle - spotAngleDecreaseRate * Time.deltaTime);
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_7 = __this->___spotLight_7;
-		float L_8 = __this->___minSpotAngle_10;
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_9 = __this->___spotLight_7;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_7 = __this->___spotLight_10;
+		float L_8 = __this->___minSpotAngle_13;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_9 = __this->___spotLight_10;
 		NullCheck(L_9);
 		float L_10;
 		L_10 = Light_get_spotAngle_m28B2CD7ADE25422693E7B1FA23E8615E9D7098FC(L_9, NULL);
-		float L_11 = __this->___spotAngleDecreaseRate_11;
+		float L_11 = __this->___spotAngleDecreaseRate_14;
 		float L_12;
 		L_12 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		float L_13;
@@ -23412,17 +23417,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Torch_UpdateHandAnimation_m0DE53769EF452
 IL_0067:
 	{
 		// spotLight.enabled = false;
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_14 = __this->___spotLight_7;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_14 = __this->___spotLight_10;
 		NullCheck(L_14);
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_14, (bool)0, NULL);
 		// spotLight.spotAngle = Mathf.Min(maxSpotAngle, spotLight.spotAngle + spotAngleIncreaseRate * Time.deltaTime);
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_15 = __this->___spotLight_7;
-		float L_16 = __this->___maxSpotAngle_9;
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_17 = __this->___spotLight_7;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_15 = __this->___spotLight_10;
+		float L_16 = __this->___maxSpotAngle_12;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_17 = __this->___spotLight_10;
 		NullCheck(L_17);
 		float L_18;
 		L_18 = Light_get_spotAngle_m28B2CD7ADE25422693E7B1FA23E8615E9D7098FC(L_17, NULL);
-		float L_19 = __this->___spotAngleIncreaseRate_12;
+		float L_19 = __this->___spotAngleIncreaseRate_15;
 		float L_20;
 		L_20 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		float L_21;
@@ -23454,10 +23459,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Torch_Update_mD0570A44B6FFA2920D9ADA04EB
 	}
 	bool V_0 = false;
 	bool V_1 = false;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
 	{
 		// material.SetVector("_LightPosition",  spotLight.transform.position);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_0 = __this->___material_4;
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_1 = __this->___spotLight_7;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_1 = __this->___spotLight_10;
 		NullCheck(L_1);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
 		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_1, NULL);
@@ -23470,14 +23478,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Torch_Update_mD0570A44B6FFA2920D9ADA04EB
 		Material_SetVector_m69444B8040D955821F241113446CC8713C9E12D1(L_0, _stringLiteral629C681B696A5B0A980A6B4BE5EA5CC59FAC5D76, L_4, NULL);
 		// material.SetFloat ("_LightAngle", spotLight.spotAngle * TO_RADIAN);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_5 = __this->___material_4;
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_6 = __this->___spotLight_7;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_6 = __this->___spotLight_10;
 		NullCheck(L_6);
 		float L_7;
 		L_7 = Light_get_spotAngle_m28B2CD7ADE25422693E7B1FA23E8615E9D7098FC(L_6, NULL);
 		NullCheck(L_5);
 		Material_SetFloat_m879CF81D740BAE6F23C9822400679F4D16365836(L_5, _stringLiteral6FBD8AC4E3773BDDF19000DF4E70F05BEF471EE9, ((float)il2cpp_codegen_multiply(L_7, (0.0174527783f))), NULL);
 		// if(spotLight.enabled){
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_8 = __this->___spotLight_7;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_8 = __this->___spotLight_10;
 		NullCheck(L_8);
 		bool L_9;
 		L_9 = Behaviour_get_enabled_mAAC9F15E9EBF552217A5AE2681589CC0BFA300C1(L_8, NULL);
@@ -23491,7 +23499,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Torch_Update_mD0570A44B6FFA2920D9ADA04EB
 	{
 		// material.SetVector("_LightDirection", -spotLight.transform.forward);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_11 = __this->___material_4;
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_12 = __this->___spotLight_7;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_12 = __this->___spotLight_10;
 		NullCheck(L_12);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13;
 		L_13 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_12, NULL);
@@ -23511,7 +23519,7 @@ IL_0087:
 	{
 		// material.SetVector("_LightDirection", spotLight.transform.forward);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_17 = __this->___material_4;
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_18 = __this->___spotLight_7;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_18 = __this->___spotLight_10;
 		NullCheck(L_18);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_19;
 		L_19 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_18, NULL);
@@ -23526,30 +23534,243 @@ IL_0087:
 
 IL_00af:
 	{
-		// if(!targetDevice.isValid)
-		InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD* L_22 = (&__this->___targetDevice_6);
-		bool L_23;
-		L_23 = InputDevice_get_isValid_mA908CF8195CECA44FF457430AFF9198C3FEC0948(L_22, NULL);
-		V_1 = (bool)((((int32_t)L_23) == ((int32_t)0))? 1 : 0);
-		bool L_24 = V_1;
-		if (!L_24)
+		// PoloMatArmour.SetVector("_LightPosition",  spotLight.transform.position);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_22 = __this->___PoloMatArmour_5;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_23 = __this->___spotLight_10;
+		NullCheck(L_23);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_24;
+		L_24 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_23, NULL);
+		NullCheck(L_24);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25;
+		L_25 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_24, NULL);
+		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_26;
+		L_26 = Vector4_op_Implicit_m2ECA73F345A7AD84144133E9E51657204002B12D_inline(L_25, NULL);
+		NullCheck(L_22);
+		Material_SetVector_m69444B8040D955821F241113446CC8713C9E12D1(L_22, _stringLiteral629C681B696A5B0A980A6B4BE5EA5CC59FAC5D76, L_26, NULL);
+		// PoloMatArmour.SetFloat("_LightAngle", spotLight.spotAngle * TO_RADIAN);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_27 = __this->___PoloMatArmour_5;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_28 = __this->___spotLight_10;
+		NullCheck(L_28);
+		float L_29;
+		L_29 = Light_get_spotAngle_m28B2CD7ADE25422693E7B1FA23E8615E9D7098FC(L_28, NULL);
+		NullCheck(L_27);
+		Material_SetFloat_m879CF81D740BAE6F23C9822400679F4D16365836(L_27, _stringLiteral6FBD8AC4E3773BDDF19000DF4E70F05BEF471EE9, ((float)il2cpp_codegen_multiply(L_29, (0.0174527783f))), NULL);
+		// if(spotLight.enabled){
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_30 = __this->___spotLight_10;
+		NullCheck(L_30);
+		bool L_31;
+		L_31 = Behaviour_get_enabled_mAAC9F15E9EBF552217A5AE2681589CC0BFA300C1(L_30, NULL);
+		V_1 = L_31;
+		bool L_32 = V_1;
+		if (!L_32)
 		{
-			goto IL_00cc;
+			goto IL_0135;
+		}
+	}
+	{
+		// PoloMatArmour.SetVector("_LightDirection", -spotLight.transform.forward);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_33 = __this->___PoloMatArmour_5;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_34 = __this->___spotLight_10;
+		NullCheck(L_34);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_35;
+		L_35 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_34, NULL);
+		NullCheck(L_35);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_36;
+		L_36 = Transform_get_forward_mFCFACF7165FDAB21E80E384C494DF278386CEE2F(L_35, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_37;
+		L_37 = Vector3_op_UnaryNegation_m5450829F333BD2A88AF9A592C4EE331661225915_inline(L_36, NULL);
+		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_38;
+		L_38 = Vector4_op_Implicit_m2ECA73F345A7AD84144133E9E51657204002B12D_inline(L_37, NULL);
+		NullCheck(L_33);
+		Material_SetVector_m69444B8040D955821F241113446CC8713C9E12D1(L_33, _stringLiteral9DDA1C3AEE245E1050F9E53868138E86EE051854, L_38, NULL);
+		goto IL_015d;
+	}
+
+IL_0135:
+	{
+		// PoloMatArmour.SetVector("_LightDirection", spotLight.transform.forward);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_39 = __this->___PoloMatArmour_5;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_40 = __this->___spotLight_10;
+		NullCheck(L_40);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_41;
+		L_41 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_40, NULL);
+		NullCheck(L_41);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_42;
+		L_42 = Transform_get_forward_mFCFACF7165FDAB21E80E384C494DF278386CEE2F(L_41, NULL);
+		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_43;
+		L_43 = Vector4_op_Implicit_m2ECA73F345A7AD84144133E9E51657204002B12D_inline(L_42, NULL);
+		NullCheck(L_39);
+		Material_SetVector_m69444B8040D955821F241113446CC8713C9E12D1(L_39, _stringLiteral9DDA1C3AEE245E1050F9E53868138E86EE051854, L_43, NULL);
+	}
+
+IL_015d:
+	{
+		// PoloTank.SetVector("_LightPosition",  spotLight.transform.position);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_44 = __this->___PoloTank_6;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_45 = __this->___spotLight_10;
+		NullCheck(L_45);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_46;
+		L_46 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_45, NULL);
+		NullCheck(L_46);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_47;
+		L_47 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_46, NULL);
+		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_48;
+		L_48 = Vector4_op_Implicit_m2ECA73F345A7AD84144133E9E51657204002B12D_inline(L_47, NULL);
+		NullCheck(L_44);
+		Material_SetVector_m69444B8040D955821F241113446CC8713C9E12D1(L_44, _stringLiteral629C681B696A5B0A980A6B4BE5EA5CC59FAC5D76, L_48, NULL);
+		// PoloTank.SetFloat("_LightAngle", spotLight.spotAngle * TO_RADIAN);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_49 = __this->___PoloTank_6;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_50 = __this->___spotLight_10;
+		NullCheck(L_50);
+		float L_51;
+		L_51 = Light_get_spotAngle_m28B2CD7ADE25422693E7B1FA23E8615E9D7098FC(L_50, NULL);
+		NullCheck(L_49);
+		Material_SetFloat_m879CF81D740BAE6F23C9822400679F4D16365836(L_49, _stringLiteral6FBD8AC4E3773BDDF19000DF4E70F05BEF471EE9, ((float)il2cpp_codegen_multiply(L_51, (0.0174527783f))), NULL);
+		// if(spotLight.enabled){
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_52 = __this->___spotLight_10;
+		NullCheck(L_52);
+		bool L_53;
+		L_53 = Behaviour_get_enabled_mAAC9F15E9EBF552217A5AE2681589CC0BFA300C1(L_52, NULL);
+		V_2 = L_53;
+		bool L_54 = V_2;
+		if (!L_54)
+		{
+			goto IL_01e3;
+		}
+	}
+	{
+		// PoloTank.SetVector("_LightDirection", -spotLight.transform.forward);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_55 = __this->___PoloTank_6;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_56 = __this->___spotLight_10;
+		NullCheck(L_56);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_57;
+		L_57 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_56, NULL);
+		NullCheck(L_57);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_58;
+		L_58 = Transform_get_forward_mFCFACF7165FDAB21E80E384C494DF278386CEE2F(L_57, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_59;
+		L_59 = Vector3_op_UnaryNegation_m5450829F333BD2A88AF9A592C4EE331661225915_inline(L_58, NULL);
+		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_60;
+		L_60 = Vector4_op_Implicit_m2ECA73F345A7AD84144133E9E51657204002B12D_inline(L_59, NULL);
+		NullCheck(L_55);
+		Material_SetVector_m69444B8040D955821F241113446CC8713C9E12D1(L_55, _stringLiteral9DDA1C3AEE245E1050F9E53868138E86EE051854, L_60, NULL);
+		goto IL_020b;
+	}
+
+IL_01e3:
+	{
+		// PoloTank.SetVector("_LightDirection", spotLight.transform.forward);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_61 = __this->___PoloTank_6;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_62 = __this->___spotLight_10;
+		NullCheck(L_62);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_63;
+		L_63 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_62, NULL);
+		NullCheck(L_63);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_64;
+		L_64 = Transform_get_forward_mFCFACF7165FDAB21E80E384C494DF278386CEE2F(L_63, NULL);
+		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_65;
+		L_65 = Vector4_op_Implicit_m2ECA73F345A7AD84144133E9E51657204002B12D_inline(L_64, NULL);
+		NullCheck(L_61);
+		Material_SetVector_m69444B8040D955821F241113446CC8713C9E12D1(L_61, _stringLiteral9DDA1C3AEE245E1050F9E53868138E86EE051854, L_65, NULL);
+	}
+
+IL_020b:
+	{
+		// PoloBodySuit.SetVector("_LightPosition",  spotLight.transform.position);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_66 = __this->___PoloBodySuit_7;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_67 = __this->___spotLight_10;
+		NullCheck(L_67);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_68;
+		L_68 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_67, NULL);
+		NullCheck(L_68);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_69;
+		L_69 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_68, NULL);
+		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_70;
+		L_70 = Vector4_op_Implicit_m2ECA73F345A7AD84144133E9E51657204002B12D_inline(L_69, NULL);
+		NullCheck(L_66);
+		Material_SetVector_m69444B8040D955821F241113446CC8713C9E12D1(L_66, _stringLiteral629C681B696A5B0A980A6B4BE5EA5CC59FAC5D76, L_70, NULL);
+		// PoloBodySuit.SetFloat("_LightAngle", spotLight.spotAngle * TO_RADIAN);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_71 = __this->___PoloBodySuit_7;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_72 = __this->___spotLight_10;
+		NullCheck(L_72);
+		float L_73;
+		L_73 = Light_get_spotAngle_m28B2CD7ADE25422693E7B1FA23E8615E9D7098FC(L_72, NULL);
+		NullCheck(L_71);
+		Material_SetFloat_m879CF81D740BAE6F23C9822400679F4D16365836(L_71, _stringLiteral6FBD8AC4E3773BDDF19000DF4E70F05BEF471EE9, ((float)il2cpp_codegen_multiply(L_73, (0.0174527783f))), NULL);
+		// if(spotLight.enabled){
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_74 = __this->___spotLight_10;
+		NullCheck(L_74);
+		bool L_75;
+		L_75 = Behaviour_get_enabled_mAAC9F15E9EBF552217A5AE2681589CC0BFA300C1(L_74, NULL);
+		V_3 = L_75;
+		bool L_76 = V_3;
+		if (!L_76)
+		{
+			goto IL_0291;
+		}
+	}
+	{
+		// PoloBodySuit.SetVector("_LightDirection", -spotLight.transform.forward);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_77 = __this->___PoloBodySuit_7;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_78 = __this->___spotLight_10;
+		NullCheck(L_78);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_79;
+		L_79 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_78, NULL);
+		NullCheck(L_79);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_80;
+		L_80 = Transform_get_forward_mFCFACF7165FDAB21E80E384C494DF278386CEE2F(L_79, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_81;
+		L_81 = Vector3_op_UnaryNegation_m5450829F333BD2A88AF9A592C4EE331661225915_inline(L_80, NULL);
+		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_82;
+		L_82 = Vector4_op_Implicit_m2ECA73F345A7AD84144133E9E51657204002B12D_inline(L_81, NULL);
+		NullCheck(L_77);
+		Material_SetVector_m69444B8040D955821F241113446CC8713C9E12D1(L_77, _stringLiteral9DDA1C3AEE245E1050F9E53868138E86EE051854, L_82, NULL);
+		goto IL_02b9;
+	}
+
+IL_0291:
+	{
+		// PoloBodySuit.SetVector("_LightDirection", spotLight.transform.forward);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_83 = __this->___PoloBodySuit_7;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_84 = __this->___spotLight_10;
+		NullCheck(L_84);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_85;
+		L_85 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_84, NULL);
+		NullCheck(L_85);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_86;
+		L_86 = Transform_get_forward_mFCFACF7165FDAB21E80E384C494DF278386CEE2F(L_85, NULL);
+		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_87;
+		L_87 = Vector4_op_Implicit_m2ECA73F345A7AD84144133E9E51657204002B12D_inline(L_86, NULL);
+		NullCheck(L_83);
+		Material_SetVector_m69444B8040D955821F241113446CC8713C9E12D1(L_83, _stringLiteral9DDA1C3AEE245E1050F9E53868138E86EE051854, L_87, NULL);
+	}
+
+IL_02b9:
+	{
+		// if(!targetDevice.isValid)
+		InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD* L_88 = (&__this->___targetDevice_9);
+		bool L_89;
+		L_89 = InputDevice_get_isValid_mA908CF8195CECA44FF457430AFF9198C3FEC0948(L_88, NULL);
+		V_4 = (bool)((((int32_t)L_89) == ((int32_t)0))? 1 : 0);
+		bool L_90 = V_4;
+		if (!L_90)
+		{
+			goto IL_02d8;
 		}
 	}
 	{
 		// TryInitialize();
 		Torch_TryInitialize_m39DD3852DA80061D26793CE5DD5701601854ED98(__this, NULL);
-		goto IL_00d5;
+		goto IL_02e1;
 	}
 
-IL_00cc:
+IL_02d8:
 	{
 		// UpdateHandAnimation();
 		Torch_UpdateHandAnimation_m0DE53769EF4526C80513047A083B479466D6E74E(__this, NULL);
 	}
 
-IL_00d5:
+IL_02e1:
 	{
 		// updateTorchBar();
 		Torch_updateTorchBar_mF49B261C077D51DB92A51F536CE37D3186230DD7(__this, NULL);
@@ -23569,19 +23790,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Torch_updateTorchBar_mF49B261C077D51DB92
 	float V_0 = 0.0f;
 	{
 		// float p = 1.0f - ((spotLight.spotAngle - minSpotAngle) / (maxSpotAngle - minSpotAngle));
-		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_0 = __this->___spotLight_7;
+		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_0 = __this->___spotLight_10;
 		NullCheck(L_0);
 		float L_1;
 		L_1 = Light_get_spotAngle_m28B2CD7ADE25422693E7B1FA23E8615E9D7098FC(L_0, NULL);
-		float L_2 = __this->___minSpotAngle_10;
-		float L_3 = __this->___maxSpotAngle_9;
-		float L_4 = __this->___minSpotAngle_10;
+		float L_2 = __this->___minSpotAngle_13;
+		float L_3 = __this->___maxSpotAngle_12;
+		float L_4 = __this->___minSpotAngle_13;
 		V_0 = ((float)il2cpp_codegen_subtract((1.0f), ((float)(((float)il2cpp_codegen_subtract(L_1, L_2))/((float)il2cpp_codegen_subtract(L_3, L_4))))));
 		// torchBar.SetFloat("_Points", p);
-		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_5 = __this->___torchBar_13;
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_5 = __this->___torchBar_16;
 		float L_6 = V_0;
 		NullCheck(L_5);
 		Material_SetFloat_m879CF81D740BAE6F23C9822400679F4D16365836(L_5, _stringLiteral07C3DCF151057E25C6B8396189B79E6863EEB5F5, L_6, NULL);
+		// clawTorch.SetFloat("_Points", p);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_7 = __this->___clawTorch_17;
+		float L_8 = V_0;
+		NullCheck(L_7);
+		Material_SetFloat_m879CF81D740BAE6F23C9822400679F4D16365836(L_7, _stringLiteral07C3DCF151057E25C6B8396189B79E6863EEB5F5, L_8, NULL);
 		// }
 		return;
 	}
@@ -23591,13 +23817,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Torch__ctor_mF2E4938DE1A60EC3BFBC8AC6BF3
 {
 	{
 		// private float maxSpotAngle = 50f;
-		__this->___maxSpotAngle_9 = (50.0f);
+		__this->___maxSpotAngle_12 = (50.0f);
 		// private float minSpotAngle = 0f;
-		__this->___minSpotAngle_10 = (0.0f);
+		__this->___minSpotAngle_13 = (0.0f);
 		// private float spotAngleDecreaseRate = 15f;
-		__this->___spotAngleDecreaseRate_11 = (15.0f);
+		__this->___spotAngleDecreaseRate_14 = (15.0f);
 		// private float spotAngleIncreaseRate = 40f;
-		__this->___spotAngleIncreaseRate_12 = (40.0f);
+		__this->___spotAngleIncreaseRate_15 = (40.0f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
@@ -30861,163 +31087,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DistanceGrabber__ctor_m88619531E7CC5EF3A
 		// int m_obstructionLayer = 0;
 		__this->___m_obstructionLayer_33 = 0;
 		OVRGrabber__ctor_m2BF96B9B9B6F6D0158D55F54FC241827EBA20F88(__this, NULL);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void OculusSampleFramework.GrabbableCrosshair::Start()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GrabbableCrosshair_Start_mB87C8BA03CF383213FB84BCC2FC039D219491F78 (GrabbableCrosshair_tD64497CB725FFAC3BADD88AA55713B55DEDD28B2* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5E59A9F9DA37A05B58E7A1FCC2DE7D33725F73CA);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// m_centerEyeAnchor = GameObject.Find("CenterEyeAnchor").transform;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0;
-		L_0 = GameObject_Find_m7A669B4EEC2617AB82F6E3FF007CDCD9F21DB300(_stringLiteral5E59A9F9DA37A05B58E7A1FCC2DE7D33725F73CA, NULL);
-		NullCheck(L_0);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
-		L_1 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_0, NULL);
-		__this->___m_centerEyeAnchor_5 = L_1;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_centerEyeAnchor_5), (void*)L_1);
-		// }
-		return;
-	}
-}
-// System.Void OculusSampleFramework.GrabbableCrosshair::SetState(OculusSampleFramework.GrabbableCrosshair/CrosshairState)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GrabbableCrosshair_SetState_m047487541FB7FC979C4AFBEAED900C7D398202AE (GrabbableCrosshair_tD64497CB725FFAC3BADD88AA55713B55DEDD28B2* __this, int32_t ___cs0, const RuntimeMethod* method) 
-{
-	bool V_0 = false;
-	bool V_1 = false;
-	bool V_2 = false;
-	{
-		// m_state = cs;
-		int32_t L_0 = ___cs0;
-		__this->___m_state_4 = L_0;
-		// if (cs == CrosshairState.Disabled)
-		int32_t L_1 = ___cs0;
-		V_0 = (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
-		bool L_2 = V_0;
-		if (!L_2)
-		{
-			goto IL_002e;
-		}
-	}
-	{
-		// m_targetedCrosshair.SetActive(false);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___m_targetedCrosshair_6;
-		NullCheck(L_3);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, (bool)0, NULL);
-		// m_enabledCrosshair.SetActive(false);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___m_enabledCrosshair_7;
-		NullCheck(L_4);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)0, NULL);
-		goto IL_0078;
-	}
-
-IL_002e:
-	{
-		// else if (cs == CrosshairState.Enabled)
-		int32_t L_5 = ___cs0;
-		V_1 = (bool)((((int32_t)L_5) == ((int32_t)1))? 1 : 0);
-		bool L_6 = V_1;
-		if (!L_6)
-		{
-			goto IL_0054;
-		}
-	}
-	{
-		// m_targetedCrosshair.SetActive(false);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = __this->___m_targetedCrosshair_6;
-		NullCheck(L_7);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_7, (bool)0, NULL);
-		// m_enabledCrosshair.SetActive(true);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = __this->___m_enabledCrosshair_7;
-		NullCheck(L_8);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_8, (bool)1, NULL);
-		goto IL_0078;
-	}
-
-IL_0054:
-	{
-		// else if (cs == CrosshairState.Targeted)
-		int32_t L_9 = ___cs0;
-		V_2 = (bool)((((int32_t)L_9) == ((int32_t)2))? 1 : 0);
-		bool L_10 = V_2;
-		if (!L_10)
-		{
-			goto IL_0078;
-		}
-	}
-	{
-		// m_targetedCrosshair.SetActive(true);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11 = __this->___m_targetedCrosshair_6;
-		NullCheck(L_11);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_11, (bool)1, NULL);
-		// m_enabledCrosshair.SetActive(false);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12 = __this->___m_enabledCrosshair_7;
-		NullCheck(L_12);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_12, (bool)0, NULL);
-	}
-
-IL_0078:
-	{
-		// }
-		return;
-	}
-}
-// System.Void OculusSampleFramework.GrabbableCrosshair::Update()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GrabbableCrosshair_Update_m4EB8F24BEAC9A34BEA562464E7173FEA6BD405BA (GrabbableCrosshair_tD64497CB725FFAC3BADD88AA55713B55DEDD28B2* __this, const RuntimeMethod* method) 
-{
-	bool V_0 = false;
-	{
-		// if (m_state != CrosshairState.Disabled)
-		int32_t L_0 = __this->___m_state_4;
-		V_0 = (bool)((!(((uint32_t)L_0) <= ((uint32_t)0)))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
-		{
-			goto IL_0022;
-		}
-	}
-	{
-		// transform.LookAt(m_centerEyeAnchor);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
-		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3 = __this->___m_centerEyeAnchor_5;
-		NullCheck(L_2);
-		Transform_LookAt_mA8567593181FD78BBDC2AF29AD99F93BDB2976B2(L_2, L_3, NULL);
-	}
-
-IL_0022:
-	{
-		// }
-		return;
-	}
-}
-// System.Void OculusSampleFramework.GrabbableCrosshair::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GrabbableCrosshair__ctor_m57951BE13DF0C3EE461F77FF73219E8737B01639 (GrabbableCrosshair_tD64497CB725FFAC3BADD88AA55713B55DEDD28B2* __this, const RuntimeMethod* method) 
-{
-	{
-		// CrosshairState m_state = CrosshairState.Disabled;
-		__this->___m_state_4 = 0;
-		// GameObject m_targetedCrosshair = null;
-		__this->___m_targetedCrosshair_6 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_targetedCrosshair_6), (void*)(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL);
-		// GameObject m_enabledCrosshair = null;
-		__this->___m_enabledCrosshair_7 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_enabledCrosshair_7), (void*)(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL);
-		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
 }

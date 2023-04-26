@@ -31332,26 +31332,34 @@ struct Torch_t2727495FD114CB86B4B9E3D080325F104E638798  : public MonoBehaviour_t
 {
 	// UnityEngine.Material Torch::material
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___material_4;
+	// UnityEngine.Material Torch::PoloMatArmour
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___PoloMatArmour_5;
+	// UnityEngine.Material Torch::PoloTank
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___PoloTank_6;
+	// UnityEngine.Material Torch::PoloBodySuit
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___PoloBodySuit_7;
 	// UnityEngine.XR.InputDeviceCharacteristics Torch::controllerCharacteristics
-	uint32_t ___controllerCharacteristics_5;
+	uint32_t ___controllerCharacteristics_8;
 	// UnityEngine.XR.InputDevice Torch::targetDevice
-	InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD ___targetDevice_6;
+	InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD ___targetDevice_9;
 	// UnityEngine.Light Torch::spotLight
-	Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* ___spotLight_7;
+	Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* ___spotLight_10;
 	// System.Single Torch::maxSpotAngle
-	float ___maxSpotAngle_9;
+	float ___maxSpotAngle_12;
 	// System.Single Torch::minSpotAngle
-	float ___minSpotAngle_10;
+	float ___minSpotAngle_13;
 	// System.Single Torch::spotAngleDecreaseRate
-	float ___spotAngleDecreaseRate_11;
+	float ___spotAngleDecreaseRate_14;
 	// System.Single Torch::spotAngleIncreaseRate
-	float ___spotAngleIncreaseRate_12;
+	float ___spotAngleIncreaseRate_15;
 	// UnityEngine.Material Torch::torchBar
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___torchBar_13;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___torchBar_16;
+	// UnityEngine.Material Torch::clawTorch
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___clawTorch_17;
 	// UnityEngine.UI.Image Torch::torchBarImage
-	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___torchBarImage_14;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___torchBarImage_18;
 	// UnityEngine.Vector2 Torch::size
-	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___size_15;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___size_19;
 };
 
 // OVRTouchSample.TouchController
@@ -38817,9 +38825,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7263[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7264[1] = 
 {
 	static_cast<int32_t>(offsetof(TestingScript_t8B162793806230F84D10B4526374A37BCB63A0E4, ___textName_4)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7265[12] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7265[16] = 
 {
-	static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___material_4)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___controllerCharacteristics_5)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___targetDevice_6)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___spotLight_7)),0,static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___maxSpotAngle_9)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___minSpotAngle_10)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___spotAngleDecreaseRate_11)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___spotAngleIncreaseRate_12)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___torchBar_13)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___torchBarImage_14)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___size_15)),};
+	static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___material_4)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___PoloMatArmour_5)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___PoloTank_6)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___PoloBodySuit_7)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___controllerCharacteristics_8)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___targetDevice_9)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___spotLight_10)),0,static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___maxSpotAngle_12)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___minSpotAngle_13)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___spotAngleDecreaseRate_14)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___spotAngleIncreaseRate_15)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___torchBar_16)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___clawTorch_17)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___torchBarImage_18)),static_cast<int32_t>(offsetof(Torch_t2727495FD114CB86B4B9E3D080325F104E638798, ___size_19)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7266[4] = 
 {
 	static_cast<int32_t>(offsetof(ConnectAndJoinRandomLb_tB03E3C55EE4600CE6CE25C6DB2632F6CA029CF39, ___appSettings_4)),static_cast<int32_t>(offsetof(ConnectAndJoinRandomLb_tB03E3C55EE4600CE6CE25C6DB2632F6CA029CF39, ___lbc_5)),static_cast<int32_t>(offsetof(ConnectAndJoinRandomLb_tB03E3C55EE4600CE6CE25C6DB2632F6CA029CF39, ___ch_6)),static_cast<int32_t>(offsetof(ConnectAndJoinRandomLb_tB03E3C55EE4600CE6CE25C6DB2632F6CA029CF39, ___StateUiText_7)),};
