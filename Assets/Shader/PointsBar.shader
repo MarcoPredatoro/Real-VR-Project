@@ -7,6 +7,7 @@ Shader "Unlit/PointsBar"
         _LeftColour ("LeftColour", Color) = (1,0,0,1)
         _RightColour ("RightColour", Color) = (0,1,0,1)
         _BlendWidth ("BlendWidth", Float) = 5
+        _MixAmount ("MixAmount", Float) = 0.5
     }
     SubShader
     {
@@ -43,6 +44,7 @@ Shader "Unlit/PointsBar"
             float _BlendWidth;
             fixed4 _LeftColour;
             fixed4 _RightColour;
+            float _MixAmount;
 
             fixed4 lerp(fixed4 a, fixed4 b, float mixAmount){
                 return a + mixAmount*(b - a);
@@ -67,9 +69,12 @@ Shader "Unlit/PointsBar"
 
                 // interpolate between the two colors based on the distance
                 fixed4 col = lerp(_LeftColour, _RightColour, distance);
+                // col = lerp(col, tex2D (_MainTex, i.uv), _MixAmount);
 
                 return col;
-            }
+
+                
+            } 
             ENDCG
 
             

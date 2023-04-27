@@ -20,7 +20,7 @@ public class Torch : MonoBehaviour
     private const float TO_RADIAN = (3.1415f / 180.0f);
     private float maxSpotAngle = 50f;
     private float minSpotAngle = 0f;
-    private float spotAngleDecreaseRate = 15f;
+    private float spotAngleDecreaseRate = 7f;
     private float spotAngleIncreaseRate = 40f;
 
     public Material torchBar;
@@ -133,10 +133,10 @@ public class Torch : MonoBehaviour
 
     void updateTorchBar() 
     {
-        float p = 1.0f - ((spotLight.spotAngle - minSpotAngle) / (maxSpotAngle - minSpotAngle));
+        float p = ((spotLight.spotAngle - minSpotAngle) / (maxSpotAngle - minSpotAngle)  - 1.0f) * 2.0f;
         // Debug.Log(p);
-        torchBar.SetFloat("_Points", p);
-        clawTorch.SetFloat("_Points", p);
+        torchBar.SetFloat("_Torch", p);
+        clawTorch.SetFloat("_Torch", p);
     }
 
     

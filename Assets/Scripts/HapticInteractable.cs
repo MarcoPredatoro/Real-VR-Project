@@ -43,7 +43,7 @@ public class HapticInteractable : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
      {
-         if ((collision.gameObject.name == "polo-with-bones" || collision.gameObject.name == "Polo2") && canSendCollision)
+         if ((collision.gameObject.name == "polo-with-bones" || collision.gameObject.name == "Polo2" || collision.gameObject.name == "Polo") && canSendCollision)
         {
             targetDevice.SendHapticImpulse(0, hapticIntensity, hapticDuration);
             SendCollisionEvent();
