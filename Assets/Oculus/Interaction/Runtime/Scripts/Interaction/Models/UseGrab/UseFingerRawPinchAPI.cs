@@ -20,7 +20,7 @@ namespace Oculus.Interaction
     public class UseFingerRawPinchAPI : MonoBehaviour, IFingerUseAPI
     {
         [SerializeField, Interface(typeof(IHand))]
-        private MonoBehaviour _hand;
+        private UnityEngine.Object _hand;
         private IHand Hand { get; set; }
 
         private IFingerAPI _grabAPI = new FingerRawPinchAPI();
@@ -36,7 +36,7 @@ namespace Oculus.Interaction
         protected virtual void Start()
         {
             this.BeginStart(ref _started);
-            Assert.IsNotNull(Hand, "Hand not assigned");
+            this.AssertField(Hand, nameof(Hand));
             this.EndStart(ref _started);
         }
 
@@ -58,7 +58,7 @@ namespace Oculus.Interaction
 
         public void InjectHand(IHand hand)
         {
-            _hand = hand as MonoBehaviour;
+            _hand = hand as UnityEngine.Object;
             Hand = hand;
         }
         #endregion

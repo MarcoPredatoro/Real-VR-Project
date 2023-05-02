@@ -26,10 +26,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BlendWidth: 0.1
-    - _MixAmount: 1
+    - _BlendWidth: 3
+    - _MixAmount: 3.4
+    - _MixAmountMultiplier: 0.35
     - _Points: 0.5
-    - _Torch: 0.5
+    - _Torch: 1
     m_Colors:
     - _LeftColour: {r: 1, g: 0.92247266, b: 0.8066038, a: 1}
     - _RightColour: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}

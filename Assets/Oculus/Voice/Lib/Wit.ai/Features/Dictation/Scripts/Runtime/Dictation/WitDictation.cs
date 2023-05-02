@@ -6,16 +6,16 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using Facebook.WitAi.Configuration;
-using Facebook.WitAi.Data.Configuration;
-using Facebook.WitAi.Events;
-using Facebook.WitAi.Interfaces;
-using Facebook.WitAi.Lib;
+using Meta.WitAi.Configuration;
+using Meta.WitAi.Data.Configuration;
+using Meta.WitAi.Events;
+using Meta.WitAi.Interfaces;
+using Meta.WitAi.Json;
 using UnityEngine;
 
-namespace Facebook.WitAi.Dictation
+namespace Meta.WitAi.Dictation
 {
-    public class WitDictation : DictationService, IWitRuntimeConfigProvider, IVoiceEventProvider, IWitRequestProvider
+    public class WitDictation : DictationService, IWitRuntimeConfigProvider, IVoiceEventProvider, IWitRequestProvider, IWitConfigurationProvider
     {
         [SerializeField] private WitRuntimeConfiguration witRuntimeConfiguration;
 
@@ -26,6 +26,7 @@ namespace Facebook.WitAi.Dictation
             get => witRuntimeConfiguration;
             set => witRuntimeConfiguration = value;
         }
+        public WitConfiguration Configuration => RuntimeConfiguration?.witConfiguration;
 
         #region Voice Service Properties
 
@@ -45,10 +46,11 @@ namespace Facebook.WitAi.Dictation
                                                      null == TranscriptionProvider;
 
         private readonly VoiceEvents voiceEvents = new VoiceEvents();
-        public VoiceEvents VoiceEvents
-        {
-            get => voiceEvents;
-        }
+
+        /// <summary>
+        /// Events specific to wit voice activation.
+        /// </summary>
+        public VoiceEvents VoiceEvents => voiceEvents;
 
         #endregion
 
@@ -56,38 +58,60 @@ namespace Facebook.WitAi.Dictation
         public WitRequest CreateWitRequest(WitConfiguration config, WitRequestOptions requestOptions,
             IDynamicEntitiesProvider[] additionalEntityProviders = null)
         {
-            return config.DictationRequest(requestOptions);
+            return config.CreateDictationRequest(requestOptions);
         }
 
         #endregion
 
         #region Voice Service Methods
 
+
+        /// <summary>
+        /// Activates and waits for the user to exceed the min wake threshold before data is sent to the server.
+        /// </summary>
         public override void Activate()
         {
             witService.Activate();
         }
 
+        /// <summary>
+        /// Activates and waits for the user to exceed the min wake threshold before data is sent to the server.
+        /// </summary>
+        /// <param name="options"></param>
         public override void Activate(WitRequestOptions options)
         {
             witService.Activate(options);
         }
 
+        /// <summary>
+        /// Activates immediately and starts sending data to the server. This will not wait for min wake threshold
+        /// </summary>
         public override void ActivateImmediately()
         {
             witService.ActivateImmediately();
         }
 
+        /// <summary>
+        /// Activates immediately and starts sending data to the server. This will not wait for min wake threshold
+        /// </summary>
+        /// <param name="options"></param>
         public override void ActivateImmediately(WitRequestOptions options)
         {
             witService.ActivateImmediately(options);
         }
 
+        /// <summary>
+        /// Deactivates. If a transcription is in progress the network request will complete and any additional
+        /// transcription values will be returned.
+        /// </summary>
         public override void Deactivate()
         {
             witService.Deactivate();
         }
 
+        /// <summary>
+        /// Deactivates and ignores any pending transcription content.
+        /// </summary>
         public override void Cancel()
         {
             witService.DeactivateAndAbortRequest();
@@ -101,6 +125,7 @@ namespace Facebook.WitAi.Dictation
             witService.VoiceEventProvider = this;
             witService.ConfigurationProvider = this;
             witService.WitRequestProvider = this;
+            witService.TelemetryEventsProvider = this;
         }
 
         protected override void OnEnable()
@@ -113,7 +138,9 @@ namespace Facebook.WitAi.Dictation
             VoiceEvents.OnMicLevelChanged.AddListener(OnMicLevelChanged);
             VoiceEvents.OnError.AddListener(OnError);
             VoiceEvents.OnResponse.AddListener(OnResponse);
-
+            VoiceEvents.OnRequestCompleted.AddListener(OnCompleted);
+            VoiceEvents.OnAborting.AddListener(OnAborting);
+            VoiceEvents.OnAborted.AddListener(OnAborted);
         }
 
         protected override void OnDisable()
@@ -126,7 +153,26 @@ namespace Facebook.WitAi.Dictation
             VoiceEvents.OnMicLevelChanged.RemoveListener(OnMicLevelChanged);
             VoiceEvents.OnError.RemoveListener(OnError);
             VoiceEvents.OnResponse.RemoveListener(OnResponse);
+            VoiceEvents.OnRequestCompleted.RemoveListener(OnCompleted);
+            VoiceEvents.OnAborting.RemoveListener(OnAborting);
+            VoiceEvents.OnAborted.RemoveListener(OnAborted);
         }
+
+        private void OnCompleted()
+        {
+            DictationEvents.OnRequestCompleted?.Invoke();
+        }
+
+        private void OnAborted()
+        {
+            DictationEvents.OnAborted?.Invoke();
+        }
+
+        private void OnAborting()
+        {
+            DictationEvents.OnAborting?.Invoke();
+        }
+
         private void OnFullTranscription(string transcription)
         {
             DictationEvents.OnFullTranscription?.Invoke(transcription);

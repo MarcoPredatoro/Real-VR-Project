@@ -8,8 +8,8 @@ Shader "Custom/TorchShader"
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Metallic ("Metallic", Range(0,1)) = 0.0
         _LightDirection("Light Direction", Vector) = (0,0,0,0)
-		_LightPosition("Light Position", Vector) = (0,0,0,0)
-		_LightAngle("Light Angle", Range(0,180)) = 0
+        _LightPosition("Light Position", Vector) = (0,0,0,0)
+        _LightAngle("Light Angle", Range(0,180)) = 0
         _ScaleStrength("Strength", Float) = 50
         _Distance("Distance", Float) = 1
     }
@@ -38,8 +38,8 @@ Shader "Custom/TorchShader"
         half _Metallic;
         fixed4 _Color;
         float3 _LightDirection;
-		float3 _LightPosition;
-		float _LightAngle;
+        float3 _LightPosition;
+        float _LightAngle;
         float _ScaleStrength;
         float _Distance;
 
@@ -50,11 +50,11 @@ Shader "Custom/TorchShader"
             // Calculate the vector from the light to the material
             float3 direction = (_LightPosition - IN.worldPos);
             // Calculate the difference between this and the direction of the light
-			float strength = dot(normalize(direction), _LightDirection);
+            float strength = dot(normalize(direction), _LightDirection);
             // add the angle of the beam (half its light angle as we are working with the light direction) to account for it
-			strength = strength - cos(_LightAngle / 2.0f);
+            strength = strength - cos(_LightAngle / 2.0f);
             // make sure that the value is between 0 and 1 for the alpha (strength determins the roll off of the invisibility)
-			strength = min(max(strength * _ScaleStrength, 0), 1);
+            strength = min(max(strength * _ScaleStrength, 0), 1);
 
             // Albedo comes from a texture tinted by color
             fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
@@ -73,3 +73,4 @@ Shader "Custom/TorchShader"
     }
     FallBack "Diffuse"
 }
+

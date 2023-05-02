@@ -20,9 +20,8 @@
 
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 using UnityEngine.Assertions;
-using Oculus.Interaction;
+using Random = UnityEngine.Random;
 
 namespace Oculus.Interaction
 {
@@ -81,7 +80,7 @@ namespace Oculus.Interaction
             _audioSource.pitch = _pitch;
             _audioSource.spatialize = _spatialize;
             _audioSource.loop = _loop;
-            Random.InitState((int)Time.time);
+
             // Play audio on start if enabled
             if (_playOnStart)
             {

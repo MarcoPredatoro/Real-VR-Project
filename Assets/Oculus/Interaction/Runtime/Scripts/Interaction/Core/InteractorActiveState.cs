@@ -19,7 +19,6 @@
  */
 
 using UnityEngine;
-using UnityEngine.Assertions;
 
 namespace Oculus.Interaction
 {
@@ -32,10 +31,12 @@ namespace Oculus.Interaction
             HasInteractable = 1 << 1,
             IsSelecting = 1 << 2,
             HasSelectedInteractable = 1 << 3,
+            IsNormal = 1 << 4,
+            IsHovering = 1 << 5,
         }
 
         [SerializeField, Interface(typeof(IInteractor))]
-        private MonoBehaviour _interactor;
+        private UnityEngine.Object _interactor;
         private IInteractor Interactor;
 
         [SerializeField]
@@ -77,6 +78,16 @@ namespace Oculus.Interaction
                 {
                     return true;
                 }
+                if ((_property & InteractorProperty.IsNormal) != 0
+                    && Interactor.State == InteractorState.Normal)
+                {
+                    return true;
+                }
+                if ((_property & InteractorProperty.IsHovering) != 0
+                    && Interactor.State == InteractorState.Hover)
+                {
+                    return true;
+                }
                 return false;
             }
         }
@@ -88,7 +99,7 @@ namespace Oculus.Interaction
 
         protected virtual void Start()
         {
-            Assert.IsNotNull(Interactor);
+            this.AssertField(Interactor, nameof(Interactor));
         }
 
         #region Inject
@@ -100,7 +111,7 @@ namespace Oculus.Interaction
 
         public void InjectInteractor(IInteractor interactor)
         {
-            _interactor = interactor as MonoBehaviour;
+            _interactor = interactor as UnityEngine.Object;
             Interactor = interactor;
         }
         #endregion

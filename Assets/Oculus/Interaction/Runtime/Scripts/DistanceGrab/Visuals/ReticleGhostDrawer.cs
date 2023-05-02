@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Copyright (c) Meta Platforms, Inc. and affiliates.
  * All rights reserved.
  *
@@ -30,7 +30,7 @@ namespace Oculus.Interaction.DistanceReticles
     public class ReticleGhostDrawer : InteractorReticle<ReticleDataGhost>
     {
         [SerializeField, Interface(typeof(IHandGrabber), typeof(IHandGrabState), typeof(IInteractorView))]
-        private MonoBehaviour _handGrabber;
+        private UnityEngine.Object _handGrabber;
         private IHandGrabber HandGrabber { get; set; }
         private IHandGrabState HandGrabSource { get; set; }
 
@@ -40,7 +40,7 @@ namespace Oculus.Interaction.DistanceReticles
 
         [SerializeField, Interface(typeof(IHandVisual))]
         [FormerlySerializedAs("_visualHand")]
-        private MonoBehaviour _handVisual;
+        private UnityEngine.Object _handVisual;
 
         private IHandVisual HandVisual;
 
@@ -63,11 +63,11 @@ namespace Oculus.Interaction.DistanceReticles
         protected override void Start()
         {
             this.BeginStart(ref _started, () => base.Start());
-            Assert.IsNotNull(HandGrabber, "Associated HandGrabber Hand can not be null");
-            Assert.IsNotNull(Interactor, "Associated Interactor Hand can not be null");
-            Assert.IsNotNull(HandGrabSource, "Associated HandGrabSource can not be null");
-            Assert.IsNotNull(HandVisual, "Associated Visual Hand can not be null");
-            Assert.IsNotNull(_syntheticHand, "Associated Synthetic hand can not be null");
+            this.AssertField(HandGrabber, nameof(HandGrabber));
+            this.AssertField(Interactor, nameof(Interactor));
+            this.AssertField(HandGrabSource, nameof(HandGrabSource));
+            this.AssertField(HandVisual, nameof(HandVisual));
+            this.AssertField(_syntheticHand, nameof(_syntheticHand));
             Transformer = _syntheticHand.GetData().Config.TrackingToWorldTransformer;
             this.EndStart(ref _started);
         }
@@ -176,7 +176,7 @@ namespace Oculus.Interaction.DistanceReticles
 
         public void InjectHandGrabber(IHandGrabber handGrabber)
         {
-            _handGrabber = handGrabber as MonoBehaviour;
+            _handGrabber = handGrabber as UnityEngine.Object;
             HandGrabber = handGrabber;
             Interactor = handGrabber as IInteractorView;
             HandGrabSource = handGrabber as IHandGrabState;
@@ -189,7 +189,7 @@ namespace Oculus.Interaction.DistanceReticles
 
         public void InjectVisualHand(IHandVisual visualHand)
         {
-            _handVisual = visualHand as MonoBehaviour;
+            _handVisual = visualHand as UnityEngine.Object;
             HandVisual = visualHand;
         }
         #endregion

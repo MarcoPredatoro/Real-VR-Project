@@ -8,6 +8,7 @@ Shader "Unlit/TorchBar"
         _RightColour ("RightColour", Color) = (0,1,0,1)
         _BlendWidth ("BlendWidth", Float) = 5
         _MixAmount ("MixAmount", Float) = 0.5
+        _MixAmountMultiplier ("MixAmountMultiplier", Float) = 0.5
     }
     SubShader
     {
@@ -45,6 +46,7 @@ Shader "Unlit/TorchBar"
             fixed4 _LeftColour;
             fixed4 _RightColour;
             float _MixAmount;
+            float _MixAmountMultiplier;
 
             fixed4 lerp(fixed4 a, fixed4 b, float mixAmount){
                 return a + mixAmount*(b - a);
@@ -65,9 +67,13 @@ Shader "Unlit/TorchBar"
                 fixed2 xy = i.uv.xy;
     
                 // calculate the distance from the current pixel's x-coordinate to the center of the blending range
-                float distance = 1.0 - smoothstep(_Torch - _BlendWidth/2.0, _Torch + _BlendWidth/2.0, xy.x);
+                //float distance = 1.0 - smoothstep(_Torch - _BlendWidth/2.0, _Torch + _BlendWidth/2.0, (xy.x + _MixAmount) * _MixAmountMultiplier);
+
+                float distance = 1.0 - smoothstep(0, _Torch + _BlendWidth/2.0, (xy.x + _MixAmount) * _MixAmountMultiplier);
 
                 // interpolate between the two colors based on the distance
+                // fixed4 col = lerp(_LeftColour, _RightColour, distance);
+                // col = lerp(col, tex2D (_MainTex, i.uv) * distance,  _MixAmount);
                 fixed4 col = lerp(_LeftColour, _RightColour, distance);
                 col = lerp(col, tex2D (_MainTex, i.uv) * distance, _MixAmount);
 

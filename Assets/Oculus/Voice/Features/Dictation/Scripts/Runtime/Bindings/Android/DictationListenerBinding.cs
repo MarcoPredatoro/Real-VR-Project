@@ -19,9 +19,10 @@
  */
 
 using UnityEngine;
-using Facebook.WitAi.Dictation;
-using Facebook.WitAi.Dictation.Data;
-using Facebook.WitAi.Dictation.Events;
+using Meta.WitAi;
+using Meta.WitAi.Dictation;
+using Meta.WitAi.Dictation.Data;
+using Meta.WitAi.Dictation.Events;
 
 namespace Oculus.Voice.Dictation.Bindings.Android
 {
@@ -46,8 +47,6 @@ namespace Oculus.Voice.Dictation.Bindings.Android
                 dictationService = _dictationService,
                 platformSessionId = sessionId
             };
-
-            DictationEvents.onDictationSessionStarted?.Invoke(session);
         }
 
         public void onMicAudioLevel(string sessionId, int micLevel)
@@ -78,12 +77,11 @@ namespace Oculus.Voice.Dictation.Bindings.Android
                 dictationService = _dictationService,
                 platformSessionId = sessionId
             };
-            DictationEvents.onDictationSessionStopped?.Invoke(session);
         }
 
         public void onServiceNotAvailable(string error, string message)
         {
-            Debug.LogWarning("Platform dictation service is not available");
+            VLog.W("Platform dictation service is not available");
             _serviceEvents.OnServiceNotAvailable(error, message);
         }
     }

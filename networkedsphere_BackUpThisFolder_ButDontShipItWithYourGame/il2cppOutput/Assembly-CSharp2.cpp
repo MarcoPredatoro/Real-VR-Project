@@ -23800,7 +23800,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Torch_updateTorchBar_mF49B261C077D51DB92
 	}
 	float V_0 = 0.0f;
 	{
-		// float p = ((spotLight.spotAngle - minSpotAngle) / (maxSpotAngle - minSpotAngle)  - 1.0f) / 2.0f;
+		// float p = ((spotLight.spotAngle - minSpotAngle) / (maxSpotAngle - minSpotAngle)  - 1.0f) * 2.0f;
 		Light_t1E68479B7782AF2050FAA02A5DC612FD034F18F3* L_0 = __this->___spotLight_10;
 		NullCheck(L_0);
 		float L_1;
@@ -23808,7 +23808,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Torch_updateTorchBar_mF49B261C077D51DB92
 		float L_2 = __this->___minSpotAngle_13;
 		float L_3 = __this->___maxSpotAngle_12;
 		float L_4 = __this->___minSpotAngle_13;
-		V_0 = ((float)(((float)il2cpp_codegen_subtract(((float)(((float)il2cpp_codegen_subtract(L_1, L_2))/((float)il2cpp_codegen_subtract(L_3, L_4)))), (1.0f)))/(2.0f)));
+		V_0 = ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_subtract(((float)(((float)il2cpp_codegen_subtract(L_1, L_2))/((float)il2cpp_codegen_subtract(L_3, L_4)))), (1.0f))), (2.0f)));
 		// torchBar.SetFloat("_Torch", p);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_5 = __this->___torchBar_16;
 		float L_6 = V_0;

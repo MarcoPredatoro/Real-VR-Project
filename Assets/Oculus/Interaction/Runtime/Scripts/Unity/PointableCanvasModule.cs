@@ -54,6 +54,9 @@ namespace Oculus.Interaction
 
         public static event Action<PointableCanvasEventArgs> WhenSelectableUnhovered;
 
+        [Tooltip("If true, the initial press position will be used as the drag start " +
+            "position, rather than the position when drag threshold is exceeded. This is used " +
+            "to prevent the pointer position shifting relative to the surface while dragging.")]
         [SerializeField]
         private bool _useInitialPressPositionForDrag = true;
 
@@ -73,7 +76,7 @@ namespace Oculus.Interaction
 
         public static void RegisterPointableCanvas(IPointableCanvas pointerCanvas)
         {
-            Assert.IsNotNull(Instance, "A PointableCanvasModule is required in the scene.");
+            Assert.IsNotNull(Instance, $"A <b>{nameof(PointableCanvasModule)}</b> is required in the scene.");
             Instance.AddPointerCanvas(pointerCanvas);
         }
 
@@ -87,6 +90,8 @@ namespace Oculus.Interaction
         private List<Pointer> _pointersForDeletion = new List<Pointer>();
         private Dictionary<IPointableCanvas, Action<PointerEvent>> _pointerCanvasActionMap =
             new Dictionary<IPointableCanvas, Action<PointerEvent>>();
+
+        private Pointer[] _pointersToProcessScratch = Array.Empty<Pointer>();
 
         private void AddPointerCanvas(IPointableCanvas pointerCanvas)
         {
@@ -336,15 +341,36 @@ namespace Oculus.Interaction
 
         public override void Process()
         {
-            foreach (Pointer pointer in _pointersForDeletion)
-            {
-                ProcessPointer(pointer, true);
-            }
-            _pointersForDeletion.Clear();
+            ProcessPointers(_pointersForDeletion, true);
+            ProcessPointers(_pointerMap.Values, false);
+        }
 
-            foreach (Pointer pointer in _pointerMap.Values)
+        private void ProcessPointers(ICollection<Pointer> pointers, bool clearAndReleasePointers)
+        {
+            // Before processing pointers, take a copy of the array since _pointersForDeletion or
+            // _pointerMap may be modified if a pointer event handler adds or removes a
+            // PointableCanvas.
+            
+            int pointersToProcessCount = pointers.Count;
+            if (pointersToProcessCount == 0)
             {
-                ProcessPointer(pointer);
+                return;
+            }
+            
+            if (pointersToProcessCount > _pointersToProcessScratch.Length)
+            {
+                _pointersToProcessScratch = new Pointer[pointersToProcessCount];
+            }
+            
+            pointers.CopyTo(_pointersToProcessScratch, 0);
+            if (clearAndReleasePointers)
+            {
+                pointers.Clear();
+            }
+
+            foreach (Pointer pointer in _pointersToProcessScratch)
+            {
+                ProcessPointer(pointer, clearAndReleasePointers);
             }
         }
 

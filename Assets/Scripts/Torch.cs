@@ -133,7 +133,7 @@ public class Torch : MonoBehaviour
 
     void updateTorchBar() 
     {
-        float p = ((spotLight.spotAngle - minSpotAngle) / (maxSpotAngle - minSpotAngle)  - 1.0f) * 2.0f;
+        float p = ((spotLight.spotAngle - minSpotAngle) / (maxSpotAngle - minSpotAngle) ) ;
         // Debug.Log(p);
         torchBar.SetFloat("_Torch", p);
         clawTorch.SetFloat("_Torch", p);

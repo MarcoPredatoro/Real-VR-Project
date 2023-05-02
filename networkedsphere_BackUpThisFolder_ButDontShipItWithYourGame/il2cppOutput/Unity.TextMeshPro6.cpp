@@ -28075,7 +28075,7 @@ IL_035c:
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_176 = L_175->___spriteSheet_12;
 		NullCheck(L_176);
 		int32_t L_177;
-		L_177 = VirtualFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_176);
+		L_177 = VirtualFuncInvoker0< int32_t >::Invoke(5 /* System.Int32 UnityEngine.Texture::get_width() */, L_176);
 		int32_t L_178;
 		L_178 = GlyphRect_get_y_mE31390BB3185EEA82DD16EA41E208F6A0397E3EA((&V_5), NULL);
 		TMP_SpriteAsset_t81F779E6F705CE190DC0D1F93A954CB8B1774B39* L_179 = __this->___m_currentSpriteAsset_250;
@@ -28083,7 +28083,7 @@ IL_035c:
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_180 = L_179->___spriteSheet_12;
 		NullCheck(L_180);
 		int32_t L_181;
-		L_181 = VirtualFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_180);
+		L_181 = VirtualFuncInvoker0< int32_t >::Invoke(7 /* System.Int32 UnityEngine.Texture::get_height() */, L_180);
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&V_6), ((float)(((float)L_174)/((float)L_177))), ((float)(((float)L_178)/((float)L_181))), NULL);
 		// Vector2 uv1 = new Vector2(uv0.x, (float)(glyphRect.y + glyphRect.height) / m_currentSpriteAsset.spriteSheet.height);  // top left
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_182 = V_6;
@@ -28097,7 +28097,7 @@ IL_035c:
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_187 = L_186->___spriteSheet_12;
 		NullCheck(L_187);
 		int32_t L_188;
-		L_188 = VirtualFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_187);
+		L_188 = VirtualFuncInvoker0< int32_t >::Invoke(7 /* System.Int32 UnityEngine.Texture::get_height() */, L_187);
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&V_7), L_183, ((float)(((float)((int32_t)il2cpp_codegen_add(L_184, L_185)))/((float)L_188))), NULL);
 		// Vector2 uv2 = new Vector2((float)(glyphRect.x + glyphRect.width) / m_currentSpriteAsset.spriteSheet.width, uv1.y); // top right
 		int32_t L_189;
@@ -28109,7 +28109,7 @@ IL_035c:
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_192 = L_191->___spriteSheet_12;
 		NullCheck(L_192);
 		int32_t L_193;
-		L_193 = VirtualFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_192);
+		L_193 = VirtualFuncInvoker0< int32_t >::Invoke(5 /* System.Int32 UnityEngine.Texture::get_width() */, L_192);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_194 = V_7;
 		float L_195 = L_194.___y_1;
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&V_8), ((float)(((float)((int32_t)il2cpp_codegen_add(L_189, L_190)))/((float)L_193))), L_195, NULL);

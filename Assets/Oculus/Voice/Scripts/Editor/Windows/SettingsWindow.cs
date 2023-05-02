@@ -18,8 +18,8 @@
  * limitations under the License.
  */
 
-using Facebook.WitAi;
-using Facebook.WitAi.Windows;
+using Meta.WitAi;
+using Meta.WitAi.Windows;
 using Oculus.Voice.Utility;
 using UnityEngine;
 
@@ -29,6 +29,7 @@ namespace Oculus.Voice.Windows
     {
         protected override GUIContent Title => VoiceSDKStyles.SettingsTitle;
         protected override Texture2D HeaderIcon => VoiceSDKStyles.MainHeader;
+        protected override string DocsUrl => VoiceSDKStyles.Texts.VoiceDocsUrl;
 
         protected override void OnEnable()
         {

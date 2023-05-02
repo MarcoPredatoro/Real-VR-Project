@@ -13,8 +13,8 @@ public class HapticInteractable : MonoBehaviour
     private InputDevice targetDevice;
     //public GameObject Sphere;
     //public UnityEngine.UI.Image pointsImage;
-    public float collisionCooldown = 1f;
-    private bool canSendCollision = true;
+    // public float collisionCooldown = 3f;
+    // private bool canSendCollision = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,11 +43,11 @@ public class HapticInteractable : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
      {
-         if ((collision.gameObject.name == "polo-with-bones" || collision.gameObject.name == "Polo2" || collision.gameObject.name == "Polo") && canSendCollision)
+         if (collision.gameObject.name == "polo-with-bones" || collision.gameObject.name == "Polo2" || collision.gameObject.name == "Polo")
         {
             targetDevice.SendHapticImpulse(0, hapticIntensity, hapticDuration);
             SendCollisionEvent();
-            StartCoroutine(CollisionCooldown());
+            // StartCoroutine(CollisionCooldown());
         }
     }
 
@@ -57,12 +57,12 @@ public class HapticInteractable : MonoBehaviour
         GameObject.Find("Canvas/Image/Points").GetComponent<EventManager>().SendMarcoCollision();
     }
 
-    private IEnumerator CollisionCooldown()
-    {
-        canSendCollision = false;
-        yield return new WaitForSeconds(collisionCooldown);
-        canSendCollision = true;
-    }
+    // private IEnumerator CollisionCooldown()
+    // {
+    //     canSendCollision = false;
+    //     yield return new WaitForSeconds(collisionCooldown);
+    //     canSendCollision = true;
+    // }
 
 
 }

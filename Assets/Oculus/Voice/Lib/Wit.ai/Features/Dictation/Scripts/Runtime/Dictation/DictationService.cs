@@ -6,18 +6,25 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-using Facebook.WitAi.Configuration;
-using Facebook.WitAi.Dictation.Events;
-using Facebook.WitAi.Events.UnityEventListeners;
-using Facebook.WitAi.Interfaces;
+using Meta.WitAi.Configuration;
+using Meta.WitAi.Dictation.Events;
+using Meta.WitAi.Events;
+using Meta.WitAi.Events.UnityEventListeners;
+using Meta.WitAi.Interfaces;
 using UnityEngine;
 
-namespace Facebook.WitAi.Dictation
+namespace Meta.WitAi.Dictation
 {
     public abstract class DictationService : MonoBehaviour, IDictationService, IAudioEventProvider, ITranscriptionEventProvider
     {
         [Tooltip("Events that will fire before, during and after an activation")]
-        [SerializeField] public DictationEvents dictationEvents = new DictationEvents();
+        [SerializeField] protected DictationEvents dictationEvents = new DictationEvents();
+
+        ///<summary>
+        /// Internal events used to report telemetry. These events are reserved for internal
+        /// use only and should not be used for any other purpose.
+        /// </summary>
+        protected TelemetryEvents telemetryEvents = new TelemetryEvents();
 
         /// <summary>
         /// Returns true if this voice service is currently active and listening with the mic
@@ -45,6 +52,8 @@ namespace Facebook.WitAi.Dictation
             get => dictationEvents;
             set => dictationEvents = value;
         }
+
+        public TelemetryEvents TelemetryEvents { get => telemetryEvents; set => telemetryEvents = value; }
 
         /// <summary>
         /// A subset of events around collection of audio data
@@ -116,7 +125,7 @@ namespace Facebook.WitAi.Dictation
         }
     }
 
-    public interface IDictationService
+    public interface IDictationService: ITelemetryEventsProvider
     {
         bool Active { get; }
 
@@ -128,6 +137,8 @@ namespace Facebook.WitAi.Dictation
 
         DictationEvents DictationEvents { get; set; }
 
+        new TelemetryEvents TelemetryEvents { get; set; }
+
         void Activate();
 
         void Activate(WitRequestOptions requestOptions);
@@ -137,5 +148,7 @@ namespace Facebook.WitAi.Dictation
         void ActivateImmediately(WitRequestOptions requestOptions);
 
         void Deactivate();
+
+        void Cancel();
     }
 }

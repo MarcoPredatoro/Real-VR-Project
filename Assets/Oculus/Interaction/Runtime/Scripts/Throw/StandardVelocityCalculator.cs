@@ -63,7 +63,7 @@ namespace Oculus.Interaction.Throw
         }
 
         [SerializeField, Interface(typeof(IPoseInputDevice))]
-        private MonoBehaviour _throwInputDevice;
+        private UnityEngine.Object _throwInputDevice;
         public IPoseInputDevice ThrowInputDevice { get; private set; }
 
         [SerializeField]
@@ -235,7 +235,7 @@ namespace Oculus.Interaction.Throw
 
         protected virtual void Start()
         {
-            Assert.IsNotNull(_bufferingParams);
+            this.AssertField(_bufferingParams, nameof(_bufferingParams));
             _bufferingParams.Validate();
 
             _bufferSize = Mathf.CeilToInt(_bufferingParams.BufferLengthSeconds
@@ -244,7 +244,7 @@ namespace Oculus.Interaction.Throw
 
             _linearVelocityFilter = OneEuroFilter.CreateVector3();
 
-            Assert.IsNotNull(ThrowInputDevice);
+            this.AssertField(ThrowInputDevice, nameof(ThrowInputDevice));
         }
 
         public ReleaseVelocityInformation CalculateThrowVelocity(Transform objectThrown)
@@ -701,7 +701,7 @@ namespace Oculus.Interaction.Throw
 
         public void InjectPoseInputDevice(IPoseInputDevice poseInputDevice)
         {
-            _throwInputDevice = poseInputDevice as MonoBehaviour;
+            _throwInputDevice = poseInputDevice as UnityEngine.Object;
             ThrowInputDevice = poseInputDevice;
         }
 

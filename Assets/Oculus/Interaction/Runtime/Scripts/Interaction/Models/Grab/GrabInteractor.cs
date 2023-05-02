@@ -23,13 +23,14 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using Oculus.Interaction.Throw;
 using System;
+using Oculus.Interaction.Grab;
 
 namespace Oculus.Interaction
 {
     public class GrabInteractor : PointerInteractor<GrabInteractor, GrabInteractable>, IRigidbodyRef
     {
         [SerializeField, Interface(typeof(ISelector))]
-        private MonoBehaviour _selector;
+        private UnityEngine.Object _selector;
 
         [SerializeField]
         private Rigidbody _rigidbody;
@@ -46,7 +47,7 @@ namespace Oculus.Interaction
         private bool _outsideReleaseDist = false;
 
         [SerializeField, Interface(typeof(IVelocityCalculator)), Optional]
-        private MonoBehaviour _velocityCalculator;
+        private UnityEngine.Object _velocityCalculator;
         public IVelocityCalculator VelocityCalculator { get; set; }
 
         private GrabInteractable _selectedInteractableOverride;
@@ -62,16 +63,18 @@ namespace Oculus.Interaction
         protected override void Start()
         {
             this.BeginStart(ref _started, () => base.Start());
-            Assert.IsNotNull(Selector);
-            Assert.IsNotNull(Rigidbody);
+            this.AssertField(Selector, nameof(Selector));
+            this.AssertField(Rigidbody, nameof(Rigidbody));
 
             _colliders = Rigidbody.GetComponentsInChildren<Collider>();
-            Assert.IsTrue(_colliders.Length > 0,
-            "The associated Rigidbody must have at least one Collider.");
+
+            this.AssertCollectionField(_colliders, nameof(_colliders),
+               $"The associated {AssertUtils.Nicify(nameof(Rigidbody))} must have at least one Collider.");
+
             foreach (Collider collider in _colliders)
             {
-                Assert.IsTrue(collider.isTrigger,
-                    "Associated Colliders must be marked as Triggers.");
+                this.AssertIsTrue(collider.isTrigger,
+                    $"Associated Colliders in the {AssertUtils.Nicify(nameof(Rigidbody))} must be marked as Triggers.");
             }
 
             if (_grabCenter == null)
@@ -86,7 +89,7 @@ namespace Oculus.Interaction
 
             if (_velocityCalculator != null)
             {
-                Assert.IsNotNull(VelocityCalculator);
+                this.AssertField(VelocityCalculator, nameof(VelocityCalculator));
             }
 
             _tween = new Tween(Pose.identity);
@@ -104,29 +107,17 @@ namespace Oculus.Interaction
         {
             Vector3 position = Rigidbody.transform.position;
             GrabInteractable closestInteractable = null;
-            float bestScore = float.MaxValue;
-            float score = bestScore;
-            bool closestPointIsInside = false;
+            GrabPoseScore bestScore = GrabPoseScore.Max;
 
-            var interactables = Interaction.GrabInteractable.Registry.List(this);
+            var interactables = GrabInteractable.Registry.List(this);
             foreach (GrabInteractable interactable in interactables)
             {
                 Collider[] colliders = interactable.Colliders;
-                foreach (Collider collider in colliders)
+                GrabPoseScore score = GrabPoseHelper.CollidersScore(position, interactable.Colliders, out Vector3 hit);
+                if (score.IsBetterThan(bestScore))
                 {
-                    bool isPointInsideCollider = Collisions.IsPointWithinCollider(position, collider);
-                    if (!isPointInsideCollider && closestPointIsInside)
-                    {
-                        continue;
-                    }
-                    Vector3 measuringPoint = isPointInsideCollider ? collider.bounds.center : collider.ClosestPoint(position);
-                    score = (position - measuringPoint).sqrMagnitude;
-                    if (score < bestScore || (isPointInsideCollider && !closestPointIsInside))
-                    {
-                        bestScore = score;
-                        closestInteractable = interactable;
-                        closestPointIsInside = isPointInsideCollider;
-                    }
+                    bestScore = score;
+                    closestInteractable = interactable;
                 }
             }
 
@@ -281,7 +272,7 @@ namespace Oculus.Interaction
 
         public void InjectSelector(ISelector selector)
         {
-            _selector = selector as MonoBehaviour;
+            _selector = selector as UnityEngine.Object;
             Selector = selector;
         }
 
@@ -302,7 +293,7 @@ namespace Oculus.Interaction
 
         public void InjectOptionalVelocityCalculator(IVelocityCalculator velocityCalculator)
         {
-            _velocityCalculator = velocityCalculator as MonoBehaviour;
+            _velocityCalculator = velocityCalculator as UnityEngine.Object;
             VelocityCalculator = velocityCalculator;
         }
 

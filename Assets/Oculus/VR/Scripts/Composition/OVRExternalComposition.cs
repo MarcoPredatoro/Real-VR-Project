@@ -46,18 +46,18 @@ public class OVRExternalComposition : OVRComposition
 	private bool skipFrame = false;
 	private float fpsThreshold = 80.0f;
 	private bool isFrameSkipped = true;
-	public bool renderCombinedFrame = false;
-	public AudioListener audioListener;
-	public OVRMRAudioFilter audioFilter;
-	public RenderTexture[] mrcRenderTextureArray = new RenderTexture[2];
-	public int frameIndex;
-	public int lastMrcEncodeFrameSyncId;
+	private bool renderCombinedFrame = false;
+	private AudioListener audioListener;
+	private OVRMRAudioFilter audioFilter;
+	private RenderTexture[] mrcRenderTextureArray = new RenderTexture[2];
+	private int frameIndex;
+	private int lastMrcEncodeFrameSyncId;
 
 	// when rendererSupportsCameraRect is false, mrcRenderTextureArray would only store the background frame (regular width)
-	public RenderTexture[] mrcForegroundRenderTextureArray = new RenderTexture[2];
+	private RenderTexture[] mrcForegroundRenderTextureArray = new RenderTexture[2];
 
 	// this is used for moving MRC camera where we would need to be able to synchronize the camera position from the game with that on the client for composition
-	public double[] cameraPoseTimeArray = new double[2];
+	private double[] cameraPoseTimeArray = new double[2];
 #endif
 
 	public override OVRManager.CompositionMethod CompositionMethod() { return OVRManager.CompositionMethod.External; }
@@ -209,6 +209,13 @@ public class OVRExternalComposition : OVRComposition
 				foregroundCamera.rect = new Rect(0.0f, 0.0f, 1.0f, 1.0f);
 			}
 #endif
+
+			// [Debug] Uncommenting the following code will put a cube on the external camera location for visualization
+			//GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+			//cube.transform.parent = foregroundCameraGameObject.transform;
+			//cube.transform.localPosition = Vector3.zero;
+			//cube.transform.localRotation = Quaternion.identity;
+			//cube.transform.localScale = Vector3.one * 0.1f;
 
 			previousMainCameraObject = mainCamera.gameObject;
 		}

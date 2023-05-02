@@ -25,10 +25,10 @@ namespace Oculus.Interaction
         public bool IsRootDriver { get; set; } = true;
 
         [SerializeField, Interface(typeof(IUpdateDriver))]
-        private List<MonoBehaviour> _updateDrivers;
+        private List<UnityEngine.Object> _updateDrivers;
         protected List<IUpdateDriver> Drivers;
 
-        [SerializeField]
+        [SerializeField, Min(1)]
         private int _iterations = 3;
 
         #region Properties
@@ -54,12 +54,8 @@ namespace Oculus.Interaction
         // Start is called before the first frame update
         protected virtual void Start()
         {
-            foreach (IUpdateDriver driver in Drivers)
-            {
-                Assert.IsNotNull(driver);
-            }
-
-            Assert.IsTrue(_iterations > 0);
+            this.AssertCollectionItems(Drivers, nameof(Drivers));
+            this.AssertIsTrue(_iterations > 0, $"{AssertUtils.Nicify(nameof(_iterations))} must be bigger than {0}.");
         }
 
         // Update is called once per frame
@@ -94,7 +90,7 @@ namespace Oculus.Interaction
         public void InjectUpdateDrivers(List<IUpdateDriver> updateDrivers)
         {
             Drivers = updateDrivers;
-            _updateDrivers = updateDrivers.ConvertAll(driver => driver as MonoBehaviour);
+            _updateDrivers = updateDrivers.ConvertAll(driver => driver as UnityEngine.Object);
         }
 
         #endregion

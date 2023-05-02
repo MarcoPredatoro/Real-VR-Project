@@ -21,7 +21,6 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 namespace Oculus.Interaction
 {
@@ -38,11 +37,11 @@ namespace Oculus.Interaction
                                     where TInteractable : Interactable<TInteractor, TInteractable>
     {
         [SerializeField, Interface(typeof(IActiveState)), Optional]
-        private MonoBehaviour _activeState;
+        private UnityEngine.Object _activeState;
         private IActiveState ActiveState = null;
 
         [SerializeField, Interface(typeof(IGameObjectFilter)), Optional]
-        private List<MonoBehaviour> _interactableFilters = new List<MonoBehaviour>();
+        private List<UnityEngine.Object> _interactableFilters = new List<UnityEngine.Object>();
         private List<IGameObjectFilter> InteractableFilters = null;
 
         private Func<TInteractable> _computeCandidateOverride;
@@ -56,6 +55,7 @@ namespace Oculus.Interaction
         protected virtual void DoNormalUpdate() { }
         protected virtual void DoHoverUpdate() { }
         protected virtual void DoSelectUpdate() { }
+        protected virtual void DoPostprocess() { }
 
         public virtual bool ShouldHover
         {
@@ -250,8 +250,6 @@ namespace Oculus.Interaction
             _whenInteractableUnselected.Invoke(interactable);
         }
 
-        protected virtual void DoPostprocess() { }
-
         private UniqueIdentifier _identifier;
         public int Identifier => _identifier.ID;
 
@@ -272,10 +270,8 @@ namespace Oculus.Interaction
         protected virtual void Start()
         {
             this.BeginStart(ref _started);
-            foreach (IGameObjectFilter filter in InteractableFilters)
-            {
-                Assert.IsNotNull(filter);
-            }
+
+            this.AssertCollectionItems(InteractableFilters, nameof(InteractableFilters));
 
             if (Data == null)
             {
@@ -709,7 +705,7 @@ namespace Oculus.Interaction
         #region Inject
         public void InjectOptionalActiveState(IActiveState activeState)
         {
-            _activeState = activeState as MonoBehaviour;
+            _activeState = activeState as UnityEngine.Object;
             ActiveState = activeState;
         }
 
@@ -717,7 +713,7 @@ namespace Oculus.Interaction
         {
             InteractableFilters = interactableFilters;
             _interactableFilters = interactableFilters.ConvertAll(interactableFilter =>
-                                    interactableFilter as MonoBehaviour);
+                                    interactableFilter as UnityEngine.Object);
         }
 
         public void InjectOptionalData(object data)

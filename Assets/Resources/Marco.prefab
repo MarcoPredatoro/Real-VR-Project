@@ -2285,7 +2285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controllerCharacteristics: 320
-  handAnimator: {fileID: 8057170505173817191}
+  handAnimator: {fileID: 8199937749838755689}
 --- !u!4 &2960062256568069812 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4402553489038162039, guid: 29a590de967194bf1a086b9ea5f995d2, type: 3}
@@ -3049,6 +3049,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 30.481
       objectReference: {fileID: 0}
+    - target: {fileID: -8428384778347268400, guid: 29a590de967194bf1a086b9ea5f995d2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cfe97e73ed4074d4d9ffd8bbf4ea7ad6, type: 2}
     - target: {fileID: 919132149155446097, guid: 29a590de967194bf1a086b9ea5f995d2, type: 3}
       propertyPath: m_Name
       value: ClawRealRight
@@ -3108,7 +3112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controllerCharacteristics: 576
-  handAnimator: {fileID: 7703587075683989068}
+  handAnimator: {fileID: 2771608135201332386}
 --- !u!4 &9168385455466008855 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4402553489038162039, guid: 29a590de967194bf1a086b9ea5f995d2, type: 3}
@@ -3171,7 +3175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5391464938148767507, guid: 914585892bd4b4419b20d9d798c927d6, type: 3}
       propertyPath: m_Intensity
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5391464938148767507, guid: 914585892bd4b4419b20d9d798c927d6, type: 3}
       propertyPath: m_SpotAngle

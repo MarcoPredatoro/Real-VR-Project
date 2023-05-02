@@ -9,10 +9,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Facebook.WitAi.Interfaces;
+using Meta.WitAi.Json;
+using Meta.WitAi.Interfaces;
 using UnityEngine;
 
-namespace Facebook.WitAi.Configuration
+namespace Meta.WitAi.Configuration
 {
     public class WitRequestOptions
     {
@@ -34,7 +35,14 @@ namespace Facebook.WitAi.Configuration
         /// <summary>
         /// A GUID - For internal use
         /// </summary>
-        public string requestID = Guid.NewGuid().ToString();
+        [JsonProperty("requestID")]
+        public string RequestId { get; set; } = Guid.NewGuid().ToString();
+        [Obsolete("Use 'RequestId' property instead")] [JsonIgnore]
+        public string requestID
+        {
+            get => RequestId;
+            set => RequestId = value;
+        }
 
         /// <summary>
         /// Additional parameters to be used for custom
