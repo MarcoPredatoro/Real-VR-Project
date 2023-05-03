@@ -2194,8 +2194,6 @@ struct Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB;
 struct EventArgs_t37273F03EAC87217701DD431B190FBD84AD7C377;
 // ExitGames.Client.Photon.EventData
 struct EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681;
-// EventManager
-struct EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A;
 // UnityEngine.EventSystems.EventSystem
 struct EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707;
 // System.Exception
@@ -2342,6 +2340,8 @@ struct HandsActiveChecker_t6A81E0F5764685D2323A37325349986B1BC3283A;
 struct HandsManager_t0737DB8A771E2BC516413E349E0CDBBC8E5189C7;
 // UnityEngine.XR.OpenXR.Input.HapticControl
 struct HapticControl_t55C6C8AF176B500F8A11E14786537FA0923A5D49;
+// HapticInteractable
+struct HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906;
 // ExitGames.Client.Photon.Hashtable
 struct Hashtable_tD626399B3ADFD501225241D7366103F35472542A;
 // Oculus.Interaction.Input.HmdDataAsset
@@ -13284,17 +13284,6 @@ struct U3CRangeIteratorU3Ed__115_tDB1D987AE1C673965E7ABCDA1D189AD36358F14D  : pu
 	int32_t ___U3CiU3E5__2_7;
 };
 
-// EventManager/<CollisionCooldown>d__24
-struct U3CCollisionCooldownU3Ed__24_tEA2BDA90329CE60638381185405812D3AC01AE86  : public RuntimeObject
-{
-	// System.Int32 EventManager/<CollisionCooldown>d__24::<>1__state
-	int32_t ___U3CU3E1__state_0;
-	// System.Object EventManager/<CollisionCooldown>d__24::<>2__current
-	RuntimeObject* ___U3CU3E2__current_1;
-	// EventManager EventManager/<CollisionCooldown>d__24::<>4__this
-	EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A* ___U3CU3E4__this_2;
-};
-
 // UnityEngine.EventSystems.EventSystem/<>c__DisplayClass52_0
 struct U3CU3Ec__DisplayClass52_0_t4061A62ABA9B8793E143D0C64BADDA6B8D4F09EE  : public RuntimeObject
 {
@@ -13700,6 +13689,17 @@ struct U3CFindSkeletonVisualGameObjectsU3Ed__52_tAEE38F2607C43B4EC514A9C784FC4E9
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___U3CleftSkeletonVisualTransformU3E5__1_3;
 	// UnityEngine.Transform OculusSampleFramework.HandsManager/<FindSkeletonVisualGameObjects>d__52::<rightSkeletonVisualTransform>5__2
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___U3CrightSkeletonVisualTransformU3E5__2_4;
+};
+
+// HapticInteractable/<CollisionCooldown>d__11
+struct U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A  : public RuntimeObject
+{
+	// System.Int32 HapticInteractable/<CollisionCooldown>d__11::<>1__state
+	int32_t ___U3CU3E1__state_0;
+	// System.Object HapticInteractable/<CollisionCooldown>d__11::<>2__current
+	RuntimeObject* ___U3CU3E2__current_1;
+	// HapticInteractable HapticInteractable/<CollisionCooldown>d__11::<>4__this
+	HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906* ___U3CU3E4__this_2;
 };
 
 // Oculus.Interaction.Input.Hmd/<>c
@@ -46251,6 +46251,10 @@ struct HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906  : public Mo
 	uint32_t ___controllerCharacteristics_6;
 	// UnityEngine.XR.InputDevice HapticInteractable::targetDevice
 	InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD ___targetDevice_7;
+	// System.Single HapticInteractable::collisionCooldown
+	float ___collisionCooldown_8;
+	// System.Boolean HapticInteractable::canSendCollision
+	bool ___canSendCollision_9;
 };
 
 // Oculus.Interaction.Samples.HideHandVisualOnGrab
@@ -52638,10 +52642,6 @@ struct EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A  : public MonoBeha
 	FlashBang_t54E642B069336B945FBCD9D203D5D6CA27FB6269* ___flashBang_17;
 	// Instantiation EventManager::decoyPolo
 	Instantiation_t782C3CB09C8FB734229108F1DB2C464876825E57* ___decoyPolo_18;
-	// System.Single EventManager::collisionCooldown
-	float ___collisionCooldown_19;
-	// System.Boolean EventManager::canSendCollision
-	bool ___canSendCollision_20;
 };
 
 // UnityEngine.EventSystems.EventSystem
@@ -61732,23 +61732,23 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize7166 = { sizeof(U3CdestroyTh
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7167;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize7167 = { sizeof(Destruction_tFB3E94F774071AE65BF1FAB3D0639DB35C56D152), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7168;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7168 = { sizeof(U3CCollisionCooldownU3Ed__24_tEA2BDA90329CE60638381185405812D3AC01AE86), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7168 = { sizeof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7169;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7169 = { sizeof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7169 = { sizeof(U3CFadeOutObjectU3Ed__8_t4BD877CD584DAD45565DFBDC24CE2993B986D8F3), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7170;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7170 = { sizeof(U3CFadeOutObjectU3Ed__8_t4BD877CD584DAD45565DFBDC24CE2993B986D8F3), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7170 = { sizeof(U3CFadeInObjectU3Ed__9_tB44EF0CAA1792D9A2FB823D8CC54022F396C7C72), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7171;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7171 = { sizeof(U3CFadeInObjectU3Ed__9_tB44EF0CAA1792D9A2FB823D8CC54022F396C7C72), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7171 = { sizeof(FadeView_t1604A276F9B4A5D9A3DF59897633B3D0A7F6A8A0), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7172;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7172 = { sizeof(FadeView_t1604A276F9B4A5D9A3DF59897633B3D0A7F6A8A0), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7172 = { sizeof(U3CInhibitVisionCoroutineU3Ed__6_t5242C6B8D0A554521C23555287B53F71AE141AAF), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7173;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7173 = { sizeof(U3CInhibitVisionCoroutineU3Ed__6_t5242C6B8D0A554521C23555287B53F71AE141AAF), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7173 = { sizeof(U3CFadeToWhiteU3Ed__7_t07F1C1F55F4D01305340A306AF62F0B20DD62DC9), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7174;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7174 = { sizeof(U3CFadeToWhiteU3Ed__7_t07F1C1F55F4D01305340A306AF62F0B20DD62DC9), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7174 = { sizeof(U3CFadeFromWhiteU3Ed__8_tA1CD7C48D1F71EC792CBA9B681ECCE64FA35E82E), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7175;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7175 = { sizeof(U3CFadeFromWhiteU3Ed__8_tA1CD7C48D1F71EC792CBA9B681ECCE64FA35E82E), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7175 = { sizeof(FlashBang_t54E642B069336B945FBCD9D203D5D6CA27FB6269), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7176;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7176 = { sizeof(FlashBang_t54E642B069336B945FBCD9D203D5D6CA27FB6269), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7176 = { sizeof(U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7177;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize7177 = { sizeof(HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize7178;

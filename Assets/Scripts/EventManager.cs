@@ -40,8 +40,8 @@ public class EventManager : MonoBehaviourPun
     [SerializeField]
     private Instantiation decoyPolo;
 
-    public float collisionCooldown = 3f;
-    private bool canSendCollision = true;
+    // public float collisionCooldown = 3f;
+    // private bool canSendCollision = true;
 
 
     // Start is called before the first frame update
@@ -135,24 +135,23 @@ public class EventManager : MonoBehaviourPun
 
     public void SendMarcoCollision()
     {
-        if (canSendCollision) 
-        {
+   
 
         Debug.Log("sending collision");
         RaiseEventOptions options = RaiseEventOptions.Default;
         options.Receivers = ReceiverGroup.All;
         PhotonNetwork.RaiseEvent(MARCO_STAB_EVENT, 2, options, SendOptions.SendReliable);
-        StartCoroutine(CollisionCooldown());
+        // StartCoroutine(CollisionCooldown());
         //test.text = "Marco Event Sent";
         //tree.SetActive(false);
         
-        }
+        
     }
 
-    private IEnumerator CollisionCooldown()
-    {
-        canSendCollision = false;
-        yield return new WaitForSeconds(collisionCooldown);
-        canSendCollision = true;
-    }
-}
+//     private IEnumerator CollisionCooldown()
+//     {
+//         canSendCollision = false;
+//         yield return new WaitForSeconds(collisionCooldown);
+//         canSendCollision = true;
+//     }
+ }

@@ -913,8 +913,6 @@ struct WillRenderCanvases_tA4A6E66DBA797DCB45B995DBA449A9D1D80D0FBC;
 struct OnClick_tE915BFC88D1C91D68F96A97D675ECCCF91B8D46A;
 // Destruction/<destroyThis>d__3
 struct U3CdestroyThisU3Ed__3_tFD41779602277CD232EC22543818E8A4275EE0BF;
-// EventManager/<CollisionCooldown>d__24
-struct U3CCollisionCooldownU3Ed__24_tEA2BDA90329CE60638381185405812D3AC01AE86;
 // FadeView/<FadeInObject>d__9
 struct U3CFadeInObjectU3Ed__9_tB44EF0CAA1792D9A2FB823D8CC54022F396C7C72;
 // FadeView/<FadeOutObject>d__8
@@ -931,6 +929,8 @@ struct GrabbedObject_tA6B05BA3219A736CE99A71B4098441732453DFFA;
 struct ReleasedObject_t03C81AEEB8828CDCAD8F6B13F9816FEA331DBAF3;
 // GrabObject/SetCursorPosition
 struct SetCursorPosition_t35BF3398EC27487041A0DDD942509659DCEAD15C;
+// HapticInteractable/<CollisionCooldown>d__11
+struct U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A;
 // UnityEngine.UI.InputField/EndEditEvent
 struct EndEditEvent_t946A962BA13CF60BB0BE7AD091DA041FD788E655;
 // UnityEngine.UI.InputField/OnChangeEvent
@@ -1036,7 +1036,7 @@ IL2CPP_EXTERN_C RuntimeClass* SimpleResizer_tEE22E45148853C2D04F5E1C04DAAFB0F022
 IL2CPP_EXTERN_C RuntimeClass* StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* String_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* U3CCollisionCooldownU3Ed__24_tEA2BDA90329CE60638381185405812D3AC01AE86_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CDelayInstantiationU3Ed__10_t98B5A0A43902E76EDBE087763A6F0ED1142793FF_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CDelayedLoadU3Ed__0_t07A64B527BA1C81D61DF3358272914889480D961_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CFadeFromWhiteU3Ed__8_tA1CD7C48D1F71EC792CBA9B681ECCE64FA35E82E_il2cpp_TypeInfo_var;
@@ -1148,6 +1148,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral8CB7873CC9B86C1D67BF2A619181392B42B2481F
 IL2CPP_EXTERN_C String_t* _stringLiteral93CD26FD25F534D18F21EBB330F02E0264AC3C8C;
 IL2CPP_EXTERN_C String_t* _stringLiteral97F5F2E635A943D0F2EDA0050FC7B3BFD6AF56D1;
 IL2CPP_EXTERN_C String_t* _stringLiteral98B08286873354CF5D3F9875D1E5346FC430D028;
+IL2CPP_EXTERN_C String_t* _stringLiteral995061C50382A5666A8EB9A41F41D169B9E64C61;
 IL2CPP_EXTERN_C String_t* _stringLiteral996526FE87FF035A6B75A9A693E98AE5E0F307CD;
 IL2CPP_EXTERN_C String_t* _stringLiteral9BFC259732F9FFBC62180E1102BBFBF8A68CC63E;
 IL2CPP_EXTERN_C String_t* _stringLiteral9C66B77414C70B07BA8BA9DA8B05A1F608B96B41;
@@ -1199,7 +1200,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteralE755D2F00264DA21CC8DFE5A4AAB38D717216A63
 IL2CPP_EXTERN_C String_t* _stringLiteralE95B20A3C0F0224ABEA60EBBCCE0DD745AF47376;
 IL2CPP_EXTERN_C String_t* _stringLiteralEE12DBC05C7FC9FA2A8B746D643F2D6E1CCE6FEF;
 IL2CPP_EXTERN_C String_t* _stringLiteralF0E91461B7ECDB6ABA60BFA77B9395C3A7DF66BE;
-IL2CPP_EXTERN_C String_t* _stringLiteralF380A2555A78A08B6566AAB5CD54AEC84111D79E;
 IL2CPP_EXTERN_C String_t* _stringLiteralF726A1EAC195324F63D384A1F2A33114361B699C;
 IL2CPP_EXTERN_C String_t* _stringLiteralF8851D9BD6F74890B3B8707221A22FD5C9A3A894;
 IL2CPP_EXTERN_C String_t* _stringLiteralF901E66F2A148065254F4D6B82528054EF835B28;
@@ -1320,7 +1320,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* SPPquad_Release_m6091EB850236963B2CFC76A385
 IL2CPP_EXTERN_C const RuntimeMethod* SpatialAnchorLoader_OnLocalized_m8AE6C20DC68F31ACBDC0C6402969903F50E226BC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* SpatialAnchorLoader_U3CLoadU3Eb__4_0_m61B6A498A916153D8F9A0EB320C5B63DC62C4BD4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* TextToggleIsOnTransition_OnValueChanged_m5938ADE42C6A8502F7D225F42C9E8A6DD15833BA_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CCollisionCooldownU3Ed__24_System_Collections_IEnumerator_Reset_m09B8181DCDE7811137BFB62D36993A0794AE480A_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CCollisionCooldownU3Ed__11_System_Collections_IEnumerator_Reset_m83F3A74477FD60E0ED8F34D5F622A0E115A98F04_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CDelayInstantiationU3Ed__10_System_Collections_IEnumerator_Reset_m6C1EE71BF18D486CEB1610BFB09703C35C9CA98C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CDelayedLoadU3Ed__0_System_Collections_IEnumerator_Reset_m03EE2942391DFAD91FA9D0570B1007024B8BA987_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CFadeFromWhiteU3Ed__8_System_Collections_IEnumerator_Reset_mCC23BFFB4B363EFEE48374EFCB7C318F9BCB51C2_RuntimeMethod_var;
@@ -2235,17 +2235,6 @@ struct U3CdestroyThisU3Ed__3_tFD41779602277CD232EC22543818E8A4275EE0BF  : public
 	Destruction_tFB3E94F774071AE65BF1FAB3D0639DB35C56D152* ___U3CU3E4__this_2;
 };
 
-// EventManager/<CollisionCooldown>d__24
-struct U3CCollisionCooldownU3Ed__24_tEA2BDA90329CE60638381185405812D3AC01AE86  : public RuntimeObject
-{
-	// System.Int32 EventManager/<CollisionCooldown>d__24::<>1__state
-	int32_t ___U3CU3E1__state_0;
-	// System.Object EventManager/<CollisionCooldown>d__24::<>2__current
-	RuntimeObject* ___U3CU3E2__current_1;
-	// EventManager EventManager/<CollisionCooldown>d__24::<>4__this
-	EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A* ___U3CU3E4__this_2;
-};
-
 // FadeView/<FadeInObject>d__9
 struct U3CFadeInObjectU3Ed__9_tB44EF0CAA1792D9A2FB823D8CC54022F396C7C72  : public RuntimeObject
 {
@@ -2307,6 +2296,17 @@ struct U3CInhibitVisionCoroutineU3Ed__6_t5242C6B8D0A554521C23555287B53F71AE141AA
 	RuntimeObject* ___U3CU3E2__current_1;
 	// FlashBang FlashBang/<InhibitVisionCoroutine>d__6::<>4__this
 	FlashBang_t54E642B069336B945FBCD9D203D5D6CA27FB6269* ___U3CU3E4__this_2;
+};
+
+// HapticInteractable/<CollisionCooldown>d__11
+struct U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A  : public RuntimeObject
+{
+	// System.Int32 HapticInteractable/<CollisionCooldown>d__11::<>1__state
+	int32_t ___U3CU3E1__state_0;
+	// System.Object HapticInteractable/<CollisionCooldown>d__11::<>2__current
+	RuntimeObject* ___U3CU3E2__current_1;
+	// HapticInteractable HapticInteractable/<CollisionCooldown>d__11::<>4__this
+	HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906* ___U3CU3E4__this_2;
 };
 
 // Instantiation/<destroyThis>d__6
@@ -5661,6 +5661,10 @@ struct HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906  : public Mo
 	uint32_t ___controllerCharacteristics_6;
 	// UnityEngine.XR.InputDevice HapticInteractable::targetDevice
 	InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD ___targetDevice_7;
+	// System.Single HapticInteractable::collisionCooldown
+	float ___collisionCooldown_8;
+	// System.Boolean HapticInteractable::canSendCollision
+	bool ___canSendCollision_9;
 };
 
 // Photon.Chat.Demo.IgnoreUiRaycastWhenInactive
@@ -6937,10 +6941,6 @@ struct EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A  : public MonoBeha
 	FlashBang_t54E642B069336B945FBCD9D203D5D6CA27FB6269* ___flashBang_17;
 	// Instantiation EventManager::decoyPolo
 	Instantiation_t782C3CB09C8FB734229108F1DB2C464876825E57* ___decoyPolo_18;
-	// System.Single EventManager::collisionCooldown
-	float ___collisionCooldown_19;
-	// System.Boolean EventManager::canSendCollision
-	bool ___canSendCollision_20;
 };
 
 // UnityEngine.EventSystems.EventSystem
@@ -9458,10 +9458,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Material_SetFloat_m879CF81D740BAE6F23C98
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
 // System.Boolean Photon.Pun.PhotonNetwork::RaiseEvent(System.Byte,System.Object,Photon.Realtime.RaiseEventOptions,ExitGames.Client.Photon.SendOptions)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_RaiseEvent_mFB515FAB067583F656F8B64D7CF44F8F0C41224B (uint8_t ___eventCode0, RuntimeObject* ___eventContent1, RaiseEventOptions_tAEB3A9A0993C52981809954BC2DB304E887D852E* ___raiseEventOptions2, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 ___sendOptions3, const RuntimeMethod* method) ;
-// System.Collections.IEnumerator EventManager::CollisionCooldown()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* EventManager_CollisionCooldown_m0BA6C47888F92FA9B44749460FD6F4BA4916FBC1 (EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A* __this, const RuntimeMethod* method) ;
-// System.Void EventManager/<CollisionCooldown>d__24::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCollisionCooldownU3Ed__24__ctor_m31BF91AFA991B8AF3202464599034D86EF19CF55 (U3CCollisionCooldownU3Ed__24_tEA2BDA90329CE60638381185405812D3AC01AE86* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
 // System.Void Photon.Pun.MonoBehaviourPun::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPun__ctor_m52771D9D46565807FDF72A7B6622574D38C29A55 (MonoBehaviourPun_t64DD82CBA1C47A70448DAB2263AB90A4411621BD* __this, const RuntimeMethod* method) ;
 // T UnityEngine.Component::GetComponent<UnityEngine.Renderer>()
@@ -9520,6 +9516,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool InputDevice_SendHapticImpulse_m7166A784508F8E0F3AE5BD88863171C7A905BC1B (InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD* __this, uint32_t ___channel0, float ___amplitude1, float ___duration2, const RuntimeMethod* method) ;
 // System.Void HapticInteractable::SendCollisionEvent()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticInteractable_SendCollisionEvent_m9F20440A8644DEC4B2A72CEEAA9B6A954636BEF9 (HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906* __this, const RuntimeMethod* method) ;
+// System.Collections.IEnumerator HapticInteractable::CollisionCooldown()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HapticInteractable_CollisionCooldown_mD0A232A76FD3324B8950C47A252B9DFAA3C984D9 (HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906* __this, const RuntimeMethod* method) ;
 // T UnityEngine.GameObject::GetComponent<EventManager>()
 inline EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A* GameObject_GetComponent_TisEventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A_m4A39DA864D15A308D0320AE1B6F6F8918C42E254 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
 {
@@ -9527,6 +9525,8 @@ inline EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A* GameObject_GetCom
 }
 // System.Void EventManager::SendMarcoCollision()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventManager_SendMarcoCollision_m0D2D3A89BF6E2CE7E3E0030338E547A6FE46C5AC (EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A* __this, const RuntimeMethod* method) ;
+// System.Void HapticInteractable/<CollisionCooldown>d__11::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCollisionCooldownU3Ed__11__ctor_mEC5332C30E5ABB1AA3BE927CA6E53C3FE503F893 (U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
 // System.Single UnityEngine.Random::Range(System.Single,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494 (float ___minInclusive0, float ___maxInclusive1, const RuntimeMethod* method) ;
 // System.Int32 UnityEngine.Random::Range(System.Int32,System.Int32)
@@ -20350,70 +20350,30 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventManager_SendMarcoCollision_m0D2D3A8
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8443E3260D5BE8B74E20200607AB7BB16B783FEF);
 		s_Il2CppMethodInitialized = true;
 	}
-	bool V_0 = false;
-	RaiseEventOptions_tAEB3A9A0993C52981809954BC2DB304E887D852E* V_1 = NULL;
-	{
-		// if (canSendCollision)
-		bool L_0 = __this->___canSendCollision_20;
-		V_0 = L_0;
-		bool L_1 = V_0;
-		if (!L_1)
-		{
-			goto IL_0045;
-		}
-	}
+	RaiseEventOptions_tAEB3A9A0993C52981809954BC2DB304E887D852E* V_0 = NULL;
 	{
 		// Debug.Log("sending collision");
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral8443E3260D5BE8B74E20200607AB7BB16B783FEF, NULL);
 		// RaiseEventOptions options = RaiseEventOptions.Default;
 		il2cpp_codegen_runtime_class_init_inline(RaiseEventOptions_tAEB3A9A0993C52981809954BC2DB304E887D852E_il2cpp_TypeInfo_var);
-		RaiseEventOptions_tAEB3A9A0993C52981809954BC2DB304E887D852E* L_2 = ((RaiseEventOptions_tAEB3A9A0993C52981809954BC2DB304E887D852E_StaticFields*)il2cpp_codegen_static_fields_for(RaiseEventOptions_tAEB3A9A0993C52981809954BC2DB304E887D852E_il2cpp_TypeInfo_var))->___Default_0;
-		V_1 = L_2;
+		RaiseEventOptions_tAEB3A9A0993C52981809954BC2DB304E887D852E* L_0 = ((RaiseEventOptions_tAEB3A9A0993C52981809954BC2DB304E887D852E_StaticFields*)il2cpp_codegen_static_fields_for(RaiseEventOptions_tAEB3A9A0993C52981809954BC2DB304E887D852E_il2cpp_TypeInfo_var))->___Default_0;
+		V_0 = L_0;
 		// options.Receivers = ReceiverGroup.All;
-		RaiseEventOptions_tAEB3A9A0993C52981809954BC2DB304E887D852E* L_3 = V_1;
-		NullCheck(L_3);
-		L_3->___Receivers_4 = 1;
+		RaiseEventOptions_tAEB3A9A0993C52981809954BC2DB304E887D852E* L_1 = V_0;
+		NullCheck(L_1);
+		L_1->___Receivers_4 = 1;
 		// PhotonNetwork.RaiseEvent(MARCO_STAB_EVENT, 2, options, SendOptions.SendReliable);
-		int32_t L_4 = 2;
-		RuntimeObject* L_5 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_4);
-		RaiseEventOptions_tAEB3A9A0993C52981809954BC2DB304E887D852E* L_6 = V_1;
+		int32_t L_2 = 2;
+		RuntimeObject* L_3 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_2);
+		RaiseEventOptions_tAEB3A9A0993C52981809954BC2DB304E887D852E* L_4 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var);
-		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_7 = ((SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_StaticFields*)il2cpp_codegen_static_fields_for(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var))->___SendReliable_0;
+		SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 L_5 = ((SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_StaticFields*)il2cpp_codegen_static_fields_for(SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8_il2cpp_TypeInfo_var))->___SendReliable_0;
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
-		bool L_8;
-		L_8 = PhotonNetwork_RaiseEvent_mFB515FAB067583F656F8B64D7CF44F8F0C41224B((uint8_t)2, L_5, L_6, L_7, NULL);
-		// StartCoroutine(CollisionCooldown());
-		RuntimeObject* L_9;
-		L_9 = EventManager_CollisionCooldown_m0BA6C47888F92FA9B44749460FD6F4BA4916FBC1(__this, NULL);
-		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_10;
-		L_10 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_9, NULL);
-	}
-
-IL_0045:
-	{
+		bool L_6;
+		L_6 = PhotonNetwork_RaiseEvent_mFB515FAB067583F656F8B64D7CF44F8F0C41224B((uint8_t)2, L_3, L_4, L_5, NULL);
 		// }
 		return;
-	}
-}
-// System.Collections.IEnumerator EventManager::CollisionCooldown()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* EventManager_CollisionCooldown_m0BA6C47888F92FA9B44749460FD6F4BA4916FBC1 (EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CCollisionCooldownU3Ed__24_tEA2BDA90329CE60638381185405812D3AC01AE86_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		U3CCollisionCooldownU3Ed__24_tEA2BDA90329CE60638381185405812D3AC01AE86* L_0 = (U3CCollisionCooldownU3Ed__24_tEA2BDA90329CE60638381185405812D3AC01AE86*)il2cpp_codegen_object_new(U3CCollisionCooldownU3Ed__24_tEA2BDA90329CE60638381185405812D3AC01AE86_il2cpp_TypeInfo_var);
-		NullCheck(L_0);
-		U3CCollisionCooldownU3Ed__24__ctor_m31BF91AFA991B8AF3202464599034D86EF19CF55(L_0, 0, NULL);
-		U3CCollisionCooldownU3Ed__24_tEA2BDA90329CE60638381185405812D3AC01AE86* L_1 = L_0;
-		NullCheck(L_1);
-		L_1->___U3CU3E4__this_2 = __this;
-		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this_2), (void*)__this);
-		return L_1;
 	}
 }
 // System.Void EventManager::.ctor()
@@ -20426,144 +20386,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventManager__ctor_mB2304AB8CE6B4D03CF0C
 		__this->___maxPoints_15 = (100.0f);
 		// private float minPoints = -100;
 		__this->___minPoints_16 = (-100.0f);
-		// public float collisionCooldown = 3f;
-		__this->___collisionCooldown_19 = (3.0f);
-		// private bool canSendCollision = true;
-		__this->___canSendCollision_20 = (bool)1;
 		MonoBehaviourPun__ctor_m52771D9D46565807FDF72A7B6622574D38C29A55(__this, NULL);
 		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void EventManager/<CollisionCooldown>d__24::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCollisionCooldownU3Ed__24__ctor_m31BF91AFA991B8AF3202464599034D86EF19CF55 (U3CCollisionCooldownU3Ed__24_tEA2BDA90329CE60638381185405812D3AC01AE86* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
-{
-	{
-		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		int32_t L_0 = ___U3CU3E1__state0;
-		__this->___U3CU3E1__state_0 = L_0;
-		return;
-	}
-}
-// System.Void EventManager/<CollisionCooldown>d__24::System.IDisposable.Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCollisionCooldownU3Ed__24_System_IDisposable_Dispose_m61630A8C6068B5463270F421B62110D2392F06AF (U3CCollisionCooldownU3Ed__24_tEA2BDA90329CE60638381185405812D3AC01AE86* __this, const RuntimeMethod* method) 
-{
-	{
-		return;
-	}
-}
-// System.Boolean EventManager/<CollisionCooldown>d__24::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CCollisionCooldownU3Ed__24_MoveNext_mBC53ABC741DD84134F2661492A43819900CFA092 (U3CCollisionCooldownU3Ed__24_tEA2BDA90329CE60638381185405812D3AC01AE86* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	int32_t V_0 = 0;
-	{
-		int32_t L_0 = __this->___U3CU3E1__state_0;
-		V_0 = L_0;
-		int32_t L_1 = V_0;
-		if (!L_1)
-		{
-			goto IL_0012;
-		}
-	}
-	{
-		goto IL_000c;
-	}
-
-IL_000c:
-	{
-		int32_t L_2 = V_0;
-		if ((((int32_t)L_2) == ((int32_t)1)))
-		{
-			goto IL_0014;
-		}
-	}
-	{
-		goto IL_0016;
-	}
-
-IL_0012:
-	{
-		goto IL_0018;
-	}
-
-IL_0014:
-	{
-		goto IL_004b;
-	}
-
-IL_0016:
-	{
-		return (bool)0;
-	}
-
-IL_0018:
-	{
-		__this->___U3CU3E1__state_0 = (-1);
-		// canSendCollision = false;
-		EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A* L_3 = __this->___U3CU3E4__this_2;
-		NullCheck(L_3);
-		L_3->___canSendCollision_20 = (bool)0;
-		// yield return new WaitForSeconds(collisionCooldown);
-		EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A* L_4 = __this->___U3CU3E4__this_2;
-		NullCheck(L_4);
-		float L_5 = L_4->___collisionCooldown_19;
-		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_6 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
-		NullCheck(L_6);
-		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_6, L_5, NULL);
-		__this->___U3CU3E2__current_1 = L_6;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current_1), (void*)L_6);
-		__this->___U3CU3E1__state_0 = 1;
-		return (bool)1;
-	}
-
-IL_004b:
-	{
-		__this->___U3CU3E1__state_0 = (-1);
-		// canSendCollision = true;
-		EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A* L_7 = __this->___U3CU3E4__this_2;
-		NullCheck(L_7);
-		L_7->___canSendCollision_20 = (bool)1;
-		// }
-		return (bool)0;
-	}
-}
-// System.Object EventManager/<CollisionCooldown>d__24::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CCollisionCooldownU3Ed__24_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m6DABD93A06BF5105DA206F5760403E2CD5F14B81 (U3CCollisionCooldownU3Ed__24_tEA2BDA90329CE60638381185405812D3AC01AE86* __this, const RuntimeMethod* method) 
-{
-	{
-		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
-		return L_0;
-	}
-}
-// System.Void EventManager/<CollisionCooldown>d__24::System.Collections.IEnumerator.Reset()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCollisionCooldownU3Ed__24_System_Collections_IEnumerator_Reset_m09B8181DCDE7811137BFB62D36993A0794AE480A (U3CCollisionCooldownU3Ed__24_tEA2BDA90329CE60638381185405812D3AC01AE86* __this, const RuntimeMethod* method) 
-{
-	{
-		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
-		NullCheck(L_0);
-		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CCollisionCooldownU3Ed__24_System_Collections_IEnumerator_Reset_m09B8181DCDE7811137BFB62D36993A0794AE480A_RuntimeMethod_var)));
-	}
-}
-// System.Object EventManager/<CollisionCooldown>d__24::System.Collections.IEnumerator.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CCollisionCooldownU3Ed__24_System_Collections_IEnumerator_get_Current_mC08BCDE881CAADE776B4ABA3EDFA0FD2425E9F50 (U3CCollisionCooldownU3Ed__24_tEA2BDA90329CE60638381185405812D3AC01AE86* __this, const RuntimeMethod* method) 
-{
-	{
-		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
-		return L_0;
 	}
 }
 #ifdef __clang__
@@ -21772,9 +21596,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticInteractable_OnCollisionEnter_m151
 		s_Il2CppMethodInitialized = true;
 	}
 	bool V_0 = false;
-	int32_t G_B4_0 = 0;
+	int32_t G_B5_0 = 0;
 	{
-		// if (collision.gameObject.name == "polo-with-bones" || collision.gameObject.name == "Polo2" || collision.gameObject.name == "Polo")
+		// if ((collision.gameObject.name == "polo-with-bones" || collision.gameObject.name == "Polo2" || collision.gameObject.name == "Polo") && canSendCollision)
 		Collision_tBCC6AEBD9A63E6DA2E50660DAC03CDCB1FF7A9B0* L_0 = ___collision0;
 		NullCheck(L_0);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1;
@@ -21814,36 +21638,50 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticInteractable_OnCollisionEnter_m151
 		L_10 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_9, NULL);
 		bool L_11;
 		L_11 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_10, _stringLiteral85082395959DE2D0388E83726B5702141DA050C2, NULL);
-		G_B4_0 = ((int32_t)(L_11));
-		goto IL_0047;
+		if (!L_11)
+		{
+			goto IL_004e;
+		}
 	}
 
 IL_0046:
 	{
-		G_B4_0 = 1;
+		bool L_12 = __this->___canSendCollision_9;
+		G_B5_0 = ((int32_t)(L_12));
+		goto IL_004f;
 	}
 
-IL_0047:
+IL_004e:
 	{
-		V_0 = (bool)G_B4_0;
-		bool L_12 = V_0;
-		if (!L_12)
+		G_B5_0 = 0;
+	}
+
+IL_004f:
+	{
+		V_0 = (bool)G_B5_0;
+		bool L_13 = V_0;
+		if (!L_13)
 		{
-			goto IL_006d;
+			goto IL_0082;
 		}
 	}
 	{
 		// targetDevice.SendHapticImpulse(0, hapticIntensity, hapticDuration);
-		InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD* L_13 = (&__this->___targetDevice_7);
-		float L_14 = __this->___hapticIntensity_4;
-		float L_15 = __this->___hapticDuration_5;
-		bool L_16;
-		L_16 = InputDevice_SendHapticImpulse_m7166A784508F8E0F3AE5BD88863171C7A905BC1B(L_13, 0, L_14, L_15, NULL);
+		InputDevice_t882EE3EE8A71D8F5F38BA3F9356A49F24510E8BD* L_14 = (&__this->___targetDevice_7);
+		float L_15 = __this->___hapticIntensity_4;
+		float L_16 = __this->___hapticDuration_5;
+		bool L_17;
+		L_17 = InputDevice_SendHapticImpulse_m7166A784508F8E0F3AE5BD88863171C7A905BC1B(L_14, 0, L_15, L_16, NULL);
 		// SendCollisionEvent();
 		HapticInteractable_SendCollisionEvent_m9F20440A8644DEC4B2A72CEEAA9B6A954636BEF9(__this, NULL);
+		// StartCoroutine(CollisionCooldown());
+		RuntimeObject* L_18;
+		L_18 = HapticInteractable_CollisionCooldown_mD0A232A76FD3324B8950C47A252B9DFAA3C984D9(__this, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_19;
+		L_19 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_18, NULL);
 	}
 
-IL_006d:
+IL_0082:
 	{
 		// }
 		return;
@@ -21856,13 +21694,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticInteractable_SendCollisionEvent_m9
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_GetComponent_TisEventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A_m4A39DA864D15A308D0320AE1B6F6F8918C42E254_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF380A2555A78A08B6566AAB5CD54AEC84111D79E);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral995061C50382A5666A8EB9A41F41D169B9E64C61);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// GameObject.Find("Canvas/Image/Points").GetComponent<EventManager>().SendMarcoCollision();
+		// GameObject.Find("Network Manager").GetComponent<EventManager>().SendMarcoCollision();
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0;
-		L_0 = GameObject_Find_m7A669B4EEC2617AB82F6E3FF007CDCD9F21DB300(_stringLiteralF380A2555A78A08B6566AAB5CD54AEC84111D79E, NULL);
+		L_0 = GameObject_Find_m7A669B4EEC2617AB82F6E3FF007CDCD9F21DB300(_stringLiteral995061C50382A5666A8EB9A41F41D169B9E64C61, NULL);
 		NullCheck(L_0);
 		EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A* L_1;
 		L_1 = GameObject_GetComponent_TisEventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A_m4A39DA864D15A308D0320AE1B6F6F8918C42E254(L_0, GameObject_GetComponent_TisEventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A_m4A39DA864D15A308D0320AE1B6F6F8918C42E254_RuntimeMethod_var);
@@ -21872,12 +21710,168 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticInteractable_SendCollisionEvent_m9
 		return;
 	}
 }
+// System.Collections.IEnumerator HapticInteractable::CollisionCooldown()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* HapticInteractable_CollisionCooldown_mD0A232A76FD3324B8950C47A252B9DFAA3C984D9 (HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A* L_0 = (U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A*)il2cpp_codegen_object_new(U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		U3CCollisionCooldownU3Ed__11__ctor_mEC5332C30E5ABB1AA3BE927CA6E53C3FE503F893(L_0, 0, NULL);
+		U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A* L_1 = L_0;
+		NullCheck(L_1);
+		L_1->___U3CU3E4__this_2 = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this_2), (void*)__this);
+		return L_1;
+	}
+}
 // System.Void HapticInteractable::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HapticInteractable__ctor_m8C941BED75ED126732FABDFA701EE2CA3286D0D0 (HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906* __this, const RuntimeMethod* method) 
 {
 	{
+		// public float collisionCooldown = 3f;
+		__this->___collisionCooldown_8 = (3.0f);
+		// private bool canSendCollision = true;
+		__this->___canSendCollision_9 = (bool)1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void HapticInteractable/<CollisionCooldown>d__11::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCollisionCooldownU3Ed__11__ctor_mEC5332C30E5ABB1AA3BE927CA6E53C3FE503F893 (U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		int32_t L_0 = ___U3CU3E1__state0;
+		__this->___U3CU3E1__state_0 = L_0;
+		return;
+	}
+}
+// System.Void HapticInteractable/<CollisionCooldown>d__11::System.IDisposable.Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCollisionCooldownU3Ed__11_System_IDisposable_Dispose_mE58D4128EC09E9458AE041530B920B45B0CF7F6A (U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A* __this, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// System.Boolean HapticInteractable/<CollisionCooldown>d__11::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CCollisionCooldownU3Ed__11_MoveNext_mEC2C8854FF462018FC44882EC012EEDDF9CFBAF4 (U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = __this->___U3CU3E1__state_0;
+		V_0 = L_0;
+		int32_t L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0012;
+		}
+	}
+	{
+		goto IL_000c;
+	}
+
+IL_000c:
+	{
+		int32_t L_2 = V_0;
+		if ((((int32_t)L_2) == ((int32_t)1)))
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		goto IL_0016;
+	}
+
+IL_0012:
+	{
+		goto IL_0018;
+	}
+
+IL_0014:
+	{
+		goto IL_004b;
+	}
+
+IL_0016:
+	{
+		return (bool)0;
+	}
+
+IL_0018:
+	{
+		__this->___U3CU3E1__state_0 = (-1);
+		// canSendCollision = false;
+		HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906* L_3 = __this->___U3CU3E4__this_2;
+		NullCheck(L_3);
+		L_3->___canSendCollision_9 = (bool)0;
+		// yield return new WaitForSeconds(collisionCooldown);
+		HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906* L_4 = __this->___U3CU3E4__this_2;
+		NullCheck(L_4);
+		float L_5 = L_4->___collisionCooldown_8;
+		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_6 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
+		NullCheck(L_6);
+		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_6, L_5, NULL);
+		__this->___U3CU3E2__current_1 = L_6;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current_1), (void*)L_6);
+		__this->___U3CU3E1__state_0 = 1;
+		return (bool)1;
+	}
+
+IL_004b:
+	{
+		__this->___U3CU3E1__state_0 = (-1);
+		// canSendCollision = true;
+		HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906* L_7 = __this->___U3CU3E4__this_2;
+		NullCheck(L_7);
+		L_7->___canSendCollision_9 = (bool)1;
+		// }
+		return (bool)0;
+	}
+}
+// System.Object HapticInteractable/<CollisionCooldown>d__11::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CCollisionCooldownU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB6EFC1FA86A508047C59E4616315ED011C9DA7C0 (U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
+		return L_0;
+	}
+}
+// System.Void HapticInteractable/<CollisionCooldown>d__11::System.Collections.IEnumerator.Reset()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CCollisionCooldownU3Ed__11_System_Collections_IEnumerator_Reset_m83F3A74477FD60E0ED8F34D5F622A0E115A98F04 (U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A* __this, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NullCheck(L_0);
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CCollisionCooldownU3Ed__11_System_Collections_IEnumerator_Reset_m83F3A74477FD60E0ED8F34D5F622A0E115A98F04_RuntimeMethod_var)));
+	}
+}
+// System.Object HapticInteractable/<CollisionCooldown>d__11::System.Collections.IEnumerator.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CCollisionCooldownU3Ed__11_System_Collections_IEnumerator_get_Current_mE30D53B423A31266DB473EC5490CD156FF6E5760 (U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
+		return L_0;
 	}
 }
 #ifdef __clang__

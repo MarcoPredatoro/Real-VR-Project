@@ -1597,120 +1597,120 @@ extern void EventManager_updatePoints_mE333250FFC0CD4A9F20029D8598471D51A085D49 
 extern void EventManager_updatePointsBar_m2368D4184C62BB480D4294722421EE5A4D95A259 (void);
 // 0x00000320 System.Void EventManager::SendMarcoCollision()
 extern void EventManager_SendMarcoCollision_m0D2D3A89BF6E2CE7E3E0030338E547A6FE46C5AC (void);
-// 0x00000321 System.Collections.IEnumerator EventManager::CollisionCooldown()
-extern void EventManager_CollisionCooldown_m0BA6C47888F92FA9B44749460FD6F4BA4916FBC1 (void);
-// 0x00000322 System.Void EventManager::.ctor()
+// 0x00000321 System.Void EventManager::.ctor()
 extern void EventManager__ctor_mB2304AB8CE6B4D03CF0C2CE4000EE529C1133D99 (void);
-// 0x00000323 System.Void EventManager/<CollisionCooldown>d__24::.ctor(System.Int32)
-extern void U3CCollisionCooldownU3Ed__24__ctor_m31BF91AFA991B8AF3202464599034D86EF19CF55 (void);
-// 0x00000324 System.Void EventManager/<CollisionCooldown>d__24::System.IDisposable.Dispose()
-extern void U3CCollisionCooldownU3Ed__24_System_IDisposable_Dispose_m61630A8C6068B5463270F421B62110D2392F06AF (void);
-// 0x00000325 System.Boolean EventManager/<CollisionCooldown>d__24::MoveNext()
-extern void U3CCollisionCooldownU3Ed__24_MoveNext_mBC53ABC741DD84134F2661492A43819900CFA092 (void);
-// 0x00000326 System.Object EventManager/<CollisionCooldown>d__24::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CCollisionCooldownU3Ed__24_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m6DABD93A06BF5105DA206F5760403E2CD5F14B81 (void);
-// 0x00000327 System.Void EventManager/<CollisionCooldown>d__24::System.Collections.IEnumerator.Reset()
-extern void U3CCollisionCooldownU3Ed__24_System_Collections_IEnumerator_Reset_m09B8181DCDE7811137BFB62D36993A0794AE480A (void);
-// 0x00000328 System.Object EventManager/<CollisionCooldown>d__24::System.Collections.IEnumerator.get_Current()
-extern void U3CCollisionCooldownU3Ed__24_System_Collections_IEnumerator_get_Current_mC08BCDE881CAADE776B4ABA3EDFA0FD2425E9F50 (void);
-// 0x00000329 System.Void FadeView::Start()
+// 0x00000322 System.Void FadeView::Start()
 extern void FadeView_Start_mCCCAD8D08060E3D59D1DB9A85A804002372F73FD (void);
-// 0x0000032A System.Void FadeView::Fade()
+// 0x00000323 System.Void FadeView::Fade()
 extern void FadeView_Fade_mC111EFD74C856D096DAE1A067F36D09BB35C9D69 (void);
-// 0x0000032B System.Void FadeView::Update()
+// 0x00000324 System.Void FadeView::Update()
 extern void FadeView_Update_mFDDD683821F26788970654C94ACC87BAEF38B930 (void);
-// 0x0000032C System.Collections.IEnumerator FadeView::FadeOutObject()
+// 0x00000325 System.Collections.IEnumerator FadeView::FadeOutObject()
 extern void FadeView_FadeOutObject_mC67ECB4F6406E681233A5C75BA71AF7E6ED98EE0 (void);
-// 0x0000032D System.Collections.IEnumerator FadeView::FadeInObject()
+// 0x00000326 System.Collections.IEnumerator FadeView::FadeInObject()
 extern void FadeView_FadeInObject_mA19047DC23935C3A91C528358B2109B08D5068CD (void);
-// 0x0000032E System.Void FadeView::.ctor()
+// 0x00000327 System.Void FadeView::.ctor()
 extern void FadeView__ctor_m4BC863AD5DF4D6CECBDE2461FDC964E68F6D8FC1 (void);
-// 0x0000032F System.Void FadeView/<FadeOutObject>d__8::.ctor(System.Int32)
+// 0x00000328 System.Void FadeView/<FadeOutObject>d__8::.ctor(System.Int32)
 extern void U3CFadeOutObjectU3Ed__8__ctor_mE3A19E64AABF375F41C5304B04CDA82F01B82FB0 (void);
-// 0x00000330 System.Void FadeView/<FadeOutObject>d__8::System.IDisposable.Dispose()
+// 0x00000329 System.Void FadeView/<FadeOutObject>d__8::System.IDisposable.Dispose()
 extern void U3CFadeOutObjectU3Ed__8_System_IDisposable_Dispose_m7CFA513002A0D39917B279063BA3FC9E86CA79ED (void);
-// 0x00000331 System.Boolean FadeView/<FadeOutObject>d__8::MoveNext()
+// 0x0000032A System.Boolean FadeView/<FadeOutObject>d__8::MoveNext()
 extern void U3CFadeOutObjectU3Ed__8_MoveNext_mE803151C8507C77EC9D80FD8500305CD9B9F3687 (void);
-// 0x00000332 System.Object FadeView/<FadeOutObject>d__8::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x0000032B System.Object FadeView/<FadeOutObject>d__8::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CFadeOutObjectU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD8F3F15112A825E714885F9E6C5E5E1A0293532E (void);
-// 0x00000333 System.Void FadeView/<FadeOutObject>d__8::System.Collections.IEnumerator.Reset()
+// 0x0000032C System.Void FadeView/<FadeOutObject>d__8::System.Collections.IEnumerator.Reset()
 extern void U3CFadeOutObjectU3Ed__8_System_Collections_IEnumerator_Reset_m512A5AE26044135457A1CE0C143B3509F23C45D6 (void);
-// 0x00000334 System.Object FadeView/<FadeOutObject>d__8::System.Collections.IEnumerator.get_Current()
+// 0x0000032D System.Object FadeView/<FadeOutObject>d__8::System.Collections.IEnumerator.get_Current()
 extern void U3CFadeOutObjectU3Ed__8_System_Collections_IEnumerator_get_Current_m04BFAD51B47C8CA22F4415192525C09FF2D65D86 (void);
-// 0x00000335 System.Void FadeView/<FadeInObject>d__9::.ctor(System.Int32)
+// 0x0000032E System.Void FadeView/<FadeInObject>d__9::.ctor(System.Int32)
 extern void U3CFadeInObjectU3Ed__9__ctor_m87025EF40B7CA57003A3BCC6D0BA4A47C86420D2 (void);
-// 0x00000336 System.Void FadeView/<FadeInObject>d__9::System.IDisposable.Dispose()
+// 0x0000032F System.Void FadeView/<FadeInObject>d__9::System.IDisposable.Dispose()
 extern void U3CFadeInObjectU3Ed__9_System_IDisposable_Dispose_m246FA8E87893E32AF5A4A9818FDDE5F9FE94EE53 (void);
-// 0x00000337 System.Boolean FadeView/<FadeInObject>d__9::MoveNext()
+// 0x00000330 System.Boolean FadeView/<FadeInObject>d__9::MoveNext()
 extern void U3CFadeInObjectU3Ed__9_MoveNext_m7836AB76AEC78E56CB362FDBAF7E2358488BCBE6 (void);
-// 0x00000338 System.Object FadeView/<FadeInObject>d__9::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000331 System.Object FadeView/<FadeInObject>d__9::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CFadeInObjectU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFDACCE7C4DC5F8B3BA74A783E63BA680433A5AE2 (void);
-// 0x00000339 System.Void FadeView/<FadeInObject>d__9::System.Collections.IEnumerator.Reset()
+// 0x00000332 System.Void FadeView/<FadeInObject>d__9::System.Collections.IEnumerator.Reset()
 extern void U3CFadeInObjectU3Ed__9_System_Collections_IEnumerator_Reset_mDBD4BDE82B278DA790204ACF3D1F0C78E333EAC4 (void);
-// 0x0000033A System.Object FadeView/<FadeInObject>d__9::System.Collections.IEnumerator.get_Current()
+// 0x00000333 System.Object FadeView/<FadeInObject>d__9::System.Collections.IEnumerator.get_Current()
 extern void U3CFadeInObjectU3Ed__9_System_Collections_IEnumerator_get_Current_m2792DD8C6356039F9C8F9648F354E299FE64B4EF (void);
-// 0x0000033B System.Void FlashBang::Start()
+// 0x00000334 System.Void FlashBang::Start()
 extern void FlashBang_Start_mB0BA9677F648FB5A2EE6DB881592930A8154EBCC (void);
-// 0x0000033C System.Void FlashBang::InhibitVision()
+// 0x00000335 System.Void FlashBang::InhibitVision()
 extern void FlashBang_InhibitVision_m8411F9E0B835C90A864A70885CDC296B74FD3C3C (void);
-// 0x0000033D System.Collections.IEnumerator FlashBang::InhibitVisionCoroutine()
+// 0x00000336 System.Collections.IEnumerator FlashBang::InhibitVisionCoroutine()
 extern void FlashBang_InhibitVisionCoroutine_m2C351D12595F79A41E602AF0182AF70FB3C3D1F5 (void);
-// 0x0000033E System.Collections.IEnumerator FlashBang::FadeToWhite()
+// 0x00000337 System.Collections.IEnumerator FlashBang::FadeToWhite()
 extern void FlashBang_FadeToWhite_mA8FCB405F47F9A81718C02F7F50B03BB7ACC4009 (void);
-// 0x0000033F System.Collections.IEnumerator FlashBang::FadeFromWhite()
+// 0x00000338 System.Collections.IEnumerator FlashBang::FadeFromWhite()
 extern void FlashBang_FadeFromWhite_mAB93C66154432AB3F0B758132507AAA55CAFABC6 (void);
-// 0x00000340 System.Void FlashBang::SetWhiteImageAlpha(System.Single)
+// 0x00000339 System.Void FlashBang::SetWhiteImageAlpha(System.Single)
 extern void FlashBang_SetWhiteImageAlpha_m0693E5A872F69F0B1B57D0C110AFA4F7BDD0ACC5 (void);
-// 0x00000341 System.Void FlashBang::.ctor()
+// 0x0000033A System.Void FlashBang::.ctor()
 extern void FlashBang__ctor_m0AE80DF3F32F39F6533854E2A1FF83268476A1DD (void);
-// 0x00000342 System.Void FlashBang/<InhibitVisionCoroutine>d__6::.ctor(System.Int32)
+// 0x0000033B System.Void FlashBang/<InhibitVisionCoroutine>d__6::.ctor(System.Int32)
 extern void U3CInhibitVisionCoroutineU3Ed__6__ctor_m523ED6B4626DC972B5CA7B69999C1D5ADDCD6BE0 (void);
-// 0x00000343 System.Void FlashBang/<InhibitVisionCoroutine>d__6::System.IDisposable.Dispose()
+// 0x0000033C System.Void FlashBang/<InhibitVisionCoroutine>d__6::System.IDisposable.Dispose()
 extern void U3CInhibitVisionCoroutineU3Ed__6_System_IDisposable_Dispose_m49181F06CBE1CFAEA81D232BD0FEF45ABC3DD6AB (void);
-// 0x00000344 System.Boolean FlashBang/<InhibitVisionCoroutine>d__6::MoveNext()
+// 0x0000033D System.Boolean FlashBang/<InhibitVisionCoroutine>d__6::MoveNext()
 extern void U3CInhibitVisionCoroutineU3Ed__6_MoveNext_m443007A5F46DDF31C17989527D67933A963A602D (void);
-// 0x00000345 System.Object FlashBang/<InhibitVisionCoroutine>d__6::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x0000033E System.Object FlashBang/<InhibitVisionCoroutine>d__6::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CInhibitVisionCoroutineU3Ed__6_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m14C3BCD28BFBA05B1C341FC88E51641453DD683D (void);
-// 0x00000346 System.Void FlashBang/<InhibitVisionCoroutine>d__6::System.Collections.IEnumerator.Reset()
+// 0x0000033F System.Void FlashBang/<InhibitVisionCoroutine>d__6::System.Collections.IEnumerator.Reset()
 extern void U3CInhibitVisionCoroutineU3Ed__6_System_Collections_IEnumerator_Reset_m89BAD1974CAA0CD8B7B66E7C336418EC5A78D62C (void);
-// 0x00000347 System.Object FlashBang/<InhibitVisionCoroutine>d__6::System.Collections.IEnumerator.get_Current()
+// 0x00000340 System.Object FlashBang/<InhibitVisionCoroutine>d__6::System.Collections.IEnumerator.get_Current()
 extern void U3CInhibitVisionCoroutineU3Ed__6_System_Collections_IEnumerator_get_Current_mECB53D2D84A55AD6E52F244EE374580AEDA3D24F (void);
-// 0x00000348 System.Void FlashBang/<FadeToWhite>d__7::.ctor(System.Int32)
+// 0x00000341 System.Void FlashBang/<FadeToWhite>d__7::.ctor(System.Int32)
 extern void U3CFadeToWhiteU3Ed__7__ctor_m92A83E3799E54068CAE3EF4C0230FFC5417DDA9F (void);
-// 0x00000349 System.Void FlashBang/<FadeToWhite>d__7::System.IDisposable.Dispose()
+// 0x00000342 System.Void FlashBang/<FadeToWhite>d__7::System.IDisposable.Dispose()
 extern void U3CFadeToWhiteU3Ed__7_System_IDisposable_Dispose_m520438159B8027AD2E1445382589F643C6E6474D (void);
-// 0x0000034A System.Boolean FlashBang/<FadeToWhite>d__7::MoveNext()
+// 0x00000343 System.Boolean FlashBang/<FadeToWhite>d__7::MoveNext()
 extern void U3CFadeToWhiteU3Ed__7_MoveNext_m6CCDEC526163B85025F137AEA549D5271A01BE94 (void);
-// 0x0000034B System.Object FlashBang/<FadeToWhite>d__7::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000344 System.Object FlashBang/<FadeToWhite>d__7::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CFadeToWhiteU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC53CD390E44224249BF77CD538321EB4DFFBA221 (void);
-// 0x0000034C System.Void FlashBang/<FadeToWhite>d__7::System.Collections.IEnumerator.Reset()
+// 0x00000345 System.Void FlashBang/<FadeToWhite>d__7::System.Collections.IEnumerator.Reset()
 extern void U3CFadeToWhiteU3Ed__7_System_Collections_IEnumerator_Reset_mD3D7F633E76D6F3254BF81326DD55F06A52E890F (void);
-// 0x0000034D System.Object FlashBang/<FadeToWhite>d__7::System.Collections.IEnumerator.get_Current()
+// 0x00000346 System.Object FlashBang/<FadeToWhite>d__7::System.Collections.IEnumerator.get_Current()
 extern void U3CFadeToWhiteU3Ed__7_System_Collections_IEnumerator_get_Current_m710CBA1A0FD3B88749AEE1AA79760959DD4B3F93 (void);
-// 0x0000034E System.Void FlashBang/<FadeFromWhite>d__8::.ctor(System.Int32)
+// 0x00000347 System.Void FlashBang/<FadeFromWhite>d__8::.ctor(System.Int32)
 extern void U3CFadeFromWhiteU3Ed__8__ctor_mF5DC2AD7230396E50F5525009EE74148C48F92AD (void);
-// 0x0000034F System.Void FlashBang/<FadeFromWhite>d__8::System.IDisposable.Dispose()
+// 0x00000348 System.Void FlashBang/<FadeFromWhite>d__8::System.IDisposable.Dispose()
 extern void U3CFadeFromWhiteU3Ed__8_System_IDisposable_Dispose_mDC017A200AC1502729F3D8A772BB06CA1A5E98ED (void);
-// 0x00000350 System.Boolean FlashBang/<FadeFromWhite>d__8::MoveNext()
+// 0x00000349 System.Boolean FlashBang/<FadeFromWhite>d__8::MoveNext()
 extern void U3CFadeFromWhiteU3Ed__8_MoveNext_m9229311BBEA6405535655BF91EA6BAC29C8BD6FE (void);
-// 0x00000351 System.Object FlashBang/<FadeFromWhite>d__8::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x0000034A System.Object FlashBang/<FadeFromWhite>d__8::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CFadeFromWhiteU3Ed__8_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m36734B9E257150A851ECA16B668D831C64DFE3E5 (void);
-// 0x00000352 System.Void FlashBang/<FadeFromWhite>d__8::System.Collections.IEnumerator.Reset()
+// 0x0000034B System.Void FlashBang/<FadeFromWhite>d__8::System.Collections.IEnumerator.Reset()
 extern void U3CFadeFromWhiteU3Ed__8_System_Collections_IEnumerator_Reset_mCC23BFFB4B363EFEE48374EFCB7C318F9BCB51C2 (void);
-// 0x00000353 System.Object FlashBang/<FadeFromWhite>d__8::System.Collections.IEnumerator.get_Current()
+// 0x0000034C System.Object FlashBang/<FadeFromWhite>d__8::System.Collections.IEnumerator.get_Current()
 extern void U3CFadeFromWhiteU3Ed__8_System_Collections_IEnumerator_get_Current_m6D744E89DCA10A0FBAC4834AF56CC119CD6D40F9 (void);
-// 0x00000354 System.Void HapticInteractable::Start()
+// 0x0000034D System.Void HapticInteractable::Start()
 extern void HapticInteractable_Start_mD1279E6D8E7E5A0C923C1A1E07C08AB590339E46 (void);
-// 0x00000355 System.Void HapticInteractable::TryInitialize()
+// 0x0000034E System.Void HapticInteractable::TryInitialize()
 extern void HapticInteractable_TryInitialize_m7064B60EEE144B44DBCD6B0C36F7C9269482DBB8 (void);
-// 0x00000356 System.Void HapticInteractable::Update()
+// 0x0000034F System.Void HapticInteractable::Update()
 extern void HapticInteractable_Update_m0CF391ACA6C438CA5C08CE21579E23E2D24256A4 (void);
-// 0x00000357 System.Void HapticInteractable::OnCollisionEnter(UnityEngine.Collision)
+// 0x00000350 System.Void HapticInteractable::OnCollisionEnter(UnityEngine.Collision)
 extern void HapticInteractable_OnCollisionEnter_m1518A39333B4A928B87AD676853D0C2100011B9A (void);
-// 0x00000358 System.Void HapticInteractable::SendCollisionEvent()
+// 0x00000351 System.Void HapticInteractable::SendCollisionEvent()
 extern void HapticInteractable_SendCollisionEvent_m9F20440A8644DEC4B2A72CEEAA9B6A954636BEF9 (void);
-// 0x00000359 System.Void HapticInteractable::.ctor()
+// 0x00000352 System.Collections.IEnumerator HapticInteractable::CollisionCooldown()
+extern void HapticInteractable_CollisionCooldown_mD0A232A76FD3324B8950C47A252B9DFAA3C984D9 (void);
+// 0x00000353 System.Void HapticInteractable::.ctor()
 extern void HapticInteractable__ctor_m8C941BED75ED126732FABDFA701EE2CA3286D0D0 (void);
+// 0x00000354 System.Void HapticInteractable/<CollisionCooldown>d__11::.ctor(System.Int32)
+extern void U3CCollisionCooldownU3Ed__11__ctor_mEC5332C30E5ABB1AA3BE927CA6E53C3FE503F893 (void);
+// 0x00000355 System.Void HapticInteractable/<CollisionCooldown>d__11::System.IDisposable.Dispose()
+extern void U3CCollisionCooldownU3Ed__11_System_IDisposable_Dispose_mE58D4128EC09E9458AE041530B920B45B0CF7F6A (void);
+// 0x00000356 System.Boolean HapticInteractable/<CollisionCooldown>d__11::MoveNext()
+extern void U3CCollisionCooldownU3Ed__11_MoveNext_mEC2C8854FF462018FC44882EC012EEDDF9CFBAF4 (void);
+// 0x00000357 System.Object HapticInteractable/<CollisionCooldown>d__11::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CCollisionCooldownU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB6EFC1FA86A508047C59E4616315ED011C9DA7C0 (void);
+// 0x00000358 System.Void HapticInteractable/<CollisionCooldown>d__11::System.Collections.IEnumerator.Reset()
+extern void U3CCollisionCooldownU3Ed__11_System_Collections_IEnumerator_Reset_m83F3A74477FD60E0ED8F34D5F622A0E115A98F04 (void);
+// 0x00000359 System.Object HapticInteractable/<CollisionCooldown>d__11::System.Collections.IEnumerator.get_Current()
+extern void U3CCollisionCooldownU3Ed__11_System_Collections_IEnumerator_get_Current_mE30D53B423A31266DB473EC5490CD156FF6E5760 (void);
 // 0x0000035A System.Void Instantiation::Start()
 extern void Instantiation_Start_mB5A7187D2C789C9694F02F1E0511B5D2B2CA15ED (void);
 // 0x0000035B System.Void Instantiation::Update()
@@ -3663,14 +3663,7 @@ static Il2CppMethodPointer s_methodPointers[1442] =
 	EventManager_updatePoints_mE333250FFC0CD4A9F20029D8598471D51A085D49,
 	EventManager_updatePointsBar_m2368D4184C62BB480D4294722421EE5A4D95A259,
 	EventManager_SendMarcoCollision_m0D2D3A89BF6E2CE7E3E0030338E547A6FE46C5AC,
-	EventManager_CollisionCooldown_m0BA6C47888F92FA9B44749460FD6F4BA4916FBC1,
 	EventManager__ctor_mB2304AB8CE6B4D03CF0C2CE4000EE529C1133D99,
-	U3CCollisionCooldownU3Ed__24__ctor_m31BF91AFA991B8AF3202464599034D86EF19CF55,
-	U3CCollisionCooldownU3Ed__24_System_IDisposable_Dispose_m61630A8C6068B5463270F421B62110D2392F06AF,
-	U3CCollisionCooldownU3Ed__24_MoveNext_mBC53ABC741DD84134F2661492A43819900CFA092,
-	U3CCollisionCooldownU3Ed__24_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m6DABD93A06BF5105DA206F5760403E2CD5F14B81,
-	U3CCollisionCooldownU3Ed__24_System_Collections_IEnumerator_Reset_m09B8181DCDE7811137BFB62D36993A0794AE480A,
-	U3CCollisionCooldownU3Ed__24_System_Collections_IEnumerator_get_Current_mC08BCDE881CAADE776B4ABA3EDFA0FD2425E9F50,
 	FadeView_Start_mCCCAD8D08060E3D59D1DB9A85A804002372F73FD,
 	FadeView_Fade_mC111EFD74C856D096DAE1A067F36D09BB35C9D69,
 	FadeView_Update_mFDDD683821F26788970654C94ACC87BAEF38B930,
@@ -3719,7 +3712,14 @@ static Il2CppMethodPointer s_methodPointers[1442] =
 	HapticInteractable_Update_m0CF391ACA6C438CA5C08CE21579E23E2D24256A4,
 	HapticInteractable_OnCollisionEnter_m1518A39333B4A928B87AD676853D0C2100011B9A,
 	HapticInteractable_SendCollisionEvent_m9F20440A8644DEC4B2A72CEEAA9B6A954636BEF9,
+	HapticInteractable_CollisionCooldown_mD0A232A76FD3324B8950C47A252B9DFAA3C984D9,
 	HapticInteractable__ctor_m8C941BED75ED126732FABDFA701EE2CA3286D0D0,
+	U3CCollisionCooldownU3Ed__11__ctor_mEC5332C30E5ABB1AA3BE927CA6E53C3FE503F893,
+	U3CCollisionCooldownU3Ed__11_System_IDisposable_Dispose_mE58D4128EC09E9458AE041530B920B45B0CF7F6A,
+	U3CCollisionCooldownU3Ed__11_MoveNext_mEC2C8854FF462018FC44882EC012EEDDF9CFBAF4,
+	U3CCollisionCooldownU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB6EFC1FA86A508047C59E4616315ED011C9DA7C0,
+	U3CCollisionCooldownU3Ed__11_System_Collections_IEnumerator_Reset_m83F3A74477FD60E0ED8F34D5F622A0E115A98F04,
+	U3CCollisionCooldownU3Ed__11_System_Collections_IEnumerator_get_Current_mE30D53B423A31266DB473EC5490CD156FF6E5760,
 	Instantiation_Start_mB5A7187D2C789C9694F02F1E0511B5D2B2CA15ED,
 	Instantiation_Update_m335F790ECC000C3911F05EFA1453F1F3B6D70B84,
 	Instantiation_CreateLots_m89E89E2103F19610EE7690A2B50BCB10026E183D,
@@ -5108,14 +5108,7 @@ static const int32_t s_InvokerIndices[1442] =
 	5941,
 	7559,
 	7559,
-	7432,
 	7559,
-	5941,
-	7559,
-	7317,
-	7432,
-	7559,
-	7432,
 	7559,
 	7559,
 	7559,
@@ -5164,7 +5157,14 @@ static const int32_t s_InvokerIndices[1442] =
 	7559,
 	5980,
 	7559,
+	7432,
 	7559,
+	5941,
+	7559,
+	7317,
+	7432,
+	7559,
+	7432,
 	7559,
 	7559,
 	7559,
