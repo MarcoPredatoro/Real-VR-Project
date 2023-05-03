@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: WorldSpace(Points)
+    uniqueID: 3365052991
+    locked: 0
+  - name: ScreenSpace(Flash)
+    uniqueID: 1256170129
+    locked: 0

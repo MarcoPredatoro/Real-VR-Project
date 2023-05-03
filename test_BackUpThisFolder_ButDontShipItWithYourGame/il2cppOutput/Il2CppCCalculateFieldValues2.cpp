@@ -31932,24 +31932,26 @@ struct DistanceGrabber_t56690441864EC9DD12844C2AAA0441AB4E3761C9  : public OVRGr
 // EventManager
 struct EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A  : public MonoBehaviourPun_t64DD82CBA1C47A70448DAB2263AB90A4411621BD
 {
+	// UnityEngine.UI.Text EventManager::flashed
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___flashed_10;
 	// System.Single EventManager::threshold
-	float ___threshold_10;
+	float ___threshold_11;
 	// System.Int32 EventManager::points
-	int32_t ___points_11;
+	int32_t ___points_12;
 	// UnityEngine.Material EventManager::pointsBar
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___pointsBar_12;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___pointsBar_13;
 	// UnityEngine.UI.Image EventManager::pointer
-	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___pointer_13;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___pointer_14;
 	// UnityEngine.Vector2 EventManager::size
-	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___size_14;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___size_15;
 	// System.Single EventManager::maxPoints
-	float ___maxPoints_15;
+	float ___maxPoints_16;
 	// System.Single EventManager::minPoints
-	float ___minPoints_16;
+	float ___minPoints_17;
 	// FlashBang EventManager::flashBang
-	FlashBang_t54E642B069336B945FBCD9D203D5D6CA27FB6269* ___flashBang_17;
+	FlashBang_t54E642B069336B945FBCD9D203D5D6CA27FB6269* ___flashBang_18;
 	// Instantiation EventManager::decoyPolo
-	Instantiation_t782C3CB09C8FB734229108F1DB2C464876825E57* ___decoyPolo_18;
+	Instantiation_t782C3CB09C8FB734229108F1DB2C464876825E57* ___decoyPolo_19;
 };
 
 // UnityEngine.EventSystems.EventSystem
@@ -38006,9 +38008,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7166[3] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7167[1] = 
 {
 	static_cast<int32_t>(offsetof(Destruction_tFB3E94F774071AE65BF1FAB3D0639DB35C56D152, ___timer_4)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7168[14] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7168[15] = 
 {
-	0,0,0,0,0,static_cast<int32_t>(offsetof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A, ___threshold_10)),static_cast<int32_t>(offsetof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A, ___points_11)),static_cast<int32_t>(offsetof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A, ___pointsBar_12)),static_cast<int32_t>(offsetof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A, ___pointer_13)),static_cast<int32_t>(offsetof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A, ___size_14)),static_cast<int32_t>(offsetof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A, ___maxPoints_15)),static_cast<int32_t>(offsetof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A, ___minPoints_16)),static_cast<int32_t>(offsetof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A, ___flashBang_17)),static_cast<int32_t>(offsetof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A, ___decoyPolo_18)),};
+	0,0,0,0,0,static_cast<int32_t>(offsetof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A, ___flashed_10)),static_cast<int32_t>(offsetof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A, ___threshold_11)),static_cast<int32_t>(offsetof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A, ___points_12)),static_cast<int32_t>(offsetof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A, ___pointsBar_13)),static_cast<int32_t>(offsetof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A, ___pointer_14)),static_cast<int32_t>(offsetof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A, ___size_15)),static_cast<int32_t>(offsetof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A, ___maxPoints_16)),static_cast<int32_t>(offsetof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A, ___minPoints_17)),static_cast<int32_t>(offsetof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A, ___flashBang_18)),static_cast<int32_t>(offsetof(EventManager_t2FAA3AA5EE7E33EE027BB7CA68ABCF128E3C579A, ___decoyPolo_19)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7169[3] = 
 {
 	static_cast<int32_t>(offsetof(U3CFadeOutObjectU3Ed__8_t4BD877CD584DAD45565DFBDC24CE2993B986D8F3, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CFadeOutObjectU3Ed__8_t4BD877CD584DAD45565DFBDC24CE2993B986D8F3, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CFadeOutObjectU3Ed__8_t4BD877CD584DAD45565DFBDC24CE2993B986D8F3, ___U3CU3E4__this_2)),};

@@ -22,7 +22,7 @@ public class EventManager : MonoBehaviourPun
 
     //public int points;
     //public Text pointsText;
-    //public Text test;
+    public Text flashed;
     
 
     public float threshold = 50;
@@ -48,7 +48,7 @@ public class EventManager : MonoBehaviourPun
     void Start()
     {
         //whiteScreen.enabled = false;
-        //test = GameObject.Find("Text2").GetComponent<Text>();
+        flashed = GameObject.Find("FlashText").GetComponent<Text>();
         Rect t = pointer.transform.parent.GetComponent<RectTransform>().rect;
         size = new Vector2(t.width, t.height);
         
@@ -97,6 +97,7 @@ public class EventManager : MonoBehaviourPun
             //GameObject.Find("WhiteScreen/Canvas/Image").GetComponent<FlashBang>().StartCoroutine(FlashWhiteScreen());
             //test.text = "Blind Event Received";
             //GameObject.Find("Network Manager").GetComponent<FlashBangGPT>().InhibitVision();
+            flashed.text = "YOU'VE BEEN BLINDED";
             flashBang.InhibitVision();
         }
         else if (photonEvent.Code == DECOY_EVENT)
