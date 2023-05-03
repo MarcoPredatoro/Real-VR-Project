@@ -9027,14 +9027,14 @@ struct U3CFindSkeletonVisualGameObjectsU3Ed__52_tAEE38F2607C43B4EC514A9C784FC4E9
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___U3CrightSkeletonVisualTransformU3E5__2_4;
 };
 
-// HapticInteractable/<CollisionCooldown>d__11
-struct U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A  : public RuntimeObject
+// HapticInteractable/<CollisionCooldown>d__13
+struct U3CCollisionCooldownU3Ed__13_t793AEC753384C2C2C9CC7126DEFA4C5AE026EE6B  : public RuntimeObject
 {
-	// System.Int32 HapticInteractable/<CollisionCooldown>d__11::<>1__state
+	// System.Int32 HapticInteractable/<CollisionCooldown>d__13::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object HapticInteractable/<CollisionCooldown>d__11::<>2__current
+	// System.Object HapticInteractable/<CollisionCooldown>d__13::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// HapticInteractable HapticInteractable/<CollisionCooldown>d__11::<>4__this
+	// HapticInteractable HapticInteractable/<CollisionCooldown>d__13::<>4__this
 	HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906* ___U3CU3E4__this_2;
 };
 
@@ -28028,6 +28028,10 @@ struct HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906  : public Mo
 	float ___collisionCooldown_8;
 	// System.Boolean HapticInteractable::canSendCollision
 	bool ___canSendCollision_9;
+	// UnityEngine.GameObject HapticInteractable::bloodSplatterPrefab
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___bloodSplatterPrefab_10;
+	// System.Single HapticInteractable::collisionForceThreshold
+	float ___collisionForceThreshold_11;
 };
 
 // Oculus.Interaction.Samples.HideHandVisualOnGrab
@@ -38034,10 +38038,10 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7175[4] =
 	static_cast<int32_t>(offsetof(FlashBang_t54E642B069336B945FBCD9D203D5D6CA27FB6269, ___whiteImage_4)),static_cast<int32_t>(offsetof(FlashBang_t54E642B069336B945FBCD9D203D5D6CA27FB6269, ___fadeDuration_5)),static_cast<int32_t>(offsetof(FlashBang_t54E642B069336B945FBCD9D203D5D6CA27FB6269, ___fadeInDuration_6)),static_cast<int32_t>(offsetof(FlashBang_t54E642B069336B945FBCD9D203D5D6CA27FB6269, ___inhibitionDuration_7)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7176[3] = 
 {
-	static_cast<int32_t>(offsetof(U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CCollisionCooldownU3Ed__11_t880B8DEBF493C4EBF51BD913BF4B2AD173EEFB8A, ___U3CU3E4__this_2)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7177[6] = 
+	static_cast<int32_t>(offsetof(U3CCollisionCooldownU3Ed__13_t793AEC753384C2C2C9CC7126DEFA4C5AE026EE6B, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CCollisionCooldownU3Ed__13_t793AEC753384C2C2C9CC7126DEFA4C5AE026EE6B, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CCollisionCooldownU3Ed__13_t793AEC753384C2C2C9CC7126DEFA4C5AE026EE6B, ___U3CU3E4__this_2)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7177[8] = 
 {
-	static_cast<int32_t>(offsetof(HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906, ___hapticIntensity_4)),static_cast<int32_t>(offsetof(HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906, ___hapticDuration_5)),static_cast<int32_t>(offsetof(HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906, ___controllerCharacteristics_6)),static_cast<int32_t>(offsetof(HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906, ___targetDevice_7)),static_cast<int32_t>(offsetof(HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906, ___collisionCooldown_8)),static_cast<int32_t>(offsetof(HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906, ___canSendCollision_9)),};
+	static_cast<int32_t>(offsetof(HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906, ___hapticIntensity_4)),static_cast<int32_t>(offsetof(HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906, ___hapticDuration_5)),static_cast<int32_t>(offsetof(HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906, ___controllerCharacteristics_6)),static_cast<int32_t>(offsetof(HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906, ___targetDevice_7)),static_cast<int32_t>(offsetof(HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906, ___collisionCooldown_8)),static_cast<int32_t>(offsetof(HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906, ___canSendCollision_9)),static_cast<int32_t>(offsetof(HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906, ___bloodSplatterPrefab_10)),static_cast<int32_t>(offsetof(HapticInteractable_tC26BC16825BD0EF0A59FB04C0DCDAC19BEA2B906, ___collisionForceThreshold_11)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7178[5] = 
 {
 	static_cast<int32_t>(offsetof(U3CdestroyThisU3Ed__6_t59F1AFFEEB84D60B06958DC6BDDD652754CA9CBB, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CdestroyThisU3Ed__6_t59F1AFFEEB84D60B06958DC6BDDD652754CA9CBB, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CdestroyThisU3Ed__6_t59F1AFFEEB84D60B06958DC6BDDD652754CA9CBB, ___gameObject_2)),static_cast<int32_t>(offsetof(U3CdestroyThisU3Ed__6_t59F1AFFEEB84D60B06958DC6BDDD652754CA9CBB, ___timer_3)),static_cast<int32_t>(offsetof(U3CdestroyThisU3Ed__6_t59F1AFFEEB84D60B06958DC6BDDD652754CA9CBB, ___U3CU3E4__this_4)),};

@@ -15,6 +15,9 @@ public class HapticInteractable : MonoBehaviour
     //public UnityEngine.UI.Image pointsImage;
     public float collisionCooldown = 3f;
     private bool canSendCollision = true;
+
+    public GameObject bloodSplatterPrefab;
+    public float collisionForceThreshold = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +48,12 @@ public class HapticInteractable : MonoBehaviour
      {
          if ((collision.gameObject.name == "polo-with-bones" || collision.gameObject.name == "Polo2" || collision.gameObject.name == "Polo") && canSendCollision)
         {
+        //     if (collision.relativeVelocity.magnitude >= collisionForceThreshold)
+        // {
+            GameObject bloodSplatter = Instantiate(bloodSplatterPrefab, collision.contacts[0].point, Quaternion.identity);
+            bloodSplatter.transform.forward = collision.contacts[0].normal;
+            Destroy(bloodSplatter, 1.5f); // Optional: Destroy blood splatter after 5 seconds
+        // }
             targetDevice.SendHapticImpulse(0, hapticIntensity, hapticDuration);
             SendCollisionEvent();
             StartCoroutine(CollisionCooldown());

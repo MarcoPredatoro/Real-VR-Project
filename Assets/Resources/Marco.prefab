@@ -736,6 +736,8 @@ MonoBehaviour:
   hapticDuration: 0.3
   controllerCharacteristics: 320
   collisionCooldown: 1
+  bloodSplatterPrefab: {fileID: 6739040229894130178, guid: bfcc1839260be4a3bb81ff5379d300b8, type: 3}
+  collisionForceThreshold: 1
 --- !u!1 &3334518151647064046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,6 +1382,8 @@ MonoBehaviour:
   hapticDuration: 0.3
   controllerCharacteristics: 576
   collisionCooldown: 1
+  bloodSplatterPrefab: {fileID: 6739040229894130178, guid: bfcc1839260be4a3bb81ff5379d300b8, type: 3}
+  collisionForceThreshold: 1
 --- !u!1 &7019728918547890363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1532,9 +1536,7 @@ MonoBehaviour:
   - {fileID: -6435944224534656319}
   - {fileID: 8711368656867191797}
   - {fileID: 3212334310558982975}
-  - {fileID: 0}
   - {fileID: 1418029361587207364}
-  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
