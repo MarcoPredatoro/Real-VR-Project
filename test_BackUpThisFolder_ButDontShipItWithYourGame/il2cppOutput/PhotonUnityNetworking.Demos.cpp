@@ -8240,7 +8240,7 @@ IL_002f:
 		Random_t79716069EDE67D1D7734F60AE402D0CA3FB6B4C8* L_9 = V_1;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_10 = ((Noise_t9CBABEB76554B5572D0908BA1F4BF2969B17659C_StaticFields*)il2cpp_codegen_static_fields_for(Noise_t9CBABEB76554B5572D0908BA1F4BF2969B17659C_il2cpp_TypeInfo_var))->___perm_1;
 		NullCheck(L_9);
-		VirtualActionInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(8 /* System.Void System.Random::NextBytes(System.Byte[]) */, L_9, L_10);
+		VirtualActionInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(9 /* System.Void System.Random::NextBytes(System.Byte[]) */, L_9, L_10);
 	}
 
 IL_0053:
