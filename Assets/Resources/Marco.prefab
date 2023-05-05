@@ -115,7 +115,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 26bdfe43fccb0443894f0eafaea27a8b, type: 2}
   - {fileID: 2100000, guid: f83a71044cf1b40ff96e2e301099235d, type: 2}
   - {fileID: 2100000, guid: 254e6328bd20b4bc1b4cc37d703c68a0, type: 2}
-  test: {fileID: 0}
   threatRadius:
   - 1.3
   - 0.82
@@ -733,9 +732,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hapticIntensity: 0.5
-  hapticDuration: 0.3
+  hapticDuration: 0.1
   controllerCharacteristics: 320
-  collisionCooldown: 1
+  collisionCooldown: 2
   bloodSplatterPrefab: {fileID: 6739040229894130178, guid: bfcc1839260be4a3bb81ff5379d300b8, type: 3}
   collisionForceThreshold: 1
 --- !u!1 &3334518151647064046
@@ -1379,9 +1378,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hapticIntensity: 0.5
-  hapticDuration: 0.3
+  hapticDuration: 0.1
   controllerCharacteristics: 576
-  collisionCooldown: 1
+  collisionCooldown: 2
   bloodSplatterPrefab: {fileID: 6739040229894130178, guid: bfcc1839260be4a3bb81ff5379d300b8, type: 3}
   collisionForceThreshold: 1
 --- !u!1 &7019728918547890363
@@ -3188,6 +3187,7 @@ MonoBehaviour:
   torchBar: {fileID: 2100000, guid: 2d6dc99f07ad34c3bbd15f44e20bc0fc, type: 2}
   clawTorch: {fileID: 2100000, guid: cfe97e73ed4074d4d9ffd8bbf4ea7ad6, type: 2}
   torchBarImage: {fileID: 0}
+  justPressed: 1
 --- !u!4 &8214231547944689500 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3758596340593082479, guid: 914585892bd4b4419b20d9d798c927d6, type: 3}

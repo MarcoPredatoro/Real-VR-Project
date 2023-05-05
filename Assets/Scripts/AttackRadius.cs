@@ -15,7 +15,7 @@ public class AttackRadius : MonoBehaviour
 
     public List<Material> materials;
 
-    public Text test;
+   // public Text test;
 
 
 
@@ -29,7 +29,7 @@ public class AttackRadius : MonoBehaviour
         background = GameObject.Find("scene2");
         // polo1 =  GameObject.Find("Polo/Audio");
         // polo2 =  GameObject.Find("Polo2/Audio");
-        test = GameObject.Find("Text2").GetComponent<Text>();
+        //test = GameObject.Find("Text2").GetComponent<Text>();
         // background = GameObject.Find("scene2");
         
 
@@ -70,7 +70,7 @@ public class AttackRadius : MonoBehaviour
                 SetMute(polo2, new bool[]{true, true, true});
                 background.GetComponent<AudioSource>().mute = false;
                 Debug.Log("Background Sound");
-                test.text = "Background Sound";
+                //test.text = "Background Sound";
                 
                 
             // cube.GetComponent<Renderer>().material = materials[0];
@@ -79,11 +79,11 @@ public class AttackRadius : MonoBehaviour
                 
                 background.GetComponent<AudioSource>().mute = true;
                 if (dis1 <= dis2 ) {
-                    test.text = polo1.name + "   :   " + dis1;
+                    //test.text = polo1.name + "   :   " + dis1;
                     SetMute(polo2, new bool[]{true, true, true});
                     makeThreatRadiusSound(polo1, dis1);
                 } else if (dis1 >= dis2) {
-                    test.text = polo2.name + "   :   " + dis2;
+                    //test.text = polo2.name + "   :   " + dis2;
                     SetMute(polo1, new bool[]{true, true, true});
                     makeThreatRadiusSound(polo2, dis2);
                 //cube.GetComponent<Renderer>().material = materials[0];
@@ -104,25 +104,25 @@ public class AttackRadius : MonoBehaviour
             // Polo in the closest ring
             Debug.Log("polo in the 3 ring");
             SetMute(polo, new bool[]{false, false, false});
-            test.text = "Closest Ring";
+            //test.text = "Closest Ring";
         } else if (distance < threatRadius[1]){
             // Polo in the second closest ring
             Debug.Log("polo in the 2 ring");
             SetMute(polo, new bool[]{false, false, true});
-            test.text = "Second Closest Ring";
+            //test.text = "Second Closest Ring";
 
         } else {
             // Polo in the furthest ring
             Debug.Log("polo in the 1 ring");
             SetMute(polo, new bool[]{false, true, true});
-            test.text = "Furthest Ring";
+            //test.text = "Furthest Ring";
 
         }
     }
 
     IEnumerator<WaitForSeconds> DelayInstantiation() {
         while(polo1 == null || polo2 == null) {
-            polo1 =  GameObject.Find("Polo(Clone)/Audio");
+            polo1 =  GameObject.Find("polo-with-bones/Audio");
             polo2 =  GameObject.Find("Polo2(Clone)/Audio");
 
             yield return new WaitForSeconds(1);
@@ -130,7 +130,7 @@ public class AttackRadius : MonoBehaviour
 
         // SetMute(polo1, new bool[]{true, true, true});
         // SetMute(polo2, new bool[]{true, true, true});
-        test.text = "polo1: " + polo1.name + " polo2: " + polo2.name;
+        //test.text = "polo1: " + polo1.name + " polo2: " + polo2.name;
     }
 
     void SetMute(GameObject polo, bool[] isMuted) {

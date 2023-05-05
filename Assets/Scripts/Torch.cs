@@ -26,7 +26,11 @@ public class Torch : MonoBehaviour
     public Material torchBar;
     public Material clawTorch;
     public Image torchBarImage;
+    public bool justPressed = true;
     private Vector2 size;
+
+    private float cooldownTimer = 0f;
+    private float cooldownDuration = 1f;
 
 
 	
@@ -60,23 +64,42 @@ public class Torch : MonoBehaviour
         if(targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
         {
             // handAnimator.SetFloat("Trigger", triggerValue);
-        if(triggerValue > 0.1f){
-          
+            if(cooldownTimer<= 0 )
+            {
+                if(triggerValue > 0.6f && justPressed)
+                {
                 spotLight.enabled = true;
-                spotLight.spotAngle = Mathf.Max(minSpotAngle, spotLight.spotAngle - spotAngleDecreaseRate * Time.deltaTime);
+                // spotLight.spotAngle = Mathf.Max(minSpotAngle, spotLight.spotAngle - spotAngleDecreaseRate * Time.deltaTime);
+                cooldownTimer=cooldownDuration;
+                justPressed = false;
+                
+                }
+            }
+
+        
+            else if (triggerValue <= 0.6f)
+            {
+                spotLight.enabled = false;
+                // spotLight.spotAngle = Mathf.Min(maxSpotAngle, spotLight.spotAngle + spotAngleIncreaseRate * Time.deltaTime);
+                // StartCoroutine(PressCooldown());
+            }
+
+
+            if(spotLight.enabled){
+            spotLight.spotAngle = Mathf.Max(minSpotAngle, spotLight.spotAngle - spotAngleDecreaseRate * Time.deltaTime);
             }
             else{
-
-                spotLight.enabled = false;
-                spotLight.spotAngle = Mathf.Min(maxSpotAngle, spotLight.spotAngle + spotAngleIncreaseRate * Time.deltaTime);
-              
+            spotLight.spotAngle = Mathf.Min(maxSpotAngle, spotLight.spotAngle + spotAngleIncreaseRate * Time.deltaTime);
+            }
         }
-        }
-       
     }
+
+
 
 	void Update ()
     {
+
+
         material.SetVector("_LightPosition",  spotLight.transform.position);
         material.SetFloat ("_LightAngle", spotLight.spotAngle * TO_RADIAN);
         
@@ -117,6 +140,14 @@ public class Torch : MonoBehaviour
             PoloBodySuit.SetVector("_LightDirection", spotLight.transform.forward);
         }
 
+        if(cooldownTimer > 0){
+
+            cooldownTimer -= Time.deltaTime;
+        }
+        else{
+            justPressed = true;
+        }
+
         if(!targetDevice.isValid)
         {
             
@@ -128,6 +159,13 @@ public class Torch : MonoBehaviour
         }
 
         updateTorchBar();
+    }
+
+     private IEnumerator PressCooldown()
+    {
+        justPressed = false;
+        yield return new WaitForSeconds(2f);
+        justPressed = true;
     }
 
 

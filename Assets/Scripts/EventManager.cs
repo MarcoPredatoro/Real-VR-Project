@@ -14,6 +14,8 @@ public class EventManager : MonoBehaviourPun
     private const byte RESET_POINTS_EVENT = 3;
     private const byte BLIND_EVENT = 4;
     private const byte DECOY_EVENT = 5;
+    private const byte GAME_COMPLETE_EVENT = 7;
+    private const byte GAME_START = 8;
 
     //public GameObject tree;
 
@@ -36,9 +38,10 @@ public class EventManager : MonoBehaviourPun
 
     [SerializeField]
     private FlashBang flashBang;
-
     [SerializeField]
     private Instantiation decoyPolo;
+    [SerializeField]
+    private Timer timer;
 
     // public float collisionCooldown = 3f;
     // private bool canSendCollision = true;
@@ -59,6 +62,8 @@ public class EventManager : MonoBehaviourPun
     {
         
     }
+
+   
 
     private void OnEnable()
     {
@@ -98,6 +103,7 @@ public class EventManager : MonoBehaviourPun
             //test.text = "Blind Event Received";
             //GameObject.Find("Network Manager").GetComponent<FlashBangGPT>().InhibitVision();
             flashed.text = "YOU'VE BEEN BLINDED";
+            StartCoroutine(DisableFlashedText());
             flashBang.InhibitVision();
         }
         else if (photonEvent.Code == DECOY_EVENT)
@@ -105,6 +111,14 @@ public class EventManager : MonoBehaviourPun
             //test.text = "Decoy Event Received";
             //GameObject.Find("Network Manager").GetComponent<Instantiation>().CreateLots();
             decoyPolo.CreateLots();
+        }
+        else if (photonEvent.Code == GAME_COMPLETE_EVENT)
+        {
+            timer.EndGame();
+        }
+        else if (photonEvent.Code == GAME_START)
+        {
+            timer.ResetTimer();
         }
     }
 
@@ -133,21 +147,29 @@ public class EventManager : MonoBehaviourPun
     //     whiteScreen.enabled = false;
     // }
 
+     public int returnPoints()
+    {
+        return points;
+    }
+
 
     public void SendMarcoCollision()
     {
-   
-
         Debug.Log("sending collision");
         RaiseEventOptions options = RaiseEventOptions.Default;
         options.Receivers = ReceiverGroup.All;
-        PhotonNetwork.RaiseEvent(MARCO_STAB_EVENT, 2, options, SendOptions.SendReliable);
+        PhotonNetwork.RaiseEvent(MARCO_STAB_EVENT, 1, options, SendOptions.SendReliable);
         // StartCoroutine(CollisionCooldown());
         //test.text = "Marco Event Sent";
         //tree.SetActive(false);
-        
-        
     }
+
+    private IEnumerator DisableFlashedText()
+    {
+        yield return new WaitForSeconds(3f);
+        flashed.text = " ";
+    }
+
 
 //     private IEnumerator CollisionCooldown()
 //     {

@@ -13,7 +13,7 @@ public class HapticInteractable : MonoBehaviour
     private InputDevice targetDevice;
     //public GameObject Sphere;
     //public UnityEngine.UI.Image pointsImage;
-    public float collisionCooldown = 3f;
+    public float collisionCooldown = 2f;
     private bool canSendCollision = true;
 
     public GameObject bloodSplatterPrefab;

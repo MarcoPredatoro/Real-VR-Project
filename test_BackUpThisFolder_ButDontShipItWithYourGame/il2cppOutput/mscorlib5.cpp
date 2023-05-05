@@ -8810,15 +8810,6 @@ IL_001e:
 		return il2cpp_codegen_cast_double_to_int<int32_t>(((double)il2cpp_codegen_multiply(L_3, ((double)L_4))));
 	}
 }
-// System.Double System.Random::NextDouble()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Random_NextDouble_m6E3E1C61E915DB1A9CE65958F5136430A8DB7750 (Random_t79716069EDE67D1D7734F60AE402D0CA3FB6B4C8* __this, const RuntimeMethod* method) 
-{
-	{
-		double L_0;
-		L_0 = VirtualFuncInvoker0< double >::Invoke(4 /* System.Double System.Random::Sample() */, __this);
-		return L_0;
-	}
-}
 // System.Void System.Random::NextBytes(System.Byte[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Random_NextBytes_m9875FEA43ECCAC302365765F3297886A36627992 (Random_t79716069EDE67D1D7734F60AE402D0CA3FB6B4C8* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___buffer0, const RuntimeMethod* method) 
 {
