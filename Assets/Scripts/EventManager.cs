@@ -25,6 +25,7 @@ public class EventManager : MonoBehaviourPun
     //public int points;
     //public Text pointsText;
     public Text flashed;
+    public Text eggStolen;
     
 
     public float threshold = 50;
@@ -52,6 +53,7 @@ public class EventManager : MonoBehaviourPun
     {
         //whiteScreen.enabled = false;
         flashed = GameObject.Find("FlashText").GetComponent<Text>();
+        eggStolen = GameObject.Find("PoloEggText").GetComponent<Text>();
         Rect t = pointer.transform.parent.GetComponent<RectTransform>().rect;
         size = new Vector2(t.width, t.height);
         
@@ -78,6 +80,8 @@ public class EventManager : MonoBehaviourPun
     {
         if (photonEvent.Code == RFID_POINTS_EVENT)
         {
+            eggStolen.text = "EGG STOLEN!";
+            StartCoroutine(DisableEggStolen());
             int value = (int)photonEvent.CustomData;
             //int value = (int)data[0];
             updatePoints(value);
@@ -118,6 +122,7 @@ public class EventManager : MonoBehaviourPun
         }
         else if (photonEvent.Code == GAME_START)
         {
+
             timer.ResetTimer();
         }
     }
@@ -168,6 +173,12 @@ public class EventManager : MonoBehaviourPun
     {
         yield return new WaitForSeconds(3f);
         flashed.text = " ";
+    }
+
+     private IEnumerator DisableEggStolen()
+    {
+        yield return new WaitForSeconds(2f);
+        eggStolen.text = " ";
     }
 
 

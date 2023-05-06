@@ -19,6 +19,13 @@ public class HapticInteractable : MonoBehaviour
     public GameObject bloodSplatterPrefab;
     public float collisionForceThreshold = 1f;
     // Start is called before the first frame update
+
+
+//resetting spawn position related variables
+    // public GameObject player;
+    // public Vector3 spawnPosition;
+    // public Vector3 spawnRotation;
+
     void Start()
     {
     
@@ -40,8 +47,17 @@ public class HapticInteractable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // bool buttonPress = false;
+        if(targetDevice.TryGetFeatureValue(CommonUsages.secondaryButton, out bool buttonPress))
+        {
+            if(buttonPress){
+             
+                GameObject.Find("Network Manager").GetComponent<OrientationCorrection>().OnEventTriggered();
+      
+            }
         
-        
+        }
+
     }
 
     private void OnCollisionEnter(Collision collision)
