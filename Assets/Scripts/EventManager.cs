@@ -24,8 +24,8 @@ public class EventManager : MonoBehaviourPun
 
     //public int points;
     //public Text pointsText;
-    public Text flashed;
-    public Text eggStolen;
+    private Text flashed;
+    private Text eggStolen;
     
 
     public float threshold = 50;
@@ -122,7 +122,6 @@ public class EventManager : MonoBehaviourPun
         }
         else if (photonEvent.Code == GAME_START)
         {
-
             timer.ResetTimer();
         }
     }

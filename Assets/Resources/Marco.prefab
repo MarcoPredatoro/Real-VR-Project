@@ -734,12 +734,9 @@ MonoBehaviour:
   hapticIntensity: 0.5
   hapticDuration: 0.1
   controllerCharacteristics: 320
-  collisionCooldown: 2
+  collisionCooldown: 1
   bloodSplatterPrefab: {fileID: 6739040229894130178, guid: bfcc1839260be4a3bb81ff5379d300b8, type: 3}
   collisionForceThreshold: 1
-  player: {fileID: 0}
-  spawnPosition: {x: 0, y: 0, z: 0}
-  spawnRotation: {x: 0, y: 0, z: 0}
 --- !u!1 &3334518151647064046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,12 +1381,9 @@ MonoBehaviour:
   hapticIntensity: 0.5
   hapticDuration: 0.1
   controllerCharacteristics: 576
-  collisionCooldown: 2
+  collisionCooldown: 1
   bloodSplatterPrefab: {fileID: 6739040229894130178, guid: bfcc1839260be4a3bb81ff5379d300b8, type: 3}
   collisionForceThreshold: 1
-  player: {fileID: 826392053212446732}
-  spawnPosition: {x: -2, y: 0, z: -2}
-  spawnRotation: {x: 0, y: 0, z: 0}
 --- !u!114 &635798558003686261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1402,9 +1396,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380ec286ef1d94bd3ada0e5d06fc8816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   spawnPosition: {x: 0, y: 0, z: 0}
-  spawnRotation: {x: 0, y: 0, z: 0}
+  resetTransform: {fileID: 0}
+  player: {fileID: 0}
+  playerHead: {fileID: 0}
 --- !u!1 &7019728918547890363
 GameObject:
   m_ObjectHideFlags: 0

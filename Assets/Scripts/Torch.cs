@@ -30,7 +30,7 @@ public class Torch : MonoBehaviour
     private Vector2 size;
 
     private float cooldownTimer = 0f;
-    private float cooldownDuration = 1f;
+    private float cooldownDuration = 0.7f;
 
 
 	
