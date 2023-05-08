@@ -46,3 +46,24 @@ b. Show Assets (Recommended) -> Clean Up (Recommended) -> Clean Up Package.
 c. On the Android tab, select the Oculus checkbox to install the Oculus XR plugin.
 d. See https://developer.oculus.com/documentation/unity/unity-xr-plugin/ for further details on
 XR Plugin.
+
+### 3) Install other required Packages 
+
+#### 3.1) PUN2 - installation 
+visit this link and download the [PUN 2 - Free](https://assetstore.unity.com/packages/tools/network/pun-2-free-119922) package.
+
+#### 3.2) Blood Splatter Package Installation 
+visit this link and download the blood splatter (https://assetstore.unity.com/packages/2d/textures-materials/blood-splatter-decal-package-7518).
+
+#### 3.2) XR interaction toolkit
+1. Window > Package Manager.
+2. At the top: Packages: In Project > Change to: Unity Registry.
+3. Find XR Interaction Toolkit > Download or Update > Import.
+
+
+
+
+
+    
+
+
