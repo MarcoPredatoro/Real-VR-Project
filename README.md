@@ -60,6 +60,18 @@ visit this link and download the blood splatter (https://assetstore.unity.com/pa
 2. At the top: Packages: In Project > Change to: Unity Registry.
 3. Find XR Interaction Toolkit > Download or Update > Import.
 
+### 4) Play 
+
+1. To beign playing, wear the headset and allow debbuing and access to the device.
+2. With the headset on click the App Library
+3. Navigate to the drop down menu on the top right and click Unkown Sources
+4. You should see the application tha you just built
+5. Run the app and play the game !
+
+
+
+
+
 
 
 
