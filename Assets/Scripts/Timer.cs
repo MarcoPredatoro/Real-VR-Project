@@ -7,9 +7,12 @@ public class Timer : MonoBehaviour
 {
 
     private Text timer;
-    private float time = 5 * 60;
+    private float time = 2 * 60;
     public GameObject gameOver;
     public EventManager points;
+    public AudioClip win;
+    public AudioClip lose;
+    
 
     private bool startTimer = false;
     // Start is called before the first frame update
@@ -17,6 +20,7 @@ public class Timer : MonoBehaviour
     {
         timer = GetComponentInChildren<Text>();
         UpdateTimer();
+        gameOver.SetActive(false);
     }
 
     // Update is called once per frame
@@ -51,7 +55,7 @@ public class Timer : MonoBehaviour
 
     public void ResetTimer()
     {
-        time = 5 * 60;
+        time = 2 * 60;
         StartTimer(true);
         gameOver.SetActive(false);
     }
@@ -59,9 +63,20 @@ public class Timer : MonoBehaviour
     public void EndGame()
     {
         //GameObject.Find("Main").GetComponent<AudioSource>().Pause();
-        // gameOver.SetActive(true);
-        // gameOver.GetComponentInChildren<Text>() = "The Winner is " + (points.returnPoints() > points.threshold ? "Marco" : "Polo");
-        timer.text = "The Winner is " + (points.returnPoints() > points.threshold ? "Marco" : "Polo");
+        gameOver.SetActive(true);
+        // gameOver.GetComponentInChildren<Text>().text = "The Winner is " + (points.returnPoints() < points.threshold ? "Marco" : "Polo");
         //GameObject.Find("networking").GetComponent<EventManager>().SendGameOver();
+        if (points.returnPoints() < points.threshold)
+        {
+            timer.text = "The Winner is Marco";
+            gameOver.GetComponentInChildren<Text>().text = "The Winner is Marco";
+            GetComponentInChildren<AudioSource>().PlayOneShot(win);
+        }
+        else
+        {
+            timer.text = "The Winner is Polo";
+            gameOver.GetComponentInChildren<Text>().text = "The Winner is Polo";
+            GetComponentInChildren<AudioSource>().PlayOneShot(lose);
+        }
     }
 }

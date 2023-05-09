@@ -783,6 +783,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralD04EA22D2CE00C16A3803205769742E31B0470A0
 IL2CPP_EXTERN_C String_t* _stringLiteralD0D7134616F5AF897073DB5A2098F65748C8A1A5;
 IL2CPP_EXTERN_C String_t* _stringLiteralD264C8D18645FED5F897C86ED3025969E82A866F;
 IL2CPP_EXTERN_C String_t* _stringLiteralD2925587A16AD3C5F400FF08DD75CAB59D0B361A;
+IL2CPP_EXTERN_C String_t* _stringLiteralD2D90AA90496F299ECA3498B3F899D0C3F8B8422;
 IL2CPP_EXTERN_C String_t* _stringLiteralD3C8B35AD95A736F17825C736585A2AEFE992253;
 IL2CPP_EXTERN_C String_t* _stringLiteralD41B04615C36889DF4949B077B38B18324DBC922;
 IL2CPP_EXTERN_C String_t* _stringLiteralD48A3ADA85FF8C27F7A943D026EDAD5D044D8096;
@@ -4071,6 +4072,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HashSet_1_Clear_m75A6528F0B47448EB3B3A05
 // System.Boolean System.Linq.Enumerable::Any<System.Object>(System.Collections.Generic.IEnumerable`1<TSource>,System.Func`2<TSource,System.Boolean>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerable_Any_TisRuntimeObject_mF6C6AC8DF8971883615734832D09C9210B956F0F_gshared (RuntimeObject* ___source0, Func_2_tE1F0D41563EE092E5E5540B061449FDE88F1DC00* ___predicate1, const RuntimeMethod* method) ;
 
+// System.Void Photon.Pun.PhotonNetwork::set_NickName(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_NickName_m9EB46021028BE0060635402D3C3989A2816AFA61 (String_t* ___value0, const RuntimeMethod* method) ;
 // System.Void NetManager::ConnecttoServer()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetManager_ConnecttoServer_m66805C07A9B1ED7CEA2FC07F80174FB5CFBF412F (NetManager_t0598E5A0D733B2F267B3D3C0B9D3EBDE393BA418* __this, const RuntimeMethod* method) ;
 // System.Boolean Photon.Pun.PhotonNetwork::ConnectUsingSettings()
@@ -5360,7 +5363,17 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Quaternion_IsEqualUsingDot_m
 // System.Void NetManager::Start()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetManager_Start_m05399E0AE674D4FA0C99003EFE5D8AE2E64B51D9 (NetManager_t0598E5A0D733B2F267B3D3C0B9D3EBDE393BA418* __this, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD2D90AA90496F299ECA3498B3F899D0C3F8B8422);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// PhotonNetwork.NickName = "Marco";
+		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
+		PhotonNetwork_set_NickName_m9EB46021028BE0060635402D3C3989A2816AFA61(_stringLiteralD2D90AA90496F299ECA3498B3F899D0C3F8B8422, NULL);
 		// ConnecttoServer();
 		NetManager_ConnecttoServer_m66805C07A9B1ED7CEA2FC07F80174FB5CFBF412F(__this, NULL);
 		// }

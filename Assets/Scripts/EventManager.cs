@@ -26,9 +26,10 @@ public class EventManager : MonoBehaviourPun
     //public Text pointsText;
     private Text flashed;
     private Text eggStolen;
+    public GameObject eggStolenBackground;
     
 
-    public float threshold = 50;
+    public float threshold = 0;
     public int points;
     public Material pointsBar;
     public Image pointer;
@@ -56,6 +57,7 @@ public class EventManager : MonoBehaviourPun
         eggStolen = GameObject.Find("PoloEggText").GetComponent<Text>();
         Rect t = pointer.transform.parent.GetComponent<RectTransform>().rect;
         size = new Vector2(t.width, t.height);
+        eggStolenBackground.SetActive(false);
         
     }
 
@@ -80,8 +82,10 @@ public class EventManager : MonoBehaviourPun
     {
         if (photonEvent.Code == RFID_POINTS_EVENT)
         {
+            eggStolenBackground.SetActive(true);
             eggStolen.text = "EGG STOLEN!";
             StartCoroutine(DisableEggStolen());
+            StartCoroutine(DisableEggStolenImage());
             int value = (int)photonEvent.CustomData;
             //int value = (int)data[0];
             updatePoints(value);
@@ -162,7 +166,7 @@ public class EventManager : MonoBehaviourPun
         Debug.Log("sending collision");
         RaiseEventOptions options = RaiseEventOptions.Default;
         options.Receivers = ReceiverGroup.All;
-        PhotonNetwork.RaiseEvent(MARCO_STAB_EVENT, 1, options, SendOptions.SendReliable);
+        PhotonNetwork.RaiseEvent(MARCO_STAB_EVENT, 2, options, SendOptions.SendReliable);
         // StartCoroutine(CollisionCooldown());
         //test.text = "Marco Event Sent";
         //tree.SetActive(false);
@@ -178,6 +182,12 @@ public class EventManager : MonoBehaviourPun
     {
         yield return new WaitForSeconds(2f);
         eggStolen.text = " ";
+    }
+
+    private IEnumerator DisableEggStolenImage()
+    {
+        yield return new WaitForSeconds(2f);
+        eggStolenBackground.SetActive(false);
     }
 
 

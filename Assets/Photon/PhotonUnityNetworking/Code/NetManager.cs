@@ -11,6 +11,7 @@ public class NetManager : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+        PhotonNetwork.NickName = "Marco";
         ConnecttoServer();
     }
 

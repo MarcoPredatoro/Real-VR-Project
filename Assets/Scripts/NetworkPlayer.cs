@@ -16,7 +16,7 @@ public class NetworkPlayer : MonoBehaviour
     private Transform rightHandRig;
     private PhotonView photonView;
 
-    public UnityEngine.UI.Image pointsImage;
+    //public UnityEngine.UI.Image pointsImage;
     //public Text test;
     
     
